@@ -4,7 +4,6 @@ from app.forms import RegistrationForm
 from app.models import User
 from app import app, db
 from werkzeug.urls import url_parse
-from form import LoginForm
 
 @app.route('/')
 def home():
