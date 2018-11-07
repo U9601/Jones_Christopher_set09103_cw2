@@ -70,7 +70,7 @@ body {
     border: 1px solid #ccc;
   }
 
-  *{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
+*{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
 
   /* Full-width input fields */
   input[type=text], input[type=password] {
@@ -154,4 +154,3 @@ body {
       from {transform: scale(0)}
       to {transform: scale(1)}
   }
-}
