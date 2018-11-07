@@ -4,14 +4,15 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon"  href="{{ url_for('static',filename='pictures/favicon.ico') }}"/>
-      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
     <title> HLTV - News</title>
     <div class="topnav">
       <a class="active" href="/">News</a>
       <a href="/matches">Matches</a>
       <a href="/results">Results</a>
       <a href="/forum">Fourm</a>
-      <a href="/login">Sign in</a>
+      <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
+      Sign in</button>
       <div class="search-container">
         <form action="/action_page.php">
           <input type="text" placeholder="Search.." name="search">
@@ -26,8 +27,6 @@
   </style>
   <h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
 
-  <button onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">
-  Open Popup</button>
 
   <div id="modal-wrapper" class="modal">
 
