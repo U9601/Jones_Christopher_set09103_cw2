@@ -11,11 +11,8 @@
       <a href="/matches">Matches</a>
       <a href="/results">Results</a>
       <a href="/forum">Forum</a>
-      {% if current_user.is_annoymous %}
       <a onclick="document.getElementById('modal-wrapper').style.display='block'" href="{{ url_for('login') }}">Sign in</a>
-      {% else %}
       <a href="{{ url_for('logout') }}">Logout</a>
-      {% endif %}
       <div class="search-container">
         <form action="/action_page.php">
           <input class="different2" type="text" placeholder="Search.." name="search">
