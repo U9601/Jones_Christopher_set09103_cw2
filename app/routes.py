@@ -17,7 +17,7 @@ def matches():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     name = ''
-    if(current_user.is_authenticated:
+    if current_user.is_authenticated:
         return redirect(url_for(''))
     form = LoginForm()
     if form.validate_on_submit():
