@@ -7,22 +7,22 @@ def home():
     return render_template('news.html', name = name)
 
 @app.route('/matches')
-def mathes():
+def matches():
     name = ''
     return render_template('matches.html', name = name)
 
 @app.route('/login')
-def mathes():
+def login():
     name = ''
     return render_template('login.html', name = name)
 
 @app.route('/fourm')
-def mathes():
+def fourm():
     name = ''
     return render_template('fourm.html', name = name)
 
 @app.route('/results')
-def mathes():
+def results():
     name = ''
     return render_template('results.html', name = name)
 
