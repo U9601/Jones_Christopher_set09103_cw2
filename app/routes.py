@@ -1,7 +1,8 @@
 from flask import render_template, url_for, redirect, request
 from flask_login import current_user, login_user, login_required, logout_user
+from app.forms import RegistrationForm
 from app.models import User
-from app import app
+from app import app, db
 from werkzeug.urls import url_parse
 
 @app.route('/')
@@ -18,7 +19,7 @@ def matches():
 def login():
     name = ''
     if current_user.is_authenticated:
-        return redirect(url_for(''))
+        return redirect(url_for('dashboard'))
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
