@@ -11,7 +11,11 @@
       <a href="/matches">Matches</a>
       <a href="/results">Results</a>
       <a href="/forum">Forum</a>
-      <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+      {% if current_user.is_annoymous %}
+      <a onclick="document.getElementById('modal-wrapper').style.display='block'" href="{{ url_for('login') }}">Sign in</a>
+      {% else %}
+      <a href="{{ url_for('logout') }}">Logout</a>
+      {% endif %}
       <div class="search-container">
         <form action="/action_page.php">
           <input class="different2" type="text" placeholder="Search.." name="search">
@@ -123,7 +127,7 @@ button:hover {
           <input type="text" placeholder="Enter Username" name="uname">
           <input type="password" placeholder="Enter Password" name="psw">
           <button type="submit">Login</button>
-          <button> Register </button>
+          <button href="/register"> Register </button>
           <input type="checkbox" style="margin:26px 30px;"> Remember me
           <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
         </div>
