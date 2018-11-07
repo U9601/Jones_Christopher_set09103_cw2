@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, request
 from flask_login import current_user, login_user, login_required, logout_user
-from app.forms import RegistrationForm
+from app.forms import RegistrationForm, LoginForm
 from app.models import User
 from app import app, db
 from werkzeug.urls import url_parse
