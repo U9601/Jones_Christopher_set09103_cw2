@@ -10,12 +10,12 @@
       <a class="active" href="/">News</a>
       <a href="/matches">Matches</a>
       <a href="/results">Results</a>
-      <a href="/forum">Fourm</a>
+      <a href="/forum">Forum</a>
       <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
       <div class="search-container">
         <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button class="different" class="different2" type="submit"><i class="fa fa-search"></i></button>
+          <input type="text" class="different2" placeholder="Search.." name="search">
+          <button class="different" type="submit"><i class="fa fa-search"></i></button>
         </form>
       </div>
     </div>
@@ -24,7 +24,7 @@
   <style>
   *{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
   /* Full-width input fields */
-  input[type=text], input[type=password] {
+  input[type=text]:not(.different2), input[type=password] {
       width: 90%;
       padding: 12px 20px;
       margin: 8px 26px;
@@ -45,7 +45,7 @@ button:not(.different) {
   	font-size:20px;
   }
 
-button:hover:not(.different2) {
+button:hover {
       opacity: 0.8;
   }
 
