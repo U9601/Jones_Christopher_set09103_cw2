@@ -1,7 +1,8 @@
-from flask import render_template, url_for, redirect
-from flask_login import current_user, login_user, login_required
+from flask import render_template, url_for, redirect, request
+from flask_login import current_user, login_user, login_required, logout_user
 from app.models import User
 from app import app
+from werkzeug.urls import url_parse
 
 @app.route('/')
 def home():
