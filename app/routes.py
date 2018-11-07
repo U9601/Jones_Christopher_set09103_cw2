@@ -65,7 +65,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('You are now a user Pog')
-        return redirect(url_for('')
+        return redirect(url_for(''))
     return render_template('register.html', name = name, form = form)
 
 
