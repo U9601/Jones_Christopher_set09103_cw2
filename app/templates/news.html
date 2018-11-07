@@ -34,7 +34,18 @@
   	font-size:16px;
   }
 
-  button:hover {
+.button2 {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 26px;
+      border: none;
+      cursor: pointer;
+      width: 90%;
+  	font-size:20px;
+  }
+
+button:hover {
       opacity: 0.8;
   }
 
@@ -108,14 +119,15 @@
         <img src="{{ url_for('static',filename='pictures/favicon.ico') }}" alt="Avatar" class="avatar">
         <h1 style="text-align:center">Modal Popup Box</h1>
       </div>
-
-      <div class="container">
-        <input type="text" placeholder="Enter Username" name="uname">
-        <input type="password" placeholder="Enter Password" name="psw">
-        <button type="submit">Login</button>
-        <input type="checkbox" style="margin:26px 30px;"> Remember me
-        <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
-      </div>
+      <div class="button2">
+        <div class="container">
+          <input type="text" placeholder="Enter Username" name="uname">
+          <input type="password" placeholder="Enter Password" name="psw">
+          <button type="submit">Login</button>
+          <input type="checkbox" style="margin:26px 30px;"> Remember me
+          <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+        </div>
+    </div>
 
     </form>
 
