@@ -5,10 +5,23 @@ from app.models import User
 from app import app, db
 from werkzeug.urls import url_parse
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
     name = ''
-    return render_template('news.html', name = name, form = form)
+    if current_user.is_authenticated:
+        return redirect(url_for('dashboard'))
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+        next_page = request.args.get('next')
+        if not next_page or url_parse(next_page).netloc != '':
+            next_page = url_for('dashbaord')
+        return redirect(next_page)
+    return render_template('login.html', title = 'Sign In', form = form, name = name)
 
 @app.route('/matches')
 def matches():
