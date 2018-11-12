@@ -17,7 +17,7 @@ def home():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('news.html' form = form, name = name)
+    return render_template('news.html', form = form, name = name)
 
 @app.route('/matches')
 def matches():
