@@ -36,7 +36,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return render_template('news.html'))
+    return render_template('news.html')
 
 @app.route('/forum')
 def fourm():
