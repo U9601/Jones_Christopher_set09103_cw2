@@ -21,7 +21,7 @@ def home():
         if not next_page or url_parse(next_page).netloc != '':
             next_page = url_for('dashboard')
         return redirect(next_page)
-    return render_template('news.html', form = form, name = name)
+    return render_template('news.html', user=user, form = form, name = name, )
 
 @app.route('/matches')
 def matches():
@@ -79,7 +79,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('You are now a user Pog')
-        return redirect(url_for(''))
+        return redirect(url_for('dashboard'))
     return render_template('register.html', name = name, form = form)
 
 
