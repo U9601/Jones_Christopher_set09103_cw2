@@ -16,9 +16,9 @@ def news():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('news'))
+            return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('login.html', form = form, name = name)
+    return render_template('dashboard.html', form = form, name = name)
 
 @app.route('/matches')
 def matches():
