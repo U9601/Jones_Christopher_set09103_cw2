@@ -8,7 +8,7 @@ from werkzeug.urls import url_parse
 @app.route('/')
 def home():
     name = ''
-    return render_template('news.html', name = name)
+    return render_template('news.html', name = name, form = form)
 
 @app.route('/matches')
 def matches():
