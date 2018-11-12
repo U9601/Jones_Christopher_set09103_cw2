@@ -14,8 +14,9 @@
       <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
       <a href="{{ url_for('logout') }}">Logout</a>
       <a href="/login"> Login </a>
-      {% if user == current_user %}
-      <a href ="/dashboard"> dashboard </a>
+      {% if current_user.is_annoymous %}
+      {% else %}
+      <a href ="{{ url_for('dashboard') }}"> dashboard </a>
       {% endif %}
       <div class="search-container">
         <form action="/action_page.php">
