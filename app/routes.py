@@ -7,7 +7,7 @@ from werkzeug.urls import url_parse
 
 @app.route('/')
 @app.route('/news')
-def home():
+def news():
     name = ''
     if current_user.is_authenticated:
         return redirect(url_for('dashboard'))
