@@ -16,6 +16,7 @@
       <a href="/login"> Login </a>
       {% !if current_user.is_annoymous %}
       <a href ="/dashboard"> dashboard </a>
+      {% endif %}
       <div class="search-container">
         <form action="/action_page.php">
           <input class="different2" type="text" placeholder="Search.." name="search">
