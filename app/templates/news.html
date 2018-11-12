@@ -58,7 +58,7 @@ button:hover {
   }
   .avatar {
       width: 200px;
-  	height:200px;
+  	  height:200px;
       border-radius: 50%;
   }
 
@@ -125,8 +125,8 @@ button:hover {
           <input type="password" placeholder="Enter Password" name="inputbutton">
           <button type="submit"> <a href="/login"></a>Login</button>
         </form>
-        <form method="GET">
-          <button onclick="{{ url_for('logout') }}">Register</button>
+        <form method="GET" action="/register">
+          <button>Register</button>
         </form>
           <input type="checkbox" style="margin:26px 30px;"> Remember me
           <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
