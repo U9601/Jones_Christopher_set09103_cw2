@@ -19,7 +19,7 @@ def home():
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('dashbaord')
+            next_page = url_for('dashboard')
         return redirect(next_page)
     return render_template('news.html', title = 'Sign In', form = form, name = name)
 
