@@ -54,7 +54,7 @@ def dashboard():
     name = ''
     return render_template('dashboard.html', posts=posts, name = name)
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
     name = ''
     if current_user.is_authenticated:
