@@ -6,7 +6,7 @@ from app import app, db
 from werkzeug.urls import url_parse
 
 @app.route('/')
-@app.route('/news')
+@app.route('/news', methods=['GET', 'POST'])
 def news():
     name = ''
     if current_user.is_authenticated:
