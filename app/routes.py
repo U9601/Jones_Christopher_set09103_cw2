@@ -18,10 +18,17 @@ def news():
         login_user(user, remember=form.remember_me.data)
     return render_template('news.html', form = form, name = name)
 
-@app.route('/matches')
+@app.route('/matches', methods=['GET', 'POST'])
 def matches():
     name = ''
-    return render_template('matches.html', name = name)
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('matches.html', form = form, name = name)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -42,15 +49,29 @@ def logout():
     logout_user()
     return redirect(url_for('news'))
 
-@app.route('/forum')
+@app.route('/forum' , methods=['GET', 'POST'])
 def fourm():
     name = ''
-    return render_template('fourm.html', name = name)
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('fourm.html', form = form, name = name)
 
-@app.route('/results')
+@app.route('/results' , methods=['GET', 'POST'])
 def results():
     name = ''
-    return render_template('results.html', name = name)
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('results.html', form = form, name = name)
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
