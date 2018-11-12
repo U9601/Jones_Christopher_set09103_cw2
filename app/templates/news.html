@@ -18,7 +18,6 @@
       {% if user == current_user %}
       <a href ="{{ url_for('dashboard') }}"> dashboard </a>
       {% endif %}
-      {% end block %}
       <div class="search-container">
         <form action="/action_page.php">
           <input class="different2" type="text" placeholder="Search.." name="search">
@@ -118,7 +117,6 @@ button:hover {
 
 
   <div id="modal-wrapper" class="modal">
-    {% block content %}
     <form class="modal-content animate" action="" method="POST" novalidate>
       {{ form.hidden_tag() }}
       <div class="imgcontainer">
