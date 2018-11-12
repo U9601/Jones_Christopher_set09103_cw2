@@ -6,6 +6,7 @@ from app import app, db
 from werkzeug.urls import url_parse
 
 @app.route('/')
+@app.route('/news')
 def home():
     name = ''
     if current_user.is_authenticated:
@@ -45,7 +46,7 @@ def login():
 @app.route('/logout')
 def logout():
     logout_user()
-    return render_template('news.html')
+    return redirect(url_for('news'))
 
 @app.route('/forum')
 def fourm():
