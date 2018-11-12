@@ -50,9 +50,7 @@ def results():
 @app.route('/dashboard')
 @login_required
 def dashboard():
-    name = ''
-    user = current_user.self
-    return render_template('dashboard.html', posts = posts, name = name)
+    return render_template('dashboard.html', name = name)
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
