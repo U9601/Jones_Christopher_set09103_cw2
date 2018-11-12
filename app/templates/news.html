@@ -14,7 +14,7 @@
       <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
       <a href="{{ url_for('logout') }}">Logout</a>
       <div class="search-container">
-        <form action="/action_page.php">
+        <form action="/register">
           <input class="different2" type="text" placeholder="Search.." name="search">
           <button class="different" type="submit"><i class="fa fa-search"></i></button>
         </form>
@@ -124,7 +124,6 @@ button:hover {
           <input type="text" placeholder="Enter Username" name="inputext">
           <input type="password" placeholder="Enter Password" name="inputbutton">
           <button type="submit" href="/login">Login</button>
-        </form>
           <button href="{{ url_for('register') }}"> Register </button>
           <input type="checkbox" style="margin:26px 30px;"> Remember me
           <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
