@@ -5,7 +5,7 @@ from app.models import User, Post
 from app import app, db
 from werkzeug.urls import url_parse
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
     return render_template('news.html')
 
