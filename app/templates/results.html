@@ -1,0 +1,167 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon"  href="{{ url_for('static',filename='pictures/favicon.ico') }}"/>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title> HLTV - News</title>
+    <div class="topnav">
+      <a class="active" href="/">News</a>
+      <a href="/matches">Matches</a>
+      <a href="/results">Results</a>
+      <a href="/forum">Forum</a>
+      <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+      <a href="/login"> Login </a>
+      {% block content %}
+      {% if user == current_user %}
+      <a href ="{{ url_for('dashboard') }}"> dashboard </a>
+      {% endif %}
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input class="different2" type="text" placeholder="Search.." name="search">
+          <button class="different" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+</head>
+<body>
+  <style>
+  *{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
+  /* Full-width input fields */
+  input[type=text]:not(.different2), input[type=password] {
+      width: 90%;
+      padding: 12px 20px;
+      margin: 8px 26px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+  	font-size:16px;
+  }
+
+button:not(.different) {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 26px;
+      border: none;
+      cursor: pointer;
+      width: 90%;
+  	font-size:20px;
+  }
+
+button:hover {
+      opacity: 0.8;
+  }
+
+  /* Center the image and position the close button */
+  .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      position: relative;
+  }
+  .avatar {
+      width: 200px;
+  	  height:200px;
+      border-radius: 50%;
+  }
+
+  /* The Modal (background) */
+  .modal {
+  	display:none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+  }
+
+  /* Modal Content Box */
+  .modal-content {
+      background-color: #fefefe;
+      margin: 4% auto 15% auto;
+      border: 1px solid #888;
+      width: 40%;
+  	padding-bottom: 30px;
+  }
+
+  /* The Close Button (x) */
+  .close {
+      position: absolute;
+      right: 25px;
+      top: 0;
+      color: #000;
+      font-size: 35px;
+      font-weight: bold;
+  }
+  .close:hover,.close:focus {
+      color: red;
+      cursor: pointer;
+  }
+
+  /* Add Zoom Animation */
+  .animate {
+      animation: zoom 0.6s
+  }
+  @keyframes zoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}
+  }
+
+  </style>
+  <h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
+
+
+  <div id="modal-wrapper" class="modal">
+    <form class="modal-content animate" action="" method="POST" novalidate>
+      {{ form.hidden_tag() }}
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+        <img src="{{ url_for('static',filename='pictures/favicon.ico') }}" alt="Avatar" class="avatar">
+      </div>
+      <div class="button">
+        <div class="container">
+          <p>
+              {{ form.username.label }}<br>
+              {{ form.username(size=32) }}<br>
+              {% for error in form.username.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+            </p>
+            <p>
+                {{ form.password.label }}<br>
+                {{ form.password(size=32) }}<br>
+                {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
+            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+            <button>{{ form.submit() }}</button>
+          {% endblock %}
+        </form>
+        <form method="GET" action="/register">
+          <button>Register</button>
+        </form>
+          <input type="checkbox" style="margin:26px 30px;"> Remember me
+          <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+        </div>
+
+    </div>
+
+
+  </div>
+  <script>
+  // If user clicks anywhere outside of the modal, Modal will close
+
+  var modal = document.getElementById('modal-wrapper');
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+</body>
+</html>
