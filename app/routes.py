@@ -58,7 +58,7 @@ def results():
     name = ''
     return render_template('results.html', name = name)
 
-@app.route('/dashboard')
+@app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def dashboard():
     name = ''
