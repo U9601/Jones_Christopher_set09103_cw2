@@ -52,7 +52,6 @@ def results():
 def dashboard():
     name = ''
     user = current_user.self
-    posts = 
     return render_template('dashboard.html', posts = posts, name = name)
 
 @app.route('/register', methods=['GET', 'POST'])
