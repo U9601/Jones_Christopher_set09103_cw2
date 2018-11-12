@@ -114,7 +114,7 @@ button:hover {
 
   <div id="modal-wrapper" class="modal">
     {% block content %}
-    <form class="modal-content animate" action="" method="POST" novalidate>
+    <form class="modal-content animate" action="dashboard" method="post" novalidate>
       {{ form.hidden_tag() }}
       <div class="imgcontainer">
         <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
@@ -137,8 +137,8 @@ button:hover {
                 {% endfor %}
             </p>
             <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-            {% endblock %}
-          <button {{ form.submit() }} ><a href="/login"></a>Login</button>
+          <button {{ form.submit() }} >Login</button>
+          {% endblock %}
         </form>
         <form method="GET" action="/register">
           <button>Register</button>
