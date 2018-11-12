@@ -1,4 +1,4 @@
-from flask import render_template, url_for, redirect, request
+from flask import render_template, url_for, redirect, request, flash
 from flask_login import current_user, login_user, login_required, logout_user
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
