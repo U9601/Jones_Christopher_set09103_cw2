@@ -5,23 +5,9 @@ from app.models import User, Post
 from app import app, db
 from werkzeug.urls import url_parse
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
-    name = ''
-    if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
-    form = LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
-        if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password')
-            return redirect(url_for('login'))
-        login_user(user, remember=form.remember_me.data)
-        next_page = request.args.get('next')
-        if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('dashboard')
-        return redirect(next_page)
-    return render_template('news.html', user=user, form = form, name = name, )
+    return render_template('news.html')
 
 @app.route('/matches')
 def matches():
@@ -65,6 +51,8 @@ def results():
 @login_required
 def dashboard():
     name = ''
+    user = current_user.self
+    posts = 
     return render_template('dashboard.html', posts = posts, name = name)
 
 @app.route('/register', methods=['GET', 'POST'])
