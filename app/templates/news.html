@@ -137,7 +137,7 @@ button:hover {
                 {% endfor %}
             </p>
             <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-          <button {{ form.submit() }} >Login</button>
+            <button>{{ form.submit() }}</button>
           {% endblock %}
         </form>
         <form method="GET" action="/register">
