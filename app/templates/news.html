@@ -113,7 +113,7 @@ button:hover {
 
   <div id="modal-wrapper" class="modal">
 
-    <form action="" method="post">
+    <form class="modal-content animate">
 
       <div class="imgcontainer">
         <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
@@ -128,8 +128,9 @@ button:hover {
           <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
         </form>
         </div>
-        <button href="{{ url_for('register') }}"> Register </button>
+
     </div>
+    <button href="{{ url_for('register') }}"> Register </button>
 
 
   </div>
