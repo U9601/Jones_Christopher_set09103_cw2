@@ -6,11 +6,11 @@ from bs4 import BeautifulSoup
 from python_utils import converters
 
 
-def get_parsed_page(url):
+class get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
 
 
-def top5teams():
+class top5teams():
     home = get_parsed_page("http://hltv.org/")
     count = 0
     teams = []
