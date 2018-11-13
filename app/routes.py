@@ -2,6 +2,7 @@ from flask import render_template, url_for, redirect, request, flash
 from flask_login import current_user, login_user, login_required, logout_user
 from app.forms import RegistrationForm, LoginForm
 from app.models import User, Post
+from app.hltv import hltv
 from app import app, db
 from werkzeug.urls import url_parse
 
@@ -9,6 +10,7 @@ from werkzeug.urls import url_parse
 @app.route('/news', methods=['GET', 'POST'])
 def news():
     name = ''
+    teams = hltv.top5teams()
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -16,7 +18,7 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('news.html', form = form, name = name)
+    return render_template('news.html', form = form, name = name, teams = teams)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
