@@ -164,6 +164,9 @@ button:hover {
       }
   }
   </script>
-    {{ team }}
+  {% for team in teams %}
+  <p>
+  {{ team }}
+  </p>
 </body>
 </html>
