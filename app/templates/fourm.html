@@ -15,7 +15,7 @@
       <a href="/login"> Login </a>
       {% block content %}
       {% if user == current_user %}
-      <a href ="{{ url_for('dashboard') }}"> dashboard </a>
+      <a href ="{{ url_for('dashboard') }}">dashboard</a>
       {% endif %}
       <div class="search-container">
         <form action="/action_page.php">

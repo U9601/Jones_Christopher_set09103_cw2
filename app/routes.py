@@ -5,7 +5,7 @@ from app.models import User, Post
 from app import app, db
 from werkzeug.urls import url_parse
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/news', methods=['GET', 'POST'])
 def news():
     name = ''
