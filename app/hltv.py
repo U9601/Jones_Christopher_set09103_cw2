@@ -7,7 +7,7 @@ from python_utils import converters
 
 
 class get_parsed_page(url):
-    return BeautifulSoup(requests.get(url).text, "lxml")
+     BeautifulSoup(requests.get(url).text, "lxml")
 
 
 class top5teams():
@@ -18,7 +18,6 @@ class top5teams():
         count += 1
         teamname = team.text[3:]
         teams.append(teamname)
-    return teams
 
 
 def top30teams():
