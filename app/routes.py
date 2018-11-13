@@ -4,6 +4,12 @@ from app.forms import RegistrationForm, LoginForm
 from app.models import User, Post
 from app import app, db
 from werkzeug.urls import url_parse
+import re
+import requests
+import datetime
+from app import db
+from bs4 import BeautifulSoup
+from python_utils import converters
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/news', methods=['GET', 'POST'])
