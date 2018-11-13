@@ -2,7 +2,6 @@ from flask import render_template, url_for, redirect, request, flash
 from flask_login import current_user, login_user, login_required, logout_user
 from app.forms import RegistrationForm, LoginForm
 from app.models import User, Post
-from hltv import top5teams
 from app import app, db
 from werkzeug.urls import url_parse
 
@@ -10,7 +9,13 @@ from werkzeug.urls import url_parse
 @app.route('/news', methods=['GET', 'POST'])
 def news():
     name = ''
-    teams = hltv.top5teams()
+    home = get_parsed_page("http://hltv.org/")
+    count = 0
+    teams = []
+    for team in home.find_all("div", {"class": ["col-box rank"], }):
+        count += 1
+        teamname = team.text[3:]
+        teams.append(teamname)
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
