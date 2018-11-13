@@ -1,6 +1,5 @@
 from flask import Flask
 from config import Config
-from hltv import hltv
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
@@ -13,4 +12,4 @@ migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
 
-from app import routes, models, hltv
+from app import routes, models
