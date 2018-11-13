@@ -11,6 +11,9 @@ from app import db
 from bs4 import BeautifulSoup
 from python_utils import converters
 
+def get_parsed_page(url):
+    return BeautifulSoup(requests.get(url).text, "lxml")
+
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/news', methods=['GET', 'POST'])
 def news():
