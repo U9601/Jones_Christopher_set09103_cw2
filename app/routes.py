@@ -10,7 +10,7 @@ from werkzeug.urls import url_parse
 @app.route('/news', methods=['GET', 'POST'])
 def news():
     name = ''
-    teams = top5teams()
+    teams = hltv.top5teams()
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
