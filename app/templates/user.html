@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+  {% block content %}
+    <h1>User: {{user.username}}</h1>
+    <hr>
+    {% for post in posts %}
+    <p>
+    {{ post.author.username }} sas: <b> {{ post.body }}</b>
+    </p>
+    {% endfor %}
+  {% endblock %}
+</body>
+</html>
