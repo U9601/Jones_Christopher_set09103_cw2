@@ -19,7 +19,7 @@
       <a href="{{ url_for('logout') }}">Logout</a>
       <a href="/login"> Login </a>
       {% block content %}
-      {% if user == current_user %}
+      {% if user == current_user.username %}
       <a href ="{{ url_for('dashboard') }}"> dashboard </a>
       {% endif %}
       <div class="search-container">
@@ -126,8 +126,9 @@
       </div>
     </div></center>
     <center><div class="column">
-    {% if current_user == "U9601" %}
+    {% if current_user.username == "U9601" %}
       <button> admin </button>
+      <h1> hi U9601 </h1>
     {% endif %}
     </div>
   </div>
