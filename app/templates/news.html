@@ -81,12 +81,12 @@
   }
   </script>
   <div class="top5teams">
-    {% for i in teams %}
+    {% for team in teams %}
     <p>
-      {% if teams[i] == "FaZe" %}
-        {{teams}} <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+      {% if team == "FaZe" %}
+        {{team}} <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
       {% else %}
-        {{teams}}
+        {{team}}
       {% endif %}
       {% endfor %}
     </p>
