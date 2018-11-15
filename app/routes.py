@@ -21,16 +21,16 @@ def news():
     count = 0
     teams = []
     news = ''
+    for team in home.find_all("div", {"class": ["col-box rank"], }):
+        count += 1
+        teamname = team.text[3:]
+        teams.append(teamname)
     newsform = NewsForm()
     if newsform.validate_on_submit():
         newspost = News(username=newsform.username.data, title=newsform.title.data, body=newsform.body.data)
         db.session.add(newspost)
         db.session.commit()
         flash('You have created a post')
-    for team in home.find_all("div", {"class": ["col-box rank"], }):
-        count += 1
-        teamname = team.text[3:]
-        teams.append(teamname)
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
