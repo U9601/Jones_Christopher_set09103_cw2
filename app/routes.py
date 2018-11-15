@@ -31,9 +31,7 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        if user == "U9601"
-            flash("admin")
-            news = News.query.all()
+        news = News.query.all()
     return render_template('news.html', form = form, name = name, teams = teams, news = news)
 
 @app.route('/matches', methods=['GET', 'POST'])
