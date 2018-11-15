@@ -25,6 +25,7 @@ def news():
         count += 1
         teamname = team.text[3:]
         teams.append(teamname)
+        flash(teams)
     newsform = NewsForm()
     if newsform.validate_on_submit():
         newspost = News(username=newsform.username.data, title=newsform.title.data, body=newsform.body.data)
