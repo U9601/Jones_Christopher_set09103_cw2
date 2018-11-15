@@ -71,7 +71,7 @@ body {
   }
 
   .box {
-    webkit-box-shadow: 10px 14px 25px 6px rgba(56,54,56,1);
+    -webkit-box-shadow: 10px 14px 25px 6px rgba(56,54,56,1);
     -moz-box-shadow: 10px 14px 25px 6px rgba(56,54,56,1);
     box-shadow: 10px 14px 25px 6px rgba(56,54,56,1);
   }
