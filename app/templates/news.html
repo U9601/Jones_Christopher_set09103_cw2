@@ -81,9 +81,11 @@
   }
   </script>
   <div class="top5teams">
+    {% set counter = 1 %}
     {% for team in teams %}
     <p>
-      {{ team }}
+      {{ counter }}{{ team }}
+      {% set count = count + 1 %}
       {% endfor %}
     </p>
   </div>
