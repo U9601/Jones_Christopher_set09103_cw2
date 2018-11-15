@@ -97,6 +97,13 @@
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
+            <p>
+                {{ news.body.label }}<br>
+                {{ news.body(size=32) }}<br>
+                {% for error in news.body.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+                {% endfor %}
+            </p>
             <button>{{ news.submit() }}</button>
         </form>
         </div>
