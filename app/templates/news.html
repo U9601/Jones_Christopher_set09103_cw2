@@ -84,10 +84,10 @@
     {% for team in teams %}
     <p>
       {% if team == Liquid %}
-      <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
-      {{team.Liquid}}
+        <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+        {{team.Liquid}}
       {% elif %}
-      {team}
+        {team}
       {% endif %}
       {% endfor %}
     </p>
