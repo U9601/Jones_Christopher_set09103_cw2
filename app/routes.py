@@ -20,9 +20,10 @@ def news():
     home = get_parsed_page("http://hltv.org/")
     count = 0
     teams = []
-    news = NewsForm()
-    if news.validate_on_submit():
-        newspost = News(username=news.username.data, title=news.title.data, body=news.body.data)
+    news = ''
+    newsform = NewsForm()
+    if newsform.validate_on_submit():
+        newspost = News(username=newsform.username.data, title=newsform.title.data, body=newsform.body.data)
         db.session.add(newspost)
         db.session.commit()
         flash('You have created a post')
@@ -38,7 +39,7 @@ def news():
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
         news = News.query.all()
-    return render_template('news.html', form = form, name = name, teams = teams, news = news)
+    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
