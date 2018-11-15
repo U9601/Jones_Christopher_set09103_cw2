@@ -26,8 +26,6 @@
         </form>
       </div>
     </div>
-    <center><h2> CSGO - News </h2></center>
-    <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
 </head>
 <body>
 
@@ -82,23 +80,33 @@
       }
   }
   </script>
-  <h3> Top 5 teams </h3>
-  <div class="top5teams">
-    {% for team in teams %}
-    <p>
-      {% if team == "FaZe" %}
-        {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
-      {% elif team == "Liquid" %}
-        {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
-      {% elif team == "Natus Vincere" %}
-        {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
-      {% elif team == "Astralis" %}
-        {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
-      {% elif team == "mousesports" %}
-        {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
-      {% endif %}
-      {% endfor %}
-    </p>
+
+  <div class="row">
+    <div class="column">
+      <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+
+      <h3> Top 5 teams </h3>
+      <div class="top5teams">
+        {% for team in teams %}
+        <p>
+          {% if team == "FaZe" %}
+            {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {% elif team == "Liquid" %}
+            {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
+          {% elif team == "Natus Vincere" %}
+            {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
+          {% elif team == "Astralis" %}
+            {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
+          {% elif team == "mousesports" %}
+            {{ loop.index }}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+          {% endif %}
+          {% endfor %}
+        </p>
+      </div>
+    </div>
+    <div class "column">
+      <center><h2> CSGO - News </h2></center>
+    </div>
   </div>
 </body>
 </html>
