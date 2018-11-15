@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .topnav {
   overflow: hidden;
@@ -28,12 +32,7 @@
   float: right;
 }
 
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-}
+
 
 .topnav .search-container button {
   float: right;
