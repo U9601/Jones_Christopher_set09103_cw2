@@ -1,7 +1,7 @@
 from flask import render_template, url_for, redirect, request, flash
 from flask_login import current_user, login_user, login_required, logout_user
-from app.forms import RegistrationForm, LoginForm
-from app.models import User, Post
+from app.forms import RegistrationForm, LoginForm, NewsForm
+from app.models import User, Post, News
 from app import app, db
 from werkzeug.urls import url_parse
 import re
@@ -31,7 +31,10 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('news.html', form = form, name = name, teams = teams)
+        if user.username == "U9601"
+            flash("admin")
+            news = News.query.all()
+    return render_template('news.html', form = form, name = name, teams = teams, news = news)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
