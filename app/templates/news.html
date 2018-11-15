@@ -93,6 +93,8 @@
         {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
       {% elif team == "Mousesports" %}
         {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+      {% else %}
+        {{team}}
       {% endif %}
       {% endfor %}
     </p>
