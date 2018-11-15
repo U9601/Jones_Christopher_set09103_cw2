@@ -82,18 +82,24 @@
   </script>
   <h3> Top 5 teams </h3>
   <div class="top5teams">
+    {% set counter = 0}
     {% for team in teams %}
     <p>
       {% if team == "FaZe" %}
-        {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+        {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+        {% set counter = counter + 1 %}
       {% elif team == "Liquid" %}
-        {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
+        {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
+        {% set counter = counter + 1 %}
       {% elif team == "Natus Vincere" %}
-        {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
+        {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
+        {% set counter = counter + 1 %}
       {% elif team == "Astralis" %}
-        {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
+        {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
+        {% set counter = counter + 1 %}
       {% elif team == "mousesports" %}
-        {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+        {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+        {% set counter = counter + 1 %}
       {% endif %}
       {% endfor %}
     </p>
