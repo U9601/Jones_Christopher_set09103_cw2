@@ -20,7 +20,7 @@ def news():
     home = get_parsed_page("http://hltv.org/")
     count = 0
     teams = []
-    news = = NewsForm()
+    news = NewsForm()
     for team in home.find_all("div", {"class": ["col-box rank"], }):
         count += 1
         teamname = team.text[3:]
