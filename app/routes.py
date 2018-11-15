@@ -22,7 +22,7 @@ def news():
     teams = []
     news = NewsForm()
     if news.validate_on_submit():
-        newspost = News(username=news.username.data, title=news.title.data, title=news.body.data)
+        newspost = News(username=news.username.data, title=news.title.data, body=news.body.data)
         db.session.add(newspost)
         db.session.commit()
         flash('You have created a post')
