@@ -31,3 +31,4 @@ class NewsForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     title = StringField('Title', validators=[DataRequired()])
     body = StringField('Body', validators=[DataRequired()])
+    submit = SubmitField('News')
