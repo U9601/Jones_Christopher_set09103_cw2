@@ -59,7 +59,6 @@
             </p>
             <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
             <button>{{ form.submit() }}</button>
-          {% endblock %}
         </form>
         <form method="GET" action="/register">
           <button>Register</button>
@@ -198,6 +197,7 @@
       <button onclick="document.getElementById('modal-wrapper2').style.display='block'"> add news </button>
       <h3> Look at me, Look at me, I am the Admin Now U9601 </h3>
     {% endif %}
+  {% endblock %}
     </div>
   </div>
 </body>
