@@ -76,7 +76,6 @@
 
   <div id="modal-wrapper2" class="modal">
     <form class="modal-content animate" action="" method="POST" novalidate>
-      {{ news.hidden_tag() }}
       <div class="imgcontainer">
         <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
         <img src="{{ url_for('static',filename='pictures/favicon.ico') }}" alt="Avatar" class="avatar">
@@ -172,6 +171,7 @@
           </div>
         </div>
       </div>
+      {% for new in news}
     </div></center>
     <center><div class="column">
     {% if current_user.username == "U9601" %}

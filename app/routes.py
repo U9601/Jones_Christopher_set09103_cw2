@@ -21,6 +21,11 @@ def news():
     count = 0
     teams = []
     news = NewsForm()
+    if news.validate_on_submit():
+        newspost = News(username=news.username.data, title=news.title.data, title=news.body.data)
+        db.session.add(newspost)
+        db.session.commit()
+        flash('You have created a post')
     for team in home.find_all("div", {"class": ["col-box rank"], }):
         count += 1
         teamname = team.text[3:]
