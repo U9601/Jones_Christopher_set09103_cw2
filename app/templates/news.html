@@ -83,27 +83,27 @@
       <div class="button">
         <div class="container">
           <p>
-              {{ news.username.label }}<br>
-              {{ news.username(size=32) }}<br>
-              {% for error in news.username.errors %}
+              {{ newsform.username.label }}<br>
+              {{ newsform.username(size=32) }}<br>
+              {% for error in newsform.username.errors %}
               <span style="color: red;">[{{ error }}]</span>
               {% endfor %}
             </p>
             <p>
-                {{ news.title.label }}<br>
-                {{ news.title(size=32) }}<br>
-                {% for error in news.title.errors %}
+                {{ newsform.title.label }}<br>
+                {{ newsform.title(size=32) }}<br>
+                {% for error in newsform.title.errors %}
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
             <p>
-                {{ news.body.label }}<br>
-                {{ news.body(size=32) }}<br>
-                {% for error in news.body.errors %}
+                {{ newsform.body.label }}<br>
+                {{ newsform.body(size=32) }}<br>
+                {% for error in newsform.body.errors %}
                 <span style="color: red;">[{{ error }}]</span>
                 {% endfor %}
             </p>
-            <button>{{ news.submit() }}</button>
+            <button>{{ newsform.submit() }}</button>
         </form>
         </div>
 
