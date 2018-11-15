@@ -7,7 +7,6 @@ from werkzeug.urls import url_parse
 import re
 import requests
 import datetime
-from app import db
 from bs4 import BeautifulSoup
 from python_utils import converters
 
