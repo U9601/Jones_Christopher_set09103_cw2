@@ -58,6 +58,10 @@ body {
   .topnav .search-container {
     float: none;
 }
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
   .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
     display: block;
@@ -155,8 +159,4 @@ button:hover {
   /* Add Zoom Animation */
   .animate {
       animation: zoom 0.6s
-  }
-  @keyframes zoom {
-      from {transform: scale(0)}
-      to {transform: scale(1)}
   }
