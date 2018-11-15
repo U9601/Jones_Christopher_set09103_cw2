@@ -31,7 +31,8 @@ class Post(db.Model):
 
 class News(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    body = db.Column(db.String(140))
+    title = db.Column(db.String(100))
+    body = db.Column(db.String(10000))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
 @login.user_loader
