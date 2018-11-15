@@ -87,19 +87,19 @@
     <p>
       {% if team == "FaZe" %}
         {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
-        {% counter = counter + 1 %}
+        {% set counter = counter + 1 %}
       {% elif team == "Liquid" %}
         {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
         {% counter = counter + 1 %}
       {% elif team == "Natus Vincere" %}
         {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
-        {% counter = counter + 1 %}
+        {% set counter = counter + 1 %}
       {% elif team == "Astralis" %}
         {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
-        {% counter = counter + 1 %}
+        {% set counter = counter + 1 %}
       {% elif team == "mousesports" %}
         {{counter}}: {{team}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
-        {% counter = counter + 1 %}
+        {% set counter = counter + 1 %}
       {% endif %}
       {% endfor %}
     </p>
