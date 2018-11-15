@@ -78,7 +78,6 @@ body {
    box-shadow: 10px 10px 5px grey;
   }
 
-  *{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
   /* Full-width input fields */
   input[type=text]:not(.different2), input[type=password] {
       width: 90%;
