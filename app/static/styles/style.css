@@ -53,6 +53,11 @@ body {
 .topnav .search-container button:hover {
   background: #ccc;
 }
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+}
   .topnav a, .topnav input[type=text], .topnav .search-container button {
     float: none;
     display: block;
@@ -64,11 +69,6 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;
   }
-
-  @media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
 
   .top5teams {
    width: 300px;
