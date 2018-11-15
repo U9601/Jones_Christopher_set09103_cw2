@@ -83,9 +83,9 @@
   <div class="top5teams">
     {% for team in teams %}
     <p>
-      {% if {{team}} == FaZe}
+      {% if {{team}} == FaZe %}
         {{team}} <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
-      {% endif%}
+      {% endif %}
       {% endfor %}
     </p>
   </div>
