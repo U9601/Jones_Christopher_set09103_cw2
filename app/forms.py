@@ -33,7 +33,7 @@ class NewsForm(FlaskForm):
     body = StringField('Body', validators=[DataRequired()])
     submit = SubmitField('Add News')
 
-class EditProfileForm(FlaskForm)
+class EditProfileForm(FlaskForm):
     usernane = StringField('Username', validators=[DataRequired()])
     about_me = TextAreaField('About me', validators=[Length(min=0, max=140)])
     submit = SubmitField('Edit')
