@@ -31,7 +31,7 @@ def news():
         db.session.add(newspost)
         db.session.commit()
         flash('You have created a post')
-    return redirect(url_for('news'))
+        news = News.query.all()
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -39,7 +39,6 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        news = News.query.all()
     return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform)
 
 @app.route('/matches', methods=['GET', 'POST'])
