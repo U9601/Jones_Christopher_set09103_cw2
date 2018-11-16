@@ -14,7 +14,6 @@
       <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
       {% block content %}
       {% if current_user.is_annoymous %}
-      <a href="/login"> Login </a>
       {% else %}
       <a href ="{{ url_for('dashboard') }}">dashboard</a>
       <a href="{{ url_for('logout') }}">Logout</a>

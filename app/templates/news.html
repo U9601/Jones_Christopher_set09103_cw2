@@ -16,12 +16,11 @@
       <a href="/results">Results</a>
       <a href="/forum">Forum</a>
       <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
-      <a href="{{ url_for('logout') }}">Logout</a>
-      <a href="/login"> Login </a>
       {% block content %}
       {% if user == current_user.username %}
       {% else %}
       <a href ="{{ url_for('dashboard') }}"> dashboard </a>
+      <a href="{{ url_for('logout') }}">Logout</a>
       {% endif %}
       <div class="search-container">
         <form action="/action_page.php">
