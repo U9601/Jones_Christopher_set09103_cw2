@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
+from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
 
 class LoginForm(FlaskForm):
@@ -32,3 +32,8 @@ class NewsForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
     body = StringField('Body', validators=[DataRequired()])
     submit = SubmitField('Add News')
+
+class EditProfileForm(FlaskForm)
+    usernane = StringField('Username', validators=[DataRequired()])
+    about_me = TextAreaField('About me', validators=[Length(min=0, max=140)])
+    submit = SubmitField('Edit')
