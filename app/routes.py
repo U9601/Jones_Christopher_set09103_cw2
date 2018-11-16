@@ -20,7 +20,7 @@ def news():
     home = get_parsed_page("http://hltv.org/")
     count = 0
     teams = []
-    news = ''
+    news = News.query.all()
     for team in home.find_all("div", {"class": ["col-box rank"], }):
         count += 1
         teamname = team.text[3:]
@@ -38,7 +38,6 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        news = News.query.all()
     return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform)
 
 @app.route('/matches', methods=['GET', 'POST'])
