@@ -154,6 +154,27 @@
     </div>
     <center><div class="column">
       <h2> CSGO - News </h2>
+      {% for new in news %}
+        {% if new is defined %}
+        <div class="w3-content" style="max-width:1400px">
+          <div class="w3-col l8 s12">
+            <!-- Blog entry -->
+            <div class="w3-card-4 w3-margin w3-white">
+              <img width="20" height="" src="{{ url_for('static', filename="pictures/astralislogo.png")  }}" alt="Nature" style="width:100%">
+              <div class="w3-container">
+                <h3><b>new.title</b></h3>
+                <h5><span class="w3-opacity">new.timestamp</span></h5>
+                <div class="w3-row">
+                  <div class="w3-col m8 s12">
+                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
       <div class="w3-content" style="max-width:1400px">
         <div class="w3-col l8 s12">
           <!-- Blog entry -->
@@ -171,27 +192,6 @@
           </div>
         </div>
       </div>
-      {% for new in news %}
-        {% if new is defined %}
-        <div class="w3-content" style="max-width:1400px">
-          <div class="w3-col l8 s12">
-            <!-- Blog entry -->
-            <div class="w3-card-4 w3-margin w3-white">
-              <img width="20" height="" src="{{ url_for('static', filename="pictures/astralislogo.png")  }}" alt="Nature" style="width:100%">
-              <div class="w3-container">
-                <h3><b>new.title</b></h3>
-                <h5><span class="w3-opacity">news.timestamp</span></h5>
-                <div class="w3-row">
-                  <div class="w3-col m8 s12">
-                    <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {% endif %}
-      {% endfor %}
     </div></center>
     <center><div class="column">
     {% if current_user.username == "U9601" %}
