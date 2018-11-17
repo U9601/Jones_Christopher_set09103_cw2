@@ -58,12 +58,14 @@
             </p>
             <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
             <button>{{ form.submit() }}</button>
+            <p>
+              Forgot Your Password?
+              <a href = "{{ url_for('reset_password_request ')}}"> Click to Reset It</a>
+            </p>
         </form>
         <form method="GET" action="/register">
           <button>Register</button>
         </form>
-          <input type="checkbox" style="margin:26px 30px;"> Remember me
-          <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
         </div>
 
     </div>

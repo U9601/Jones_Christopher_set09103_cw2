@@ -42,3 +42,7 @@ class EditProfileForm(FlaskForm):
     def __init__(self, orginal_user, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)
         self.orginal_username = orginal_username
+
+class ResetPasswordRequestForm(FlaskForm):
+    email = StringField('Email', validators=[DataRequired(), Email()])
+    submit = SubmitField('Request Password Reset')
