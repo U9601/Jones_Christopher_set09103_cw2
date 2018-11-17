@@ -1,6 +1,7 @@
 from flask_mail import Message
 from flask import render_template
 from app import mail
+from app import app
 from threading import Thread
 
 def send_email(subject, sender, recipients, text_body, html_body):
