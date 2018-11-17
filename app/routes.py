@@ -1,6 +1,6 @@
 from flask import render_template, url_for, redirect, request, flash
 from flask_login import current_user, login_user, login_required, logout_user
-from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm
+from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm
 from app.models import User, Post, News
 from app.email import send_password_reset_email
 from app import app, db
@@ -158,7 +158,22 @@ def reset_password_request():
             send_password_reset_email(user)
         flash('Check your emails')
         return redirec(url_for('login'))
-    return render_template('reset_password.html', title ='Reset Password', form = form)
+    return render_template('reset_password_request.html', title ='Reset Password', form = form)
+
+@app.route('/reset_password/<token>', methods=['GET', 'POST'])
+def reset_password(token):
+    if current_user.is_authenticated:
+        return redirect(url_for('news'))
+    user = User.verfiy_reset_password_token(token)
+    if not user:
+        return redirect(url_for('news'))
+    form = ResetPasswordForm()
+    if form.validate_on_submit():
+        user.set_password(form.password.data)
+        db.session.commit()
+        flash('Your password has been reset.')
+        return redirect(url_for('news'))
+    return render_template('reset_password.html', form = form)
 
 
 if __name__ == "__main__":
