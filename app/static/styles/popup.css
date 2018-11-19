@@ -117,8 +117,8 @@ button:hover {
 }
 
 .rectangle {
-  height: 300px;
-  width: 600px;
+  height: 200px;
+  width: 800px;
   background-color: white;
   border: black;
 }
