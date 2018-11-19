@@ -121,4 +121,5 @@ button:hover {
   width: 800px;
   background-color: white;
   border: black;
+  display: inline-block;
 }
