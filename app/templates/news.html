@@ -132,7 +132,7 @@
   function top5teams(){
   var myObj = 'data/top5teams.json';
   var myJSON = JSON.stringify(myObj);
-  document.getElementById("top5teams").innerHTML = myJSON;
+  document.getElementById("5teams").innerHTML = myJSON;
 
   })
 }
@@ -142,7 +142,7 @@
     <div class="column">
       <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
       <h3> Top 5 teams </h3>
-      <div id="top5teams" class"top5teams">
+      <div id="5teams" class"top5teams">
         {% for team in teams %}
         <p>
           {% if team == "FaZe" %}
