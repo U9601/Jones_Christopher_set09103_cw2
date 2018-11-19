@@ -127,3 +127,6 @@ button:hover {
 .dImg{
   display: inline-block;
 }
+figcaption {
+    width: 100px;
+}
