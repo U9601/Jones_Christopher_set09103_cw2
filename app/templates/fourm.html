@@ -79,15 +79,15 @@
   </script>
 <h1> Hi, {{ current_user.username }}!</h1>
 <form action "" method="post">
-    {{ form.hidden_tag() }}
+    {{ postform.hidden_tag() }}
     <p>
-      {{ form.post.label }}<br>
-      {{ form.post(col=32, rows=4) }}<br>
-      {% for error in form.post.erros %}
+      {{ postform.post.label }}<br>
+      {{ postform.post(col=32, rows=4) }}<br>
+      {% for error in postform.post.erros %}
       <span style="color:red;">[{{ error }}]</span>
       {% endfor %}
     </p>
-    <p> {{form.submit() }}</p>
+    <p> {{postform.submit() }}</p>
   </form>
   {% for post in posts %}
   <p>
