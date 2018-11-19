@@ -115,3 +115,10 @@ button:hover {
     background-color: white;
     margin-top: 20px;
 }
+
+.rectangle {
+  height: 50px;
+  width: 100px;
+  background-color: white;
+  border: black;
+}
