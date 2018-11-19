@@ -84,26 +84,26 @@ def fourm():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        postform = PostForm()
-        if postform.validate_on_submit():
-            post = Post(body=form.post.data, author=current_user)
-            db.session.add(post)
-            db.session.commit()
-            flash('Your post is now live!')
-            return redirect(url_for('forum'))
-        posts = [
-            {
-                'author': {'username': 'U9601'},
-                'body': 'Beautiful day in Scotland!'
-            },
-            {
-                'author': {'username': 'banter'},
-                'body': 'heheh'
-            }
-        ]
+    postform = PostForm()
+    if postform.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('forum'))
+    posts = [
+        {
+            'author': {'username': 'U9601'},
+            'body': 'Beautiful day in Scotland!'
+        },
+        {
+            'author': {'username': 'banter'},
+            'body': 'heheh'
+        }
+    ]
 
-        posts = Post.query.order_by(Post.timestamp.desc()).all()
-    return render_template('fourm.html', form = form, name = name, postform = postform)
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
+return render_template('fourm.html', form = form, name = name, postform = postform)
 
 @app.route('/results' , methods=['GET', 'POST'])
 def results():
