@@ -93,20 +93,22 @@
           {% for p in o["players"] %}
           <hr>
           <p>
-          <div class="rectangle">
-            <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/karrigan.jpeg")  }}>
-            {{p["one"]}}
-            <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/olofmeister.jpeg")  }}>
-            {{p["two"]}}
-            <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Guardian.jpeg")  }}>
-            {{p["three"]}}
-            <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/NIKO.jpeg")  }}>
-            {{p["four"]}}
-            <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/rain.jpeg")  }}>
-            {{p["five"]}}
+          <div class="img-with-text">
+            <div class="rectangle">
+              <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/karrigan.jpeg")  }}>
+              {{p["one"]}}
+              <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/olofmeister.jpeg")  }}>
+              {{p["two"]}}
+              <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Guardian.jpeg")  }}>
+              {{p["three"]}}
+              <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/NIKO.jpeg")  }}>
+              {{p["four"]}}
+              <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/rain.jpeg")  }}>
+              {{p["five"]}}
+           </div>
          </div>
-          </p>
-          {% endfor %}
+         </p>
+        {% endfor %}
         {% elif o["team"] == "Liquid" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}> ({{ o["points"] }} points)
           {% for p in o["players"] %}
