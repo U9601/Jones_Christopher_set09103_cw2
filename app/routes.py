@@ -101,9 +101,13 @@ def forum():
             'body': 'heheh'
         }
     ]
-
-    posts = Post.query.order_by(Post.timestamp.desc()).all()
-    return render_template('forum.html', form = form, name = name, postform = postform, posts = posts)
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.cofig['POSTS_PER_PAGE'], False)
+    next_url = url_for('forum' page=posts.next_num) \
+        if posts.has_next else None
+    prev_url = url_for('forum', page=posts.prev_num) \
+        if posts.has_prev else None
+    return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items)
 
 @app.route('/results' , methods=['GET', 'POST'])
 def results():
