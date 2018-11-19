@@ -123,3 +123,7 @@ button:hover {
   border: black;
   display: inline-block;
 }
+
+.dImg{
+  display: inline-block;
+}
