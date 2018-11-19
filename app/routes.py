@@ -169,7 +169,7 @@ def reset_password(token):
         return redirect(url_for('news'))
     form = ResetPasswordForm()
     if form.validate_on_submit():
-        user.set_password(form.password.data)
+        user.set_password(form.password2.data)
         db.session.commit()
         flash('Your password has been reset.')
         return redirect(url_for('news'))
