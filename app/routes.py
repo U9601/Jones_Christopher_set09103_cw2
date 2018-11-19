@@ -1,5 +1,5 @@
 from __future__ import print_function
-from flask import render_template, url_for, redirect, request, flash
+from flask import render_template, url_for, redirect, request, flash, *
 from flask_login import current_user, login_user, login_required, logout_user
 from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm
 from app.models import User, Post, News
@@ -12,6 +12,10 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from python_utils import converters
 import sys
+
+top5teams = json.load(open("data/top5teams.json"))
+
+teamslist = top5teams["top5teams"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
@@ -41,6 +45,7 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
+    teams = [item for item in data["team"]
     return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform)
 
 @app.route('/matches', methods=['GET', 'POST'])
