@@ -45,8 +45,10 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    teams = [item for item in data["team"]
-    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform)
+    output = []
+    for x in teamslist:
+        output.append(x)
+    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
