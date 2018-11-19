@@ -223,7 +223,7 @@ def top20teams():
     output = []
     for x in teamslist20:
         output.append(x)
-    return render_template('reset_password.html', form=form, output=output)
+    return render_template('top20teams.html', form=form, output=output)
 
 
 
