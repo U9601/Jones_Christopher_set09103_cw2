@@ -116,189 +116,427 @@
         {% elif o["team"] == "Liquid" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}> ({{ o["points"] }} points)
           {% for p in o["players"] %}
+          <hr>
           <p>
-            {{p["one"]}}
-            {{p["two"]}}
-            {{p["three"]}}
-            {{p["four"]}}
-            {{p["five"]}}
+            <div class="rectangle">
+              <table>
+                <tr>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/nitro0.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/NAF.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Elige.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Taco.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Twistzz.jpeg")  }}></th>
+                </tr>
+                <tr>
+                  <th>{{p["one"]}}</th>
+                  <th>{{p["two"]}}</th>
+                  <th>{{p["three"]}}</th>
+                  <th>{{p["four"]}}</th>
+                  <th>{{p["five"]}}</th>
+                </tr>
+              </table>
+           </div>
           </p>
           {% endfor %}
         {% elif o["team"] == "Natus Vincere" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/Navilogo.png")  }}> ({{ o["points"] }} points)
           {% for p in o["players"] %}
+          <hr>
           <p>
-            {{p["one"]}}
-            {{p["two"]}}
-            {{p["three"]}}
-            {{p["four"]}}
-            {{p["five"]}}
-          </p>
+            <div class="rectangle">
+              <table>
+                <tr>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Ewward.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Zeus.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/flame.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/s1mple.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/electronic.jpeg")  }}></th>
+                </tr>
+                <tr>
+                  <th>{{p["one"]}}</th>
+                  <th>{{p["two"]}}</th>
+                  <th>{{p["three"]}}</th>
+                  <th>{{p["four"]}}</th>
+                  <th>{{p["five"]}}</th>
+                </tr>
+              </table>
+           </div>
+         </p>
           {% endfor %}
         {% elif o["team"] == "Astralis" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/astralislogo.png")  }}> ({{ o["points"] }} points)
           {% for p in o["players"] %}
+          <hr>
           <p>
-            {{p["one"]}}
-            {{p["two"]}}
-            {{p["three"]}}
-            {{p["four"]}}
-            {{p["five"]}}
+            <div class="rectangle">
+              <table>
+                <tr>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Xyp9x.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/dupreeh.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/gla1ve.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/device.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/magisk.jpeg")  }}></th>
+                </tr>
+                <tr>
+                  <th>{{p["one"]}}</th>
+                  <th>{{p["two"]}}</th>
+                  <th>{{p["three"]}}</th>
+                  <th>{{p["four"]}}</th>
+                  <th>{{p["five"]}}</th>
+                </tr>
+              </table>
+           </div>
           </p>
           {% endfor %}
         {% elif o["team"] == "mousesports" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}> ({{ o["points"] }} points)
           {% for p in o["players"] %}
+          <hr>
           <p>
-            {{p["one"]}}
-            {{p["two"]}}
-            {{p["three"]}}
-            {{p["four"]}}
-            {{p["five"]}}
+            <div class="rectangle">
+              <table>
+                <tr>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/oskar.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/chrisj.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/sunny.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/styko.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/ropz.jpeg")  }}></th>
+                </tr>
+                <tr>
+                  <th>{{p["one"]}}</th>
+                  <th>{{p["two"]}}</th>
+                  <th>{{p["three"]}}</th>
+                  <th>{{p["four"]}}</th>
+                  <th>{{p["five"]}}</th>
+                </tr>
+              </table>
+           </div>
           </p>
           {% endfor %}
       </p>
       {% elif o["team"] == "MIBR" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/MIBR.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/fallen.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/tarik.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/fer.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/stewie.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/cold.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "NiP" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/nip.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/forest.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/get_right.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/dennis.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/lekro.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/rez.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "NRG" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/NRG.jpg")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/daps.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/fugly.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/brehze.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/nahtE.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/cerq.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "North" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/North.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/cadian.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/aizy.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/kjaebye.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/gade.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/valde.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "fnatic" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fnatic.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/xizt.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/jw.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/twist.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/krimz.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/brollan.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "LDLC" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/LDLC.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/to1nou.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/alex.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/amanek.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/devoduvek.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/logan.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "OpTic" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/optic.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/snappi.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/cajunb.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/jugi.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/konfig.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/niko.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "ENCE" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/ENCE.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/ange1.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/hobbit.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/woxic.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/deadfox.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/issaa.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "HellRaisers" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HR.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/shahzam.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/dephh.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/stanislaw.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/yay.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/android.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "compLexity" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/COL.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/fitch.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/buster.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/krizzen.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/qlkert.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/jame.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "AVANGAR" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/Avangar.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/tonyblack.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/chopper.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/jr.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/hutji.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/crush.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "Vega Squadron" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/vega.png")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/moddii.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/friberg.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/acilion.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/es3tag.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/mertz.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "Heroic" %}
         {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/Heroic.jpg")  }}> ({{ o["points"] }} points)
         {% for p in o["players"] %}
+        <hr>
         <p>
-          {{p["one"]}}
-          {{p["two"]}}
-          {{p["three"]}}
-          {{p["four"]}}
-          {{p["five"]}}
+          <div class="rectangle">
+            <table>
+              <tr>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/shox.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/ex6tenz.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/kennys.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/smithzz.jpeg")  }}></th>
+                <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/bodyy.jpeg")  }}></th>
+              </tr>
+              <tr>
+                <th>{{p["one"]}}</th>
+                <th>{{p["two"]}}</th>
+                <th>{{p["three"]}}</th>
+                <th>{{p["four"]}}</th>
+                <th>{{p["five"]}}</th>
+              </tr>
+            </table>
+         </div>
         </p>
         {% endfor %}
       {% elif o["team"] == "G2" %}
