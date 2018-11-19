@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 from python_utils import converters
 import sys
 
-top5teams = json.load(open("app/data/top5teams.json"))
+top5teams = json.load(open("data/top5teams.json"))
 
 teamslist = top5teams["top5teams"]
 
