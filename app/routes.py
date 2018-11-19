@@ -157,7 +157,7 @@ def reset_password_request():
         if user:
             send_password_reset_email(user)
         flash('Check your emails')
-        return redirect(url_for('login'))
+        return redirect(url_for('news'))
     return render_template('reset_password_request.html', title ='Reset Password', form = form)
 
 @app.route('/reset_password/<token>', methods=['GET', 'POST'])
@@ -172,7 +172,7 @@ def reset_password(token):
         user.set_password(form.password.data)
         db.session.commit()
         flash('Your password has been reset.')
-        return redirect(url_for('news'))
+        return redirect(url_for('login'))
     return render_template('reset_password.html', form = form)
 
 
