@@ -95,11 +95,8 @@
       <h3> Top 20 teams </h3>
       {% for o in output %}
       <p>
-        <svg width="400" height="110">
-          <rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" onclick="myFunction()">
         {% if o["team"] == "FaZe" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}> ({{ o["points"] }} points)
-        <div id="myDIV">
           {% for p in o["players"] %}
           <p>
             {{p["one"]}}
@@ -108,10 +105,7 @@
             {{p["four"]}}
             {{p["five"]}}
           </p>
-        </div>
           {% endfor %}
-        </rect>
-        </svg>
         {% elif o["team"] == "Liquid" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}> ({{ o["points"] }} points)
           {% for p in o["players"] %}
