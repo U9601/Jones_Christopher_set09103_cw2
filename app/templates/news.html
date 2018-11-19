@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script type="text/javascript" src="data/top5teams.json"> top5teams()</script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon"  href="{{ url_for('static',filename='pictures/favicon.ico') }}"/>
@@ -112,7 +113,7 @@
 
 
   </div>
-  <script>
+  <script type="text/javascript" src="data/top5teams.json">
   // If user clicks anywhere outside of the modal, Modal will close
 
   var modal = document.getElementById('modal-wrapper');
@@ -130,7 +131,7 @@
   }
 
   function top5teams(){
-  var myObj = 'data/top5teams.json';
+  var myObj = JSON.parse(top5teams.json)
   var myJSON = JSON.stringify(myObj);
   document.getElementById("5teams").innerHTML = myObj;
 
