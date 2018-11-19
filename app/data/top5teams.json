@@ -1,0 +1,18 @@
+{
+  "top5teams": [{
+          "team": "Astralis",
+          "pos": "1"
+        }, {
+          "team": "Natus Vincere",
+          "pos": "2"
+        }, {
+          "team": "Liquid",
+          "pos": "3"
+        }, {
+          "team": "FaZe",
+          "pos": "4"
+        }, {
+          "team": "mousesports",
+          "pos": "5"
+    }]
+}
