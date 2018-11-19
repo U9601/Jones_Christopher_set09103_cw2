@@ -211,7 +211,7 @@ def reset_password(token):
         return redirect(url_for('news'))
     return render_template('reset_password.html', form=form)
 
-@app.route('/top20teams', methoods=['GET', 'POST'])
+@app.route('/top20teams', methods=['GET', 'POST'])
 def top20teams():
     form = LoginForm()
     if form.validate_on_submit():
