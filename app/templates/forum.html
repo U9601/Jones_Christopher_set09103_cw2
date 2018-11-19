@@ -96,7 +96,10 @@
       </p>
       {% endfor %}
       {% if prev_url %}
-      <a href ="{{ next_url }}"> Older posts </a>
+      <a href ="{{ prev_url }}"> Older posts </a>
+      {% endif %}
+      {if next_url %}
+      <a href="{{ next_url }}"> Older posts </a>
       {% endif %}
   {% endblock %}
 </body>
