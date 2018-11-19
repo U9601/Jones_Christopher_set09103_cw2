@@ -75,7 +75,7 @@ def logout():
     return redirect(url_for('news'))
 
 @app.route('/forum' , methods=['GET', 'POST'])
-def fourm():
+def forum():
     name = ''
     postform = PostForm()
     form = LoginForm()
