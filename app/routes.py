@@ -103,7 +103,7 @@ def fourm():
     ]
 
     posts = Post.query.order_by(Post.timestamp.desc()).all()
-    return render_template('fourm.html', form = form, name = name, postform = postform)
+    return render_template('forum.html', form = form, name = name, postform = postform)
 
 @app.route('/results' , methods=['GET', 'POST'])
 def results():
