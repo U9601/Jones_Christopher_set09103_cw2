@@ -77,6 +77,7 @@ def logout():
 @app.route('/forum' , methods=['GET', 'POST'])
 def fourm():
     name = ''
+    postform = PostForm()
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -84,7 +85,6 @@ def fourm():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    postform = PostForm()
     if postform.validate_on_submit():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
