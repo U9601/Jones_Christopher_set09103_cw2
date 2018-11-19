@@ -122,13 +122,3 @@ button:hover {
   background-color: white;
   border: black;
 }
-
-.img-with-text {
-    text-align: justify;
-    width: 100px;
-}
-
-.img-with-text img {
-    display: block;
-    margin: 0 auto;
-}

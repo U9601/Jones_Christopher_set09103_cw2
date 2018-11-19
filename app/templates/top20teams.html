@@ -93,20 +93,20 @@
           {% for p in o["players"] %}
           <hr>
           <p>
-          <div class="img-with-text">
+          <figure>
             <div class="rectangle">
               <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/karrigan.jpeg")  }}>
-              {{p["one"]}}
+              <figcaption>{{p["one"]}}</figcaption>
               <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/olofmeister.jpeg")  }}>
-              {{p["two"]}}
+              <figcaption>{{p["two"]}}<figcaption>
               <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Guardian.jpeg")  }}>
-              {{p["three"]}}
+              <figcaption>{{p["three"]}}</figcaption>
               <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/NIKO.jpeg")  }}>
-              {{p["four"]}}
+              <figcaption>{{p["four"]}}</figcaption>
               <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/rain.jpeg")  }}>
-              {{p["five"]}}
+              <figcaption>{{p["five"]}}</figcaption>
            </div>
-         </div>
+         </figure>
          </p>
         {% endfor %}
         {% elif o["team"] == "Liquid" %}
