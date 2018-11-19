@@ -36,13 +36,13 @@
             "team": "FaZe",
             "pos": "4",
             "points": "469",
-            "players":[{
+            "players":{
                   "one": "karrigan",
                   "two": "olofmeister",
                   "three": "GuardiaN",
                   "four": "Niko",
                   "five":"rain"
-                  }]
+                  }
           }, {
             "team": "mousesports",
             "pos": "5",
