@@ -110,6 +110,7 @@
           </p>
         </div>
           {% endfor %}
+        </rect>
         </svg>
         {% elif o["team"] == "Liquid" %}
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}> ({{ o["points"] }} points)
