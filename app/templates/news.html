@@ -137,15 +137,15 @@
         {% for o in output %}
         <p>
           {% if o["team"] == "FaZe" %}
-            {{ o["pos"] }}: o["team"] <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+            {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
           {% elif o["team"] == "Liquid" %}
-            {{ o["pos"] }}: o["team"] <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
+            {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
           {% elif o["team"] == "Natus Vincere" %}
-            {{ o["pos"] }}: o["team"] <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
+            {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
           {% elif o["team"] == "Astralis" %}
-            {{ o["pos"] }}: o["team"] <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
+            {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
           {% elif o["team"] == "mousesports" %}
-            {{ o["pos"] }}: o["team"] <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+            {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
           {% endif %}
           {% endfor %}
         </p>
