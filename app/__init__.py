@@ -18,17 +18,17 @@ login.login_view = 'login'
 mail = Mail(app)
 
 if not app.debug:
-    if app.config['smtp.googlemail.com']:
+    if app.config['MAIL_SERVER']:
         auth = None
-        if app.config['testserveremail123@gmail.com'] or app.config['lantaui1581']:
-            auth = (app.config['testserveremail123@gmail.com'], app.config['lantaui1581])
+        if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
+            auth = (app.config['MAIL_USERNAME'], app.config['MAIL_PASSWORD'])
         secure = None
-        if app.config['1']:
+        if app.config['MAIL_USE_TLS']:
             secure = ()
         mail_handler = SMTPHandler(
-            mailhost=(app.config['smtp.googlemail.com'], app.config[587]),
-            fromaddr='no-reply@' + app.config['smtp.googlemail.com'],
-            toaddrs=app.config['testserveremail123@gmail.com'], subject='HLTV Failure',
+            mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),
+            fromaddr='no-reply@' + app.config['MAIL_SERVER'],
+            toaddrs=app.config['ADMINS'], subject='HLTV Failure',
             credentials=auth, secure=secure)
         mail_handler.setLevel(logging.ERROR)
         app.logger.addHandler(mail_handler)
