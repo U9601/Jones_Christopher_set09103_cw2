@@ -13,9 +13,9 @@ from bs4 import BeautifulSoup
 from python_utils import converters
 import sys
 
-top5teams = json.load(open("data/top5teams.json"))
+#top5teams = json.load(open("data/top5teams.json"))
 
-teamslist = top5teams["top5teams"]
+#teamslist = top5teams["top5teams"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
@@ -45,10 +45,10 @@ def news():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    output = []
-    for x in teamslist:
-        output.append(x)
-    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output)
+    #output = []
+    #for x in teamslist:
+    #    output.append(x)
+    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform)# output=output)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
