@@ -1,5 +1,5 @@
 from __future__ import print_function
-from flask import render_template, url_for, redirect, request, flash, *
+from flask import *
 from flask_login import current_user, login_user, login_required, logout_user
 from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm
 from app.models import User, Post, News
