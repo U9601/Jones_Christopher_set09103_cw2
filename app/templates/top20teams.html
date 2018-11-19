@@ -95,16 +95,22 @@
           <p>
           <figure>
             <div class="rectangle">
-              <img class="dImg" width="100" height="100" style="display:inline-block" src={{ url_for('static', filename="pictures/karrigan.jpeg")  }}>
-              <figcaption>{{p["one"]}}</figcaption>
-              <img class="dImg" width="100" height="100" style="display:inline-block" src={{ url_for('static', filename="pictures/olofmeister.jpeg")  }}>
-              <figcaption>{{p["two"]}}<figcaption>
-              <img class="dImg" width="100" height="100" style="display:inline-block" src={{ url_for('static', filename="pictures/Guardian.jpeg")  }}>
-              <figcaption>{{p["three"]}}</figcaption>
-              <img class="dImg" width="100" height="100" style="display:inline-block" src={{ url_for('static', filename="pictures/NIKO.jpeg")  }}>
-              <figcaption>{{p["four"]}}</figcaption>
-              <img class="dImg" width="100" height="100" style="display:inline-block" src={{ url_for('static', filename="pictures/rain.jpeg")  }}>
-              <figcaption>{{p["five"]}}</figcaption>
+              <table>
+                <tr>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/karrigan.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/olofmeister.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/Guardian.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/NIKO.jpeg")  }}></th>
+                  <th><img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/rain.jpeg")  }}></th>
+                </tr>
+                <tr>
+                  <th>{{p["one"]}}</th>
+                  <th>{{p["two"]}}</th>
+                  <th>{{p["three"]}</th>
+                  <th>{{p["four"]}}</th>
+                  <th>{{p["five"]}}</th>
+                </tr>
+              </table
            </div>
          </figure>
          </p>

@@ -118,15 +118,12 @@ button:hover {
 
 .rectangle {
   height: 200px;
-  width: 5000px;
+  width: 400px;
   background-color: white;
   border: black;
   display: inline-block;
 }
 
-.dImg{
-  display: inline-block;
-}
-figcaption {
-    width: 100px;
+table, th, td {
+    border: 0px solid white;
 }
