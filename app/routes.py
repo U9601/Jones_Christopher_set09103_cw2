@@ -10,6 +10,8 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 from python_utils import converters
+from __future__ import print_function
+import sys
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
@@ -169,7 +171,8 @@ def reset_password(token):
         return redirect(url_for('news'))
     form = ResetPasswordForm()
     if form.validate_on_submit():
-        user.set_password("banter")
+        user.set_password(form.password.data)
+        print(form.password.data, file=sys.stdout)
         db.session.commit()
         flash('Your password has been reset.')
         return redirect(url_for('news'))
