@@ -1,3 +1,4 @@
+from __future__ import print_function
 from flask import render_template, url_for, redirect, request, flash
 from flask_login import current_user, login_user, login_required, logout_user
 from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm
@@ -10,7 +11,6 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 from python_utils import converters
-from __future__ import print_function
 import sys
 
 def get_parsed_page(url):
