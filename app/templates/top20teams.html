@@ -99,7 +99,7 @@
           {{ o["pos"] }}: {{o["team"]}} <img class="dImg" width="100" height="100" src={{ url_for('static', filename="pictures/fazelogo.png")  }}> {{ o["points"] }}
           {% for p in o["players"] %}
           <p>
-            {{p}}
+            {{p["one"]}}
           </p>
           {% endfor %}
         {% elif o["team"] == "Liquid" %}
