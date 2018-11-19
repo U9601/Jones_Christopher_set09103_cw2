@@ -1,7 +1,7 @@
 from __future__ import print_function
 from flask import render_template, url_for, redirect, request, flash
 from flask_login import current_user, login_user, login_required, logout_user
-from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm
+from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm
 from app.models import User, Post, News
 from app.email import send_password_reset_email
 from app import app, db
@@ -84,7 +84,26 @@ def fourm():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('fourm.html', form = form, name = name)
+        postform = PostForm()
+        if postform.validate_on_submit():
+            post = Post=(body=form.post.data, author=current_user)
+            db.session.add(post)
+            db.session.commit()
+            flash('Your post is now live!')
+            return redirect(url_for('forum'))
+        posts = [
+            {
+                'author': {'username': 'U9601'},
+                'body': 'Beautiful day in Scotland!'
+            },
+            {
+                'author': {'username': 'banter'},
+                'body': 'heheh'
+            }
+        ]
+
+        posts = Post.query.order_by(Post.timestamp.desc()).all()
+    return render_template('fourm.html', form = form, name = name, postform = postform)
 
 @app.route('/results' , methods=['GET', 'POST'])
 def results():
@@ -172,7 +191,6 @@ def reset_password(token):
     form = ResetPasswordForm()
     if form.validate_on_submit():
         user.set_password(form.password.data)
-        print(form.password.data, file=sys.stdout)
         db.session.commit()
         flash('Your password has been reset.')
         return redirect(url_for('news'))

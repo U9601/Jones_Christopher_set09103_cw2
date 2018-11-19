@@ -13,7 +13,7 @@
       <a href="/forum">Forum</a>
       <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
       {% block content %}
-      {% if current_user.is_annoymous %}
+      {% if user == current_user.username %}
       {% else %}
       <a href ="{{ url_for('dashboard') }}">dashboard</a>
       <a href="{{ url_for('logout') }}">Logout</a>
@@ -55,7 +55,6 @@
             </p>
             <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
             <button>{{ form.submit() }}</button>
-          {% endblock %}
         </form>
         <form method="GET" action="/register">
           <button>Register</button>
@@ -78,5 +77,23 @@
       }
   }
   </script>
+<h1> Hi, {{ current_user.username }}!</h1>
+<form action "" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.post.label }}<br>
+      {{ form.post(col=32, rows=4) }}<br>
+      {% for error in form.post.erros %}
+      <span style="color:red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p> {{form.submit() }}</p>
+  </form>
+  {% for post in posts %}
+  <p>
+    {% include '_post.html' %}
+  </p>
+  {% endfor %}
+{% endblock %}
 </body>
 </html>
