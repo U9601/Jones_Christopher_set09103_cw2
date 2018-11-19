@@ -14,8 +14,10 @@ from python_utils import converters
 import sys
 
 top5teams = json.load(open("app/data/top5teams.json"))
+top20teams = json.load(open("app/data/top20teams.json"))
 
-teamslist = top5teams["top5teams"]
+teamslist5 = top5teams["top5teams"]
+teamslist20 = top20teams["top20teams"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
@@ -46,7 +48,7 @@ def news():
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
     output = []
-    for x in teamslist:
+    for x in teamslist5:
         output.append(x)
     return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output)
 
@@ -138,7 +140,7 @@ def dashboard():
 def register():
     name = ''
     if current_user.is_authenticated:
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('news'))
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(username=form.username.data, email=form.email.data)
@@ -208,6 +210,21 @@ def reset_password(token):
         flash('Your password has been reset.')
         return redirect(url_for('news'))
     return render_template('reset_password.html', form=form)
+
+@app.route('/top20teams', methoods=['GET', 'POST'])
+def top20teams():
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in teamslist20:
+        output.append(x)
+    return render_template('reset_password.html', form=form, output=output)
+
 
 
 if __name__ == "__main__":

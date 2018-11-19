@@ -1,0 +1,212 @@
+{
+  "top20teams": [{
+        "team": "Astralis",
+        "pos": "1",
+        "points": "1000",
+        "players":[{
+              "one": "Xyp9x",
+              "two": "dupreeh",
+              "three": "gla1ve",
+              "four": "device",
+              "five":"Magisk"
+              }]
+        }, {
+          "team": "Natus Vincere",
+          "pos": "2",
+          "points": "608",
+          "players":[{
+                "one": "Edward",
+                "two": "Zeus",
+                "three": "flamie",
+                "four": "s1mple",
+                "five":"eletronic"
+                }]
+        }, {
+          "team": "Liquid",
+          "pos": "3",
+          "points": "521",
+          "players":[{
+                "one": "nitr0",
+                "two": "NAF",
+                "three": "EliGE",
+                "four": "TACO",
+                "five":"Twistzz"
+                }]
+          }, {
+            "team": "FaZe",
+            "pos": "4",
+            "points": "469",
+            "players":[{
+                  "one": "karrigan",
+                  "two": "olofmeister",
+                  "three": "GuardiaN",
+                  "four": "Niko",
+                  "five":"rain"
+                  }]
+          }, {
+            "team": "mousesports",
+            "pos": "5",
+            "points": "344",
+            "players":[{
+                  "one": "oskar",
+                  "two": "chrisj",
+                  "three": "suNny",
+                  "four": "STYKO",
+                  "five":"ropz"
+                  }]
+          }, {
+            "team": "MIBR",
+            "pos": "6",
+            "points": "327",
+            "players":[{
+                  "one": "Fallen",
+                  "two": "tarik",
+                  "three": "fer",
+                  "four": "Stewie2K",
+                  "five":"coldzera"
+                  }]
+          }, {
+            "team": "NiP",
+            "pos": "7",
+            "points": "295",
+            "players":[{
+                  "one": "f0rest",
+                  "two": "GeT_RiGht",
+                  "three": "dennis",
+                  "four": "Lekr0",
+                  "five":"REZ"
+                  }]
+          }, {
+            "team": "NRG",
+            "pos": "8",
+            "points": "285",
+            "players":[{
+                  "one": "daps",
+                  "two": "FugLy",
+                  "three": "Brehze",
+                  "four": "nahtE",
+                  "five":"CeRq"
+                  }]
+          }, {
+            "team": "BIG",
+            "pos": "9",
+            "points": "205",
+            "players":[{
+                  "one": "gob b",
+                  "two": "tabseN",
+                  "three": "tiziaN",
+                  "four": "nex",
+                  "five":"smooya"
+                  }]
+         }, {
+           "team": "North",
+           "pos": "10",
+           "points": "201",
+           "players":[{
+                 "one": "cadiaN",
+                 "two": "aizy",
+                 "three": "Kjaebye",
+                 "four": "gade",
+                 "five":"valde"
+                 }]
+        }, {
+          "team": "fnatic",
+          "pos": "11",
+          "points": "175",
+          "players":[{
+                "one": "Xizt",
+                "two": "jW",
+                "three": "twist",
+                "four": "KRIMZ",
+                "five":"Brollan"
+                }]
+        }, {
+          "team": "LDLC",
+          "pos": "12",
+          "points": "152",
+          "players":[{
+                "one": "to1nou",
+                "two": "ALEX",
+                "three": "AmaNek",
+                "four": "devoduvek",
+                "five":"LOGAN"
+                }]
+        }, {
+          "team": "OpTic",
+          "pos": "13",
+          "points": "141",
+          "players":[{
+                "one": "Snappi",
+                "two": "cajunb",
+                "three": "JUGi",
+                "four": "K0nfig",
+                "five":"niko"
+                }]
+        }, {
+          "team": "HellRaisers",
+          "pos": "15",
+          "points": "124",
+          "players":[{
+                "one": "ANGE1",
+                "two": "Hobbit",
+                "three": "woxic",
+                "four": "DxadFoz",
+                "five":"ISSAA"
+                }]
+        }, {
+          "team": "compLexity",
+          "pos": "16",
+          "points": "121",
+          "players":[{
+                "one": "ShahZaM",
+                "two": "dephh",
+                "three": "stanislaw",
+                "four": "yay",
+                "five":"ANDROID"
+                }]
+        }, {
+          "team": "AVANGAR",
+          "pos": "17",
+          "points": "101",
+          "players":[{
+                "one": "fitch",
+                "two": "buster",
+                "three": "Krizzen",
+                "four": "qlkert",
+                "five":"Jame"
+                }]
+        }, {
+          "team": "Vega Squadron",
+          "pos": "18",
+          "points": "99",
+          "players":[{
+                "one": "tonyblack",
+                "two": "chopper",
+                "three": "jR",
+                "four": "hutji",
+                "five":"crush"
+                }]
+        }, {
+          "team": "Heroic",
+          "pos": "19",
+          "points": "93",
+          "players":[{
+                "one": "MODII",
+                "two": "friberg",
+                "three": "ACLLioN",
+                "four": "es3tag",
+                "five":"mertz"
+                }]
+        }, {
+          "team": "G2",
+          "pos": "20",
+          "points": "92",
+          "players":[{
+                "one": "shox",
+                "two": "Ex6TenZ",
+                "three": "KennyS",
+                "four": "SmithZz",
+                "five":"bodyy"
+                }]
+       }]
+}
