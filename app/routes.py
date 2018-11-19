@@ -103,7 +103,7 @@ def forum():
     ]
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
-    next_url = url_for('forum' page=posts.next_num) \
+    next_url = url_for('forum', page=posts.next_num) \
         if posts.has_next else None
     prev_url = url_for('forum', page=posts.prev_num) \
         if posts.has_prev else None
