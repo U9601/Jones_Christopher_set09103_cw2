@@ -161,6 +161,8 @@ table, th, td {
 
 .heightadjustment{
   margin-top: 300px;
+  margin-left: 50px;
+  width: 100px;
 }
 
 .matchinfo{
