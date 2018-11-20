@@ -346,9 +346,33 @@ def IsurusvsUruguay():
         login_user(user, remember=form.remember_me.data)
     return render_template('matchdetails.html', form=form, name = name)
 
+@app.route('/matchdetails/sproutvsldlc2', methods=['GET', 'POST'])
+def SproutvsLDLC2():
+    name = 'SproutvsLDLC2'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('matchdetails.html', form=form, name = name)
+
+@app.route('/matchdetails/wildvsisurus', methods=['GET', 'POST'])
+def WildvsIsurus():
+    name = 'WildvsIsurus'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('matchdetails.html', form=form, name = name)
+
 @app.route('/matchdetails/w7mfuria', methods=['GET', 'POST'])
 def W7MvsFuria():
-    name = 'W7W7MvsFuria'
+    name = 'W7MvsFuria'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
