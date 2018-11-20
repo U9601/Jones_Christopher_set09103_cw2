@@ -88,17 +88,17 @@
       <h3> Matches </h3>
       <h4> 20/11/2018</h4>
       {% for o in output20th %}
-      <a href="/matchdetails/havuvsrr">
       <div class="rectangle2">
       <p>
         {% if ((o["team"] == "HAVU" and o["team2"] == "Red Reserve"))  %}
+            <a href="/matchdetails/havuvsrr">
             <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HAVU.png")  }}> {{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/RR.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
             <hr>
       </div>
      </a>
-      <a href="/matchdetails/sproutvsldlc">
       <div class="rectangle2">
         {% elif ((o["team"] == "Sprout" and o["team2"] == "LDLC")) %}
+          <a href="/matchdetails/sproutvsldlc">
           <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/sprout.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/LDLC.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
