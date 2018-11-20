@@ -87,7 +87,7 @@
     <div class="column">
       <h3> Matches </h3>
       {% for o in output20th %}
-      <div class="rectangle">
+      <div class="rectangle2">
       <p>
         {% if ((o["team"] == "HAVU" and o["team2"] == "Red Reserve"))  %}
           <b>{{ o["time"] }}<b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
