@@ -250,6 +250,43 @@ def top20teams():
         output.append(x)
     return render_template('top20teams.html', form=form, output=output)
 
+@app.route('/matchdetails/havuvsrr', methods=['GET', 'POST'])
+def HAVUvsRR():
+    name = 'HAVUvsRR'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('matchdetails.html', form=form, name = name)
+
+@app.route('/matchdetails/sproutvsldlc', methods=['GET', 'POST'])
+def SproutVSLDLC():
+    name = 'sproutvsldlc'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('matchdetails.html', form=form, name = name)
+
+@app.route('/matchdetails/quescovsforze', methods=['GET', 'POST'])
+def quescovsforze():
+    name = 'quescovsforze'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('matchdetails.html', form=form, name = name)
+
+
 
 
 if __name__ == "__main__":
