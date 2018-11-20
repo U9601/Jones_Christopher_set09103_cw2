@@ -109,6 +109,7 @@ def logout():
     return redirect(url_for('news'))
 
 @app.route('/forum' , methods=['GET', 'POST'])
+@login_required
 def forum():
     name = ''
     postform = PostForm()
