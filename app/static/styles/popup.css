@@ -129,7 +129,7 @@ button:hover {
   width: 600px;
   background-color: white;
   border: black;
-  border-style: solid 2px;
+  border-style: 2px solid black;
   border-width: 1px;
   display: inline-block;
 }
