@@ -97,29 +97,16 @@
         <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
         <div class="centered"><b>TBA</b></div>
       </div>
-    {% if name == "HAVUvsRR" %}
-    <div class="rectangle3">
-      <center><b><h1>14:00</h1></b>
-      <h4>20th of November 2018</h4>
-      <h3>United Masters League</h3>      </center>
-      <h2 align=right>HAVU</h2>
-      <h2 align=left>Red Reserve</h2>
     </div>
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "SproutvsLDLC" %}
+    <div class="column">
+      {% if name == "HAVUvsRR" %}
+      <div class="rectangle3">
+        <center><b><h1>14:00</h1></b>
+        <h4>20th of November 2018</h4>
+        <h3>United Masters League</h3></center>
+        <h2 align=right>HAVU</h2>
+        <h2 align=left>Red Reserve</h2>
+      </div>
       <div class="twitchbox">
         <div id="twitch-embed"></div>
         <!-- Load the Twitch embed script -->
@@ -134,251 +121,266 @@
           });
         </script>
       </div>
-    {% elif name == "QuescovsforZe" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      {% elif name == "SproutvsLDLC" %}
+        <div class="twitchbox">
+          <div id="twitch-embed"></div>
+          <!-- Load the Twitch embed script -->
+          <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "plg"
-        });
-      </script>
-    </div>
-    {% elif name == "WindigoAvsSmoke" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+          <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+          <script type="text/javascript">
+            new Twitch.Embed("twitch-embed", {
+              width: 854,
+              height: 480,
+              channel: "um_league"
+            });
+          </script>
+        </div>
+      {% elif name == "QuescovsforZe" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "plg"
-        });
-      </script>
-    </div>
-    {% elif name == "FCDBvsWindigo" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "plg"
+          });
+        </script>
+      </div>
+      {% elif name == "WindigoAvsSmoke" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "uccacademy"
-        });
-      </script>
-    </div>
-    {% elif name == "3DMAXvsAlternate" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "plg"
+          });
+        </script>
+      </div>
+      {% elif name == "FCDBvsWindigo" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "gameagents"
-        });
-      </script>
-    </div>
-    {% elif name == "TrickedvsVexed" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "uccacademy"
+          });
+        </script>
+      </div>
+      {% elif name == "3DMAXvsAlternate" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "IsurusvsUruguay" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "gameagents"
+          });
+        </script>
+      </div>
+      {% elif name == "TrickedvsVexed" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "debionesports"
-        });
-      </script>
-    </div>
-    {% elif name == "SproutvsLDLC2" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+      {% elif name == "IsurusvsUruguay" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "WildvsIsurus" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "debionesports"
+          });
+        </script>
+      </div>
+      {% elif name == "SproutvsLDLC2" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "gamersclubcs"
-        });
-      </script>
-    </div>
-    {% elif name == "W7MvFURIA" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+      {% elif name == "WildvsIsurus" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "EURONICSvsTricked" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "gamersclubcs"
+          });
+        </script>
+      </div>
+      {% elif name == "W7MvFURIA" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "HAVUvsx6tence" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+      {% elif name == "EURONICSvsTricked" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "AstvsC9" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "VexedvsValiance" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+      {% elif name == "HAVUvsx6tence" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "MouzvsMIBR" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "NRGvsNIP" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "LiquidvsNorth" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ECSGroupAWinner" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ECSGroupBWinner" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ECSGroupAElim" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ExpertvsLDLC" %}
-    <div class="twitchbox">
-      <div id="twitch-embed"></div>
-      <!-- Load the Twitch embed script -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+      {% elif name == "AstvsC9" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "VexedvsValiance" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: 854,
-          height: 480,
-          channel: "um_league"
-        });
-      </script>
-    </div>
-    {% elif name == "ECSGroupBElim" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ECSGroupBDecider" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ECSSemiFinal#1" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ECSSemiFinal#2" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% elif name == "ECSGrandFinal" %}
-    <div class="twitchbox">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    {% endif %}
-  {% endblock %}
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+      {% elif name == "MouzvsMIBR" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "NRGvsNIP" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "LiquidvsNorth" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ECSGroupAWinner" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ECSGroupBWinner" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ECSGroupAElim" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ExpertvsLDLC" %}
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+      {% elif name == "ECSGroupBElim" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ECSGroupBDecider" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ECSSemiFinal#1" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ECSSemiFinal#2" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% elif name == "ECSGrandFinal" %}
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% endif %}
+    {% endblock %}
   </div>
     <div class="column">
     </div>
