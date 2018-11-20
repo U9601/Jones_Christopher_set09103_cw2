@@ -99,13 +99,13 @@
       </div>
     </div>
     <div class="column">
+      <div id="twitch-embed"></div>
     </div>
     <div class="column">
       {% if name == "HAVUvsRR" %}
       <h3> Watch></h3>
       <button><script src="https://embed.twitch.tv/embed/v1.js"></script>click</button>
       <!-- Add a placeholder for the Twitch embed -->
-      <div id="twitch-embed"></div>
 
       <!-- Load the Twitch embed script -->
 
@@ -116,6 +116,10 @@
           height: 480,
           channel: "um_league"
         });
+        embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
       </script>
       {% elif name == "SproutvsLDLC" %}
       {% elif name == "QuescovsforZe" %}
