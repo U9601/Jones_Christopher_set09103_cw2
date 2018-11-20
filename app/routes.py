@@ -19,7 +19,12 @@ matches = json.load(open("app/data/matches.json"))
 
 teamslist5 = top5teams["top5teams"]
 teamslist20 = top20teams["top20teams"]
-matchlist = matches["matches"]
+matchlist20th = matches["20-11-2018"]
+matchlist21st = matches["21-11-2018"]
+matchlist22nd = matches["22-11-2018"]
+matchlist23rd = matches["23-11-2018"]
+matchlist24th = matches["24-11-2018"]
+matchlist25th = matches["25-11-2018"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
@@ -64,10 +69,25 @@ def matches():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    output = []
-    for x in matchlist :
-        output.append(x)
-    return render_template('matches.html', form = form, name = name, output=output)
+    output20th = []
+    for x in matchlist20th:
+        output20th.append(x);
+    output21st = []
+    for x in matchlist21st:
+        output21st.append(x)
+    output22nd = []
+    for x in matchlist22nd:
+        output22nd.append(x)
+    output23st = []
+    for x in matchlist23rd:
+        output23rd.append(x)
+    output24th = []
+    for x in matchlist24th:
+        output24th.append(x)
+    output25th = []
+    for x in matchlist25th:
+        output25th.append(x)
+    return render_template('matches.html', form = form, name = name, output20t=output20th, output21st=output21st, output22nd=output22nd, output23rd=output23rd, output24th=output24th, output25th=output25th)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
