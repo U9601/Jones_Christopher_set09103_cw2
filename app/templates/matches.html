@@ -88,7 +88,7 @@
       <h3> Matches </h3>
       <h4> 20/11/2018</h4>
       {% for o in output20th %}
-      <div class="rectangle2">
+      <div class="rectangle2" onclick="/matchdetails/havuvsrr">
       <p>
         {% if ((o["team"] == "HAVU" and o["team2"] == "Red Reserve"))  %}
             <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HAVU.png")  }}> {{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/RR.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
