@@ -146,6 +146,11 @@ table, th, td {
     text-align: left;
     color: black;
 }
+.container2{
+  position: relative;
+  text-align: center;
+  color: white;
+}
 
 .centered {
     position: absolute;
