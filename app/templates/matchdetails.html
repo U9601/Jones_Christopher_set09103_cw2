@@ -98,9 +98,12 @@
         <tr>
           <td>
             <div class="mapinfo">
+              {% for o in output %}
+              {% if ((o["team"] == "HAVU" and o["team2"] == "Red Reserve"))  %}
               <h3> Maps </h3>
               <hr>
-              <h4> Best of 2</h4>
+              <h4> Best of {{o["bo"][loop.index2]}}</h4>
+              {% endif %}
               <div class="container2">
                 <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
                 <div class="centered"><b>TBA</b></div>
@@ -112,7 +115,7 @@
               </div>
             </div>
           </td>
-        <td style="margin-left:50px">
+        <td>
       <div class="twitchbox">
         <div id="twitch-embed"></div>
         <!-- Load the Twitch embed script -->
