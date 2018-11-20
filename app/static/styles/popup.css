@@ -135,7 +135,7 @@ button:hover {
   height: 100px;
   width: 800px;
   background-color: white;
-  display: inline-block;
+  border-style: solid black;
 }
 
 table, th, td {
