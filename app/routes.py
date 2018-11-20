@@ -87,7 +87,7 @@ def matches():
     output25th = []
     for x in matchlist25th:
         output25th.append(x)
-    return render_template('matches.html', form = form, name = name, output20t=output20th, output21st=output21st, output22nd=output22nd, output23rd=output23rd, output24th=output24th, output25th=output25th)
+    return render_template('matches.html', form = form, name = name, output20th=output20th, output21st=output21st, output22nd=output22nd, output23rd=output23rd, output24th=output24th, output25th=output25th)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
