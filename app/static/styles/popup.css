@@ -131,6 +131,13 @@ button:hover {
   display: inline-block;
 }
 
+.rectangle3 {
+  height: 100px;
+  width: 800px;
+  background-color: white;
+  display: inline-block;
+}
+
 table, th, td {
     border: 0px solid white;
 }

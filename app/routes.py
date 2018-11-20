@@ -260,7 +260,10 @@ def HAVUvsRR():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/sproutvsldlc', methods=['GET', 'POST'])
 def SproutVSLDLC():
@@ -272,7 +275,10 @@ def SproutVSLDLC():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/quescovsforze', methods=['GET', 'POST'])
 def QuescovsforZe():
@@ -284,7 +290,10 @@ def QuescovsforZe():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/windigoavssmoke', methods=['GET', 'POST'])
 def quescovsforze():
@@ -296,7 +305,10 @@ def quescovsforze():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/fcdbvswindigo', methods=['GET', 'POST'])
 def FCBDvsWindigo():
@@ -308,7 +320,10 @@ def FCBDvsWindigo():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/3dmaxvsalternate', methods=['GET', 'POST'])
 def threeDMAXvsAlternate():
@@ -320,7 +335,10 @@ def threeDMAXvsAlternate():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/trickedvsvexed', methods=['GET', 'POST'])
 def TrickedvsVexed():
@@ -332,7 +350,10 @@ def TrickedvsVexed():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/isurusvsuruguay', methods=['GET', 'POST'])
 def IsurusvsUruguay():
@@ -344,7 +365,10 @@ def IsurusvsUruguay():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/sproutvsldlc2', methods=['GET', 'POST'])
 def SproutvsLDLC2():
@@ -356,7 +380,10 @@ def SproutvsLDLC2():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/wildvsisurus', methods=['GET', 'POST'])
 def WildvsIsurus():
@@ -368,7 +395,10 @@ def WildvsIsurus():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist20th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/w7mvsfuria', methods=['GET', 'POST'])
 def W7MvsFuria():
@@ -380,7 +410,10 @@ def W7MvsFuria():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist21st:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/euronicsvstricked', methods=['GET', 'POST'])
 def EURONICSvsTricked():
@@ -392,7 +425,10 @@ def EURONICSvsTricked():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist21st:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/havuvsex6tence', methods=['GET', 'POST'])
 def HAVUvsx6tence():
@@ -404,7 +440,10 @@ def HAVUvsx6tence():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist21st:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/astvsc9', methods=['GET', 'POST'])
 def AstvsC9():
@@ -416,7 +455,10 @@ def AstvsC9():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist22nd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/vexedvsvaliance', methods=['GET', 'POST'])
 def VexedvsValiance():
@@ -428,7 +470,10 @@ def VexedvsValiance():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist22nd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/mouzvsmibr', methods=['GET', 'POST'])
 def MouzvsMIBR():
@@ -440,7 +485,10 @@ def MouzvsMIBR():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist22nd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/nrgvsnip', methods=['GET', 'POST'])
 def NRGvsNIP():
@@ -452,7 +500,10 @@ def NRGvsNIP():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist22nd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/liquidvsnorth', methods=['GET', 'POST'])
 def LiquidvsNorth():
@@ -464,7 +515,10 @@ def LiquidvsNorth():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist22nd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecsgroupawinner', methods=['GET', 'POST'])
 def ECSGroupAWinner():
@@ -476,7 +530,10 @@ def ECSGroupAWinner():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist22nd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecsgroupbwinner', methods=['GET', 'POST'])
 def ECSGroupBWinner():
@@ -488,7 +545,10 @@ def ECSGroupBWinner():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist23rd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecsgroupaelim', methods=['GET', 'POST'])
 def ECSGroupAElim():
@@ -500,7 +560,10 @@ def ECSGroupAElim():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist23rd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/expertvsldlc', methods=['GET', 'POST'])
 def ExpertvsLDLC():
@@ -512,7 +575,10 @@ def ExpertvsLDLC():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist23rd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecsgroupbelim', methods=['GET', 'POST'])
 def ECSGroupBElim():
@@ -524,7 +590,10 @@ def ECSGroupBElim():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist23rd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecsgroupbdecider', methods=['GET', 'POST'])
 def ECSGroupBDecider():
@@ -536,7 +605,10 @@ def ECSGroupBDecider():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist23rd:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecssemifinal1', methods=['GET', 'POST'])
 def ECSSemiFinal1():
@@ -548,7 +620,10 @@ def ECSSemiFinal1():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist24th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecssemifinal2', methods=['GET', 'POST'])
 def ECSSemiFinal2():
@@ -560,7 +635,10 @@ def ECSSemiFinal2():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist24th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/ecsgrandfinal', methods=['GET', 'POST'])
 def ECSGrandFinal():
@@ -572,7 +650,10 @@ def ECSGrandFinal():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matchdetails.html', form=form, name = name)
+    output = []
+    for x in matchlist25th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
 
 
 
