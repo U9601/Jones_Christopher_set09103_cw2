@@ -15,9 +15,11 @@ import sys
 
 top5teams = json.load(open("app/data/top5teams.json"))
 top20teams = json.load(open("app/data/top20teams.json"))
+matches = json.load(open("app/data/matches.json"))
 
 teamslist5 = top5teams["top5teams"]
 teamslist20 = top20teams["top20teams"]
+matchlist = matches["matches"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
@@ -62,7 +64,10 @@ def matches():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('matches.html', form = form, name = name)
+    output = []
+    for x in matchlist :
+        output.append(x)
+    return render_template('matches.html', form = form, name = name, output=output)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
