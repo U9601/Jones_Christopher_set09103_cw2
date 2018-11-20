@@ -78,7 +78,7 @@ def matches():
     output22nd = []
     for x in matchlist22nd:
         output22nd.append(x)
-    output23st = []
+    output23rd = []
     for x in matchlist23rd:
         output23rd.append(x)
     output24th = []
