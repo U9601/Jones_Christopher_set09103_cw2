@@ -83,6 +83,16 @@
         }
     }
 </script>
+      {% if name == "HAVUvsRR" %}
+      <div class="matchinfo">
+        <div class="rectangle3">
+          <center><b><h1>14:00</h1></b>
+          <h4>20th of November 2018</h4>
+          <h3>United Masters League</h3></center>
+          <h2 align=right>HAVU <h2 align=left>Red Reserve</h2>
+        </div>
+      </div>
+      <div class="mapinfo">
         <h3> Maps </h3>
         <hr>
         <h4> Best of 2</h4>
@@ -94,14 +104,6 @@
         <div class="container">
           <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
           <div class="centered"><b>TBA</b></div>
-        </div>
-      {% if name == "HAVUvsRR" %}
-      <div class="matchinfo">
-        <div class="rectangle3">
-          <center><b><h1>14:00</h1></b>
-          <h4>20th of November 2018</h4>
-          <h3>United Masters League</h3></center>
-          <h2 align=right>HAVU <h2 align=left>Red Reserve</h2>
         </div>
       </div>
       <div class="twitchbox">
@@ -118,6 +120,7 @@
           });
         </script>
       </div>
+
       {% elif name == "SproutvsLDLC" %}
         <div class="twitchbox">
           <div id="twitch-embed"></div>

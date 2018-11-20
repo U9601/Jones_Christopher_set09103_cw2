@@ -159,6 +159,10 @@ table, th, td {
   margin-top: 100px;
 }
 
+.mapsinfo{
+  width: 15%;
+}
+
 
 .matchinfo{
   margin-top: -10px;
