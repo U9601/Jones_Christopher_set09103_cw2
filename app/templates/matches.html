@@ -139,7 +139,7 @@
       <h3> {{output21st["date"]}} </h3>
       {% for o in output21st %}
         <div class="rectangle2">
-          {% elif ((o["team"] == "W7M" and o["team2"] == "FURIA inagame")) %}
+          {% if ((o["team"] == "W7M" and o["team2"] == "FURIA inagame")) %}
           <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
           <hr>
         </div>
@@ -158,7 +158,7 @@
     <h3> {{output22nd["date"]}} </h3>
     {% for o in output22nd %}
       <div class="rectangle2">
-        {% elif ((o["team"] == "W7M" and o["team2"] == "FURIA inagame")) %}
+        {% if ((o["team"] == "W7M" and o["team2"] == "FURIA inagame")) %}
         <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
         <hr>
       </div>
@@ -197,7 +197,7 @@
     <h3> {{output23rd["date"]}} </h3>
     {% for o in output23rd %}
       <div class="rectangle2">
-        {% elif ((o["team"] == "ECS S6 Finals - Group B" and o["team2"] == "tba")) %}
+        {% if ((o["team"] == "ECS S6 Finals - Group B" and o["team2"] == "tba")) %}
         <b>{{ o["time"] }}</b> <center>{{o["team"]}}</center> {{o["event"]}} {{ o["bo"] }}
         <hr>
       </div>
@@ -226,7 +226,7 @@
     <h3> {{output24th["date"]}} </h3>
     {% for o in output24th %}
       <div class="rectangle2">
-        {% elif ((o["team"] == "ECS S6 Finals - Semi-final #1" and o["team2"] == "tba")) %}
+        {% if ((o["team"] == "ECS S6 Finals - Semi-final #1" and o["team2"] == "tba")) %}
         <b>{{ o["time"] }}</b> <center>{{o["team"]}}</center> {{o["event"]}} {{ o["bo"] }}
         <hr>
       </div>
@@ -240,7 +240,7 @@
     <h3> {{output25th["date"]}} </h3>
     {% for o in output24th %}
       <div class="rectangle2">
-        {% elif ((o["team"] == "ECS S6 Finals - Grand final" and o["team2"] == "tba")) %}
+        {% if ((o["team"] == "ECS S6 Finals - Grand final" and o["team2"] == "tba")) %}
         <b>{{ o["time"] }}</b> <center>{{o["team"]}}</center> {{o["event"]}} {{ o["bo"] }}
         <hr>
       </div>
