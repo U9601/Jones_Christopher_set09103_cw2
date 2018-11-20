@@ -1,0 +1,170 @@
+{
+  "20-11-2018": [{
+        "team": "Havu",
+        "team2": "Red Reserve",
+        "time": "14:00",
+        "event": "United Masters League",
+        "bo": "bo2"
+      }, {
+        "team": "Sprout",
+        "team2": "LDLC",
+        "time": "16:00",
+        "event": "United Masters League",
+        "bo": "bo2"
+      }, {
+        "team": "Quesco",
+        "team2": "forZe",
+        "time": "16:00",
+        "event": "PLG Grand Slam 2018",
+        "bo": "bo3"
+      }, {
+        "team": "Windigo Academy",
+        "team2": "Smoke Criminals",
+        "time": "16:00",
+        "event": "PLG Grand Slam 2018",
+        "bo": "bo3"
+      }, {
+        "team": "FCDB",
+        "team2": "Windigo",
+        "time": "16:00",
+        "event": "WESG 2018 East Europe",
+        "bo": "bo3"
+      }, {
+        "team": "3DMAX",
+        "team2": "ALTERNATE aTTaX",
+        "time": "16:00",
+        "event": "NoxFire League",
+        "bo": "bo3"
+      }, {
+        "team": "Tricked",
+        "team2": "Vexed",
+        "time": "18:00",
+        "event": "United Masters League",
+        "bo": "bo2"
+      }, {
+        "team": "Isurus",
+        "team2": "Uruguay",
+        "time": "21:00",
+        "event": "WESG 2018 South America",
+        "bo": "bo3"
+     }, {
+         "team": "Sprout",
+         "team2": "LDLC",
+         "time": "16:00",
+         "event": "United Masters League",
+         "bo": "bo1"
+     }, {
+       "team": "Wild",
+       "team2": "Isurus",
+       "time": "23:50",
+       "event": "Alienware Liga Pro Gamers Club",
+       "bo": "bo1"
+  }],
+  "21-11-2018": [{
+        "team": "W7M",
+        "team2": "FURIA inagame",
+        "time": "01:00",
+        "event": "Alienware Liga Pro Gamers Club",
+        "bo": "tba"
+      }, {
+        "team": "EURONICS",
+        "team2": "Tricked",
+        "time": "14:00",
+        "event": "United Masters League",
+        "bo": "bo2"
+      }, {
+        "team": "HAVU",
+        "team2": "x6tence Galaxy",
+        "time": "18:00",
+        "event": "United Masters League",
+        "bo": "bo2"
+      }],
+      "22-11-2018": [{
+          "team": "Astralis",
+          "team2": "Cloud9",
+          "time": "15:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo1"
+        }, {
+          "team": "Vexed",
+          "team2": "Valiance",
+          "time": "16:00",
+          "event": "United Masters League",
+          "bo": "bo2"
+        }, {
+          "team": "mousesports",
+          "team2": "MIBR",
+          "time": "16:30",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo1"
+        }, {
+          "team": "NRG",
+          "team2": "NiP",
+          "time": "18:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo1"
+        }, {
+          "team": "Liquid",
+          "team2": "North",
+          "time": "19:30",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo1"
+        }, {
+          "team": "ECS S6 Finals - Group A Winners Match",
+          "team2": "tba",
+          "time": "21:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo3"
+      }],
+      "23-11-2018":[{
+          "team": "ECS S6 Finals - Group B Winners Match",
+          "team2": "tba",
+          "time": "00:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo3"
+        }, {
+          "team": "ECS S6 Finals - Group A Elimination Match",
+          "team2": "tba",
+          "time": "15:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo3"
+        }, {
+          "team": "expert",
+          "team2": "LDLC",
+          "time": "16:00",
+          "event": "United Masters League",
+          "bo": "bo2"
+        }, {
+          "team": "ECS S6 Finals - Group B Elimination Match",
+          "team2": "tba",
+          "time": "18:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo3"
+        }, {
+          "team": "ECS S6 Finals - Group B Decider Match",
+          "team2": "tba",
+          "time": "23:30",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo3"
+      }],
+      "24-11-2018": [{
+          "team": "ECS S6 Finals - Semi-final #1",
+          "team2": "tba",
+          "time": "18:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo3"
+        }, {
+          "team": "ECS S6 Finals - Semi-final #2",
+          "team2": "tba",
+          "time": "21:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo3"
+      }],
+      "25-11-2018": [{
+          "team": "ECS S6 Finals - Grand final",
+          "team2": "tba",
+          "time": "21:00",
+          "event": "ECS Season 6 Finals",
+          "bo": "bo2"
+        }]
+}
