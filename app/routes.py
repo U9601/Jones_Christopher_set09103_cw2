@@ -370,7 +370,7 @@ def WildvsIsurus():
         login_user(user, remember=form.remember_me.data)
     return render_template('matchdetails.html', form=form, name = name)
 
-@app.route('/matchdetails/w7mfuria', methods=['GET', 'POST'])
+@app.route('/matchdetails/w7mvsfuria', methods=['GET', 'POST'])
 def W7MvsFuria():
     name = 'W7MvsFuria'
     form = LoginForm()
