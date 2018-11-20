@@ -96,42 +96,42 @@
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "Sprout" and o["team2"] == "LDLC")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/sprout.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/LDLC.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "Quesco" and o["team2"] == "forZe")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/hltvquestion.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/forze.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
-        {% elif ((o["team"] == "Windigo" and o["team2"] == "Academy")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+        {% elif ((o["team"] == "Windigo Academy" and o["team2"] == "Smoke Criminals")) %}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/windigo.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/hltvquestion.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "FCDB" and o["team2"] == "Windigo")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fcdb.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/windigo.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "3DMAX" and o["team2"] == "ALTERNATE aTTaX")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/windigo.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/alternate.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "Tricked" and o["team2"] == "Vexed")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/tricked.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/vexed.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "Isurus" and o["team2"] == "Uruguay")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/isurus.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/hltvquestion.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "Wild" and o["team2"] == "Isurus")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/wild.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/isurus.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
         {% endif %}
@@ -140,17 +140,17 @@
       {% for o in output21st %}
         <div class="rectangle2">
           {% if ((o["team"] == "W7M" and o["team2"] == "FURIA inagame")) %}
-            <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+            <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/w7m.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/furiaingame.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
             <hr>
         </div>
         <div class="rectangle2">
           {% elif ((o["team"] == "EURONICS" and o["team2"] == "Tricked")) %}
-            <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+            <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/euronics.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/tricked.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
             <hr>
         </div>
         <div class="rectangle2">
           {% elif ((o["team"] == "HAVU" and o["team2"] == "x6tence Galaxy")) %}
-            <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+            <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HAVU.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/x6galaxy.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
             <hr>
         </div>
           {% endif %}
@@ -158,33 +158,28 @@
     <h4> 22/11/2018</h4>
     {% for o in output22nd %}
       <div class="rectangle2">
-        {% if ((o["team"] == "W7M" and o["team2"] == "FURIA inagame")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
-          <hr>
-      </div>
-      <div class="rectangle2">
         {% elif ((o["team"] == "Astralis" and o["team2"] == "Cloud9")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "Vexed" and o["team2"] == "Valiance")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/vexed.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/valiance.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "mousesports" and o["team2"] == "MIBR")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/mibr.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "NRG" and o["team2"] == "NiP")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/nrg.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/nip.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "Liquid" and o["team2"] == "North")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/liquid.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="north/isurus.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
@@ -208,7 +203,7 @@
       </div>
       <div class="rectangle2">
         {% elif ((o["team"] == "expert" and o["team2"] == "LDLC")) %}
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+          <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/expert.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/LDLC.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       <div class="rectangle2">
