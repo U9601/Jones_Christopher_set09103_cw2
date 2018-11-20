@@ -146,3 +146,8 @@ table, th, td {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.banter{
+  margin-left: 300px;
+  margin-top: 300px;
+}
