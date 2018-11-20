@@ -104,7 +104,7 @@
     <div class="column">
       {% if name == "HAVUvsRR" %}
       <h3> Watch></h3>
-      <button><script src="https://embed.twitch.tv/embed/v1.js"></script>click</button>
+      <button onclick="player.play()">click</button>
       <!-- Add a placeholder for the Twitch embed -->
 
       <!-- Load the Twitch embed script -->
@@ -118,7 +118,7 @@
         });
         embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
         var player = embed.getPlayer();
-        player.play();
+        player.pause();
       });
       </script>
       {% elif name == "SproutvsLDLC" %}
