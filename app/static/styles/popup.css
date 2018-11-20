@@ -135,6 +135,7 @@ button:hover {
   height: 100px;
   width: 800px;
   background-color: white;
+  display: inline-block;
 }
 
 table, th, td {
@@ -159,5 +160,5 @@ table, th, td {
 }
 
 .heightadjustment{
-  margin-top: 250px;
+  margin-top: 500px;
 }
