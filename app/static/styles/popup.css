@@ -136,7 +136,6 @@ button:hover {
   width: 800px;
   background-color: white;
   display: inline-block;
-  margin-right: 300px;
 }
 
 table, th, td {
@@ -162,4 +161,7 @@ table, th, td {
 
 .heightadjustment{
   margin-top: 300px;
+}
+.matchinfo{
+  margin-right: 300px;
 }
