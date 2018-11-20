@@ -183,7 +183,7 @@
       <div class="rectangle2">
         {% if ((o["team"] == "Astralis" and o["team2"] == "Cloud9")) %}
           <a href="/matchdetails/astvsc9" style="text-decoration:none">
-          <b>{{ o["time"] }}</b> {{o["team"]}} vs {{o["team2"]}} <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>{{o["event"]}} {{ o["bo"] }}
+            <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/c9.jpg")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
       </a>
