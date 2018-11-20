@@ -1,32 +1,34 @@
 <html>
+
 <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon"  href="{{ url_for('static',filename='pictures/favicon.ico') }}"/>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
-    <link rel= "stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/popup.css') }}">
-    <title> HLTV - News</title>
-    <div class="topnav">
-      <a class="active" href="/">News</a>
-      <a href="/matches">Matches</a>
-      <a href="/results">Results</a>
-      <a href="/top20teams">Top 20 Teams</a>
-      <a href="/forum">Forum</a>
-      <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
-      {% block content %}
-      {% if user == current_user.username %}
-      {% else %}
-      <a href ="{{ url_for('dashboard') }}">dashboard</a>
-      <a href="{{ url_for('logout') }}">Logout</a>
-      {% endif %}
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input class="different2" type="text" placeholder="Search.." name="search">
-          <button class="different" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="{{ url_for('static',filename='pictures/favicon.ico') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/popup.css') }}">
+  <title> HLTV - News</title>
+  <div class="topnav">
+    <a class="active" href="/">News</a>
+    <a href="/matches">Matches</a>
+    <a href="/results">Results</a>
+    <a href="/top20teams">Top 20 Teams</a>
+    <a href="/forum">Forum</a>
+    <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+    {% block content %}
+    {% if user == current_user.username %}
+    {% else %}
+    <a href="{{ url_for('dashboard') }}">dashboard</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    {% endif %}
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input class="different2" type="text" placeholder="Search.." name="search">
+        <button class="different" type="submit"><i class="fa fa-search"></i></button>
+      </form>
     </div>
+  </div>
 </head>
+
 <body>
   <h1 style="text-align:center; font-size:50px; color:#fff">Modal Popup Box Login Form</h1>
 
@@ -41,67 +43,68 @@
       <div class="button">
         <div class="container">
           <p>
-              {{ form.username.label }}<br>
-              {{ form.username(size=32) }}<br>
-              {% for error in form.username.errors %}
-              <span style="color: red;">[{{ error }}]</span>
-              {% endfor %}
-            </p>
-            <p>
-                {{ form.password.label }}<br>
-                {{ form.password(size=32) }}<br>
-                {% for error in form.password.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-                {% endfor %}
-            </p>
-            <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-            <button>{{ form.submit() }}</button>
-        </form>
-        <form method="GET" action="/register">
-          <button>Register</button>
-        </form>
-          <input type="checkbox" style="margin:26px 30px;"> Remember me
-          <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
-        </div>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+          <button>{{ form.submit() }}</button>
+    </form>
+    <form method="GET" action="/register">
+      <button>Register</button>
+    </form>
+    <input type="checkbox" style="margin:26px 30px;"> Remember me
+    <a href="#" style="text-decoration:none; float:right; margin-right:34px; margin-top:26px;">Forgot Password ?</a>
+  </div>
 
-    </div>
+  </div>
 
 
   </div>
   <script>
-  // If user clicks anywhere outside of the modal, Modal will close
+    // If user clicks anywhere outside of the modal, Modal will close
 
-  var modal = document.getElementById('modal-wrapper');
-  window.onclick = function(event) {
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
       if (event.target == modal) {
-          modal.style.display = "none";
+        modal.style.display = "none";
       }
-  }
+    }
   </script>
 
-    <h1> Hi, {{ current_user.username }}!</h1>
-    <form action "" method="post">
-        {{ postform.hidden_tag() }}
-        <p>
-          {{ postform.post.label }}<br>
-          {{ postform.post(col=32, rows=4) }}<br>
-          {% for error in postform.post.erros %}
-          <span style="color:red;">[{{ error }}]</span>
-          {% endfor %}
-        </p>
-        <p> {{postform.submit() }}</p>
-      </form>
-      {% for post in posts %}
-      <p>
-        {% include '_posts.html' %}
-      </p>
+  <h1> Hi, {{ current_user.username }}!</h1>
+  <form action "" method="post">
+    {{ postform.hidden_tag() }}
+    <p>
+      {{ postform.post.label }}<br>
+      {{ postform.post(col=32, rows=4) }}<br>
+      {% for error in postform.post.erros %}
+      <span style="color:red;">[{{ error }}]</span>
       {% endfor %}
-      {% if prev_url %}
-      <a href ="{{ prev_url }}"> Newer posts </a>
-      {% endif %}
-      {% if next_url %}
-      <a href="{{ next_url }}"> Older posts </a>
-      {% endif %}
+    </p>
+    <p> {{postform.submit() }}</p>
+  </form>
+  {% for post in posts %}
+  <p>
+    {% include '_posts.html' %}
+  </p>
+  {% endfor %}
+  {% if prev_url %}
+  <a href="{{ prev_url }}"> Newer posts </a>
+  {% endif %}
+  {% if next_url %}
+  <a href="{{ next_url }}"> Older posts </a>
+  {% endif %}
   {% endblock %}
 </body>
+
 </html>
