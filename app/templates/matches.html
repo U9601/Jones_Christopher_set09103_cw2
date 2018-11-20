@@ -91,14 +91,14 @@
       <div class="rectangle2">
       <p>
         {% if ((o["team"] == "HAVU" and o["team2"] == "Red Reserve"))  %}
-            <a href="/matchdetails/havuvsrr">
+            <a href="/matchdetails/havuvsrr" style="text-decoration:none">
             <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HAVU.png")  }}> {{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/RR.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
             <hr>
       </div>
      </a>
       <div class="rectangle2">
         {% elif ((o["team"] == "Sprout" and o["team2"] == "LDLC")) %}
-          <a href="/matchdetails/sproutvsldlc">
+          <a href="/matchdetails/sproutvsldlc" style="text-decoration:none">
           <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/sprout.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/LDLC.png")  }}> {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
           <hr>
       </div>
