@@ -153,6 +153,27 @@
           {% endfor %}
         </p>
       </div>
+      <div class="top5teams">
+        {% for p in players %}
+        <p>
+          {% if p["player"] == "Mareclo 'coldzera' David" %}
+          rating: {{ p["rating"]}}
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {% elif p["player"] == "Nikola 'Niko' Kovač" %}
+          rating: {{ p["rating"]}}
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
+          {% elif p["team"] == "Fernando 'fer' Alvarenga" %}
+          rating: {{ p["rating"]}}
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
+          {% elif p["team"] == "Håvard 'rain' Nygaard" %}
+          rating: {{ p["rating"]}}
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
+          {% elif p["team"] == "Nicolai 'device' Reedtz" %}
+          rating: {{ p["rating"]}}
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+          {% endif %}
+          {% endfor %}
+        </p>
     </div>
     <center>
       <div class="column">

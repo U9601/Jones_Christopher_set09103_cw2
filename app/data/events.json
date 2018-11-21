@@ -1,0 +1,18 @@
+{
+  "events": [{
+          "event": "TOYOTA Master",
+          "days": "1"
+        }, {
+          "event": "ECS S6 Finals",
+          "days": "2"
+        }, {
+          "event": "SuperNova Malta",
+          "days": "8"
+        }, {
+          "event": "DH Winter 2018",
+          "days": "9"
+        }, {
+          "event": "EPL S8 Finals",
+          "days": "13"
+    }]
+}
