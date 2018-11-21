@@ -20,7 +20,7 @@ top5players = json.load(open("app/data/top5players.json"))
 
 teamslist5 = top5teams["top5teams"]
 teamslist20 = top20teams["top20teams"]
-playerslist = top5player["top5players"]
+playerslist = top5players["top5players"]
 matchlist20th = matches["20-11-2018"]
 matchlist21st = matches["21-11-2018"]
 matchlist22nd = matches["22-11-2018"]
