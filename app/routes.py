@@ -17,10 +17,12 @@ top5teams = json.load(open("app/data/top5teams.json"))
 top20teams = json.load(open("app/data/top20teams.json"))
 matches = json.load(open("app/data/matches.json"))
 top5players = json.load(open("app/data/top5players.json"))
+events = json.load(open("app/data/events.json"))
 
 teamslist5 = top5teams["top5teams"]
 teamslist20 = top20teams["top20teams"]
 playerslist = top5players["top5players"]
+eventslist = events["events"]
 matchlist20th = matches["20-11-2018"]
 matchlist21st = matches["21-11-2018"]
 matchlist22nd = matches["22-11-2018"]
@@ -58,11 +60,14 @@ def news():
         login_user(user, remember=form.remember_me.data)
     output = []
     players = []
+    listofevents = []
     for x in teamslist5:
         output.append(x)
     for x in playerslist:
         players.append(x)
-    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output, players=players)
+    for x in eventslist:
+        listofevents.append(x)
+    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output, players=players, listofevents=listofevents)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
