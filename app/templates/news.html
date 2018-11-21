@@ -178,7 +178,7 @@
       <div class="top5teams">
         {% for e in listofevents %}
         <p>
-          {% if p["event"] == "TOYOTA Master" %}
+          {% if e["event"] == "TOYOTA Master" %}
           {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
           Days to go: {{ e["days"] }}
           {% elif e["event"] == "Nikola 'Niko' Kovač" %}
