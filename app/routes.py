@@ -16,7 +16,7 @@ import sys
 top5teams = json.load(open("app/data/top5teams.json"))
 top20teams = json.load(open("app/data/top20teams.json"))
 matches = json.load(open("app/data/matches.json"))
-top5players = json.load(open("app/data/top5players.json"))))
+top5players = json.load(open("app/data/top5players.json"))
 
 teamslist5 = top5teams["top5teams"]
 teamslist20 = top20teams["top20teams"]
