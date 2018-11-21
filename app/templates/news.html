@@ -158,20 +158,20 @@
         {% for p in players %}
         <p>
           {% if p["player"] == "Mareclo 'coldzera' David" %}
-          rating: {{ p["rating"]}}
           {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          rating: {{ p["rating"]}}
           {% elif p["player"] == "Nikola 'Niko' Kovač" %}
-          rating: {{ p["rating"]}}
           {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
+          rating: {{ p["rating"]}}
           {% elif p["team"] == "Fernando 'fer' Alvarenga" %}
-          rating: {{ p["rating"]}}
           {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
+          rating: {{ p["rating"]}}
           {% elif p["team"] == "Håvard 'rain' Nygaard" %}
-          rating: {{ p["rating"]}}
           {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
-          {% elif p["team"] == "Nicolai 'device' Reedtz" %}
           rating: {{ p["rating"]}}
+          {% elif p["team"] == "Nicolai 'device' Reedtz" %}
           {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+          rating: {{ p["rating"]}}
           {% endif %}
         {% endfor %}
         </p>
@@ -183,16 +183,16 @@
           {% if e["event"] == "TOYOTA Master" %}
           {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
           Days to go: {{ e["days"] }}
-          {% elif e["event"] == "Nikola 'Niko' Kovač" %}
+          {% elif e["event"] == "ECS S6 Finals" %}
           {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
           Days to go: {{ e["days"] }}
-          {% elif e["event"] == "Fernando 'fer' Alvarenga" %}
+          {% elif e["event"] == "SuperNova Malta" %}
           {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
           Days to go: {{ e["days"] }}
-          {% elif e["event"] == "Håvard 'rain' Nygaard" %}
+          {% elif e["event"] == "DH Winter 2018" %}
           {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
           Days to go: {{ e["days"] }}
-          {% elif e["event"] == "Nicolai 'device' Reedtz" %}
+          {% elif e["event"] == "EPL S8 Finals" %}
           {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
           Days to go: {{ e["days"] }}
           {% endif %}
