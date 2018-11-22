@@ -13,13 +13,13 @@
         says: <br> {{post.body }}
       </td>
       <p>
-        {{ commentsform.comment.label }}<br>
-        {{ commentsform.comment(col=32, rows=4) }}<br>
+        {{ commentform.comment.label }}<br>
+        {{ commentform.comment(col=32, rows=4) }}<br>
         {% for error in commentsform.comment.errors %}
         <span style="color:red;">[{{ error }}]</span>
         {% endfor %}
       </p>
-      {{ commentsform.submit() }}
+      {{ commentform.submit() }}
       comments: {{comments.body}}
     </tr>
   </table>

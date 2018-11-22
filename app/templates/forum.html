@@ -84,7 +84,7 @@
   <h1> Hi, {{ current_user.username }}!</h1>
   <form action "" method="post">
     {{ postform.hidden_tag() }}
-    {{ commentsform.hidden_tag() }}
+    {{ commentform.hidden_tag() }}
     <p>
       {{ postform.post.label }}<br>
       {{ postform.post(col=32, rows=4) }}<br>
