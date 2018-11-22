@@ -687,6 +687,455 @@ def ECSGrandFinal():
         output.append(x)
     return render_template('matchdetails.html', form=form, name = name, output=output)
 
+@app.route('/resultsdetails/dentonavscoolkids', methods=['GET', 'POST'])
+def DentonavscOOLkids():
+    name = 'dentonavscoolkids'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/yeahvsnoorg', methods=['GET', 'POST'])
+def YeahvsNOORG():
+    name = 'yeahvsnoorg'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/ldlcvs3dmax', methods=['GET', 'POST'])
+def LDLCvs3DMAX():
+    name = 'ldlcvs3dmax'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/windigoavsnemiga', methods=['GET', 'POST'])
+def WindigovsNemiga():
+    name = 'windigoavsnemiga'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/windigovsvaliance', methods=['GET', 'POST'])
+def WindigovsValiance():
+    name = 'windigovsvaliance'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/mvppkvsgosu', methods=['GET', 'POST'])
+def MVPPKvsGOSU():
+    name = 'mvppkvsgosu'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/renegadesvstaintedminds', methods=['GET', 'POST'])
+def RenegadesvsTaintedMinds():
+    name = 'renegadesvstaintedminds'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/ordervstaintedminds', methods=['GET', 'POST'])
+def OrdervsTaintedMinds():
+    name = 'ordervstaintedminds'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/renegadesvsgrayhound', methods=['GET', 'POST'])
+def RenegadesvsGrayhound():
+    name = 'renegadesvsgrayhound'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/luminosityvsvitality', methods=['GET', 'POST'])
+def LuminosityvsVitality():
+    name = 'luminosityvsvitality'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist19th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/complexityvsvitality', methods=['GET', 'POST'])
+def compLexityvsVitality():
+    name = 'complexityvsvitality'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist18th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/imperialvswild', methods=['GET', 'POST'])
+def ImperialvsWild():
+    name = 'imperialvswild'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist18th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/gambitvspugstar5', methods=['GET', 'POST'])
+def GambitvsPUGSTAR5():
+    name = 'yeahvsnoorg'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist18th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/forzevspro100', methods=['GET', 'POST'])
+def forZevsPro100():
+    name = 'yeahvsnoorg'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist18th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/taintedmindsvslegacy', methods=['GET', 'POST'])
+def TaintedMindsvsLegacy():
+    name = 'taintedmindsvslegacy'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist18th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/renegadesvsbreakaway', methods=['GET', 'POST'])
+def RenegadesvsBreakaway():
+    name = 'renegadesvsbreakaway'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist18th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/yeahvsnoorg', methods=['GET', 'POST'])
+def YeahvsNOORG():
+    name = 'yeahvsnoorg'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist18th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/roguevsvitality', methods=['GET', 'POST'])
+def RoguevsVitaltiy():
+    name = 'roguevsvitality'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist17th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/euronicsvstricked', methods=['GET', 'POST'])
+def EURONICSvsTricked():
+    name = 'euronicsvstricked'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist17th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/euronicsvstricked', methods=['GET', 'POST'])
+def EURONICSvsTricked():
+    name = 'euronicsvstricked'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist17th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/eunitedvsluminosity', methods=['GET', 'POST'])
+def eUnitedvsLuminosity():
+    name = 'eunitedvsluminosity'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist17th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/fragstersvsrogue', methods=['GET', 'POST'])
+def FragstersvsRogue():
+    name = 'fragstersvsrogue'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist16th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/ghostvsvitality', methods=['GET', 'POST'])
+def GhostvsVitality():
+    name = 'ghostvsvitality'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist16th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/complexityvsenvyus', methods=['GET', 'POST'])
+def compLexityvsEnvyUs():
+    name = 'complexityvsenvyus'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist16th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/agovskinguin', methods=['GET', 'POST'])
+def AGOvsKinguin():
+    name = 'agovskinguin'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist16th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/ordervsavant', methods=['GET', 'POST'])
+def OrdervsAvant():
+    name = 'ordervsavant'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist16th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/epsilionvskinguin', methods=['GET', 'POST'])
+def EpsilonvsKinguin():
+    name = 'epsilionvskinguin'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist15th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+@app.route('/resultsdetails/trickedvsnexus', methods=['GET', 'POST'])
+def TrickedvsNexus():
+    name = 'trickedvsnexus'
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
+    output = []
+    for x in resultslist15th:
+        output.append(x)
+    return render_template('matchdetails.html', form=form, name = name, output=output)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":
