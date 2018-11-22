@@ -33,7 +33,7 @@ class User(UserMixin, db.Model):
         return jwt.encode(
             {'reset_password': self.id, 'exp': time() + expires_in},
             app.config['SECRET_KEY'], algorithm='HS256').decode('utf-8')
-            
+
     @staticmethod
     def verify_reset_password_token(token):
         try:
@@ -49,6 +49,7 @@ class Post(db.Model):
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    comments = db.relationship('Comment', backref='author', lazy='dynamic')
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
@@ -59,6 +60,13 @@ class News(db.Model):
     title = db.Column(db.String(100))
     body = db.Column(db.String(10000))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+
+class Comment(db.model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), index=True)
+    body = db.Column(db.String(10000))
+    timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
+    post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
 
 @login.user_loader
 def load_user(id):

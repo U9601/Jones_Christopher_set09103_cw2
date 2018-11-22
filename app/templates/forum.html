@@ -84,6 +84,7 @@
   <h1> Hi, {{ current_user.username }}!</h1>
   <form action "" method="post">
     {{ postform.hidden_tag() }}
+    {{ commentsform.hidden_tag() }}
     <p>
       {{ postform.post.label }}<br>
       {{ postform.post(col=32, rows=4) }}<br>
@@ -94,9 +95,11 @@
     <p> {{postform.submit() }}</p>
   </form>
   {% for post in posts %}
-  <p>
-    {% include '_posts.html' %}
-  </p>
+    {% for c in comments %}
+    <p>
+      {% include '_posts.html' %}
+    </p>
+  {% endfor %}
   {% endfor %}
   {% if prev_url %}
   <a href="{{ prev_url }}"> Newer posts </a>

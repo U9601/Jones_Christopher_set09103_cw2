@@ -1,7 +1,7 @@
 from __future__ import print_function
 from flask import *
 from flask_login import current_user, login_user, login_required, logout_user
-from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm
+from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm, CommentForm
 from app.models import User, Post, News
 from app.email import send_password_reset_email
 from app import app, db
@@ -129,6 +129,7 @@ def logout():
 def forum():
     name = ''
     postform = PostForm()
+    commentform = CommentForm()
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -142,23 +143,18 @@ def forum():
         db.session.commit()
         flash('Your post is now live!')
         return redirect(url_for('forum'))
-    posts = [
-        {
-            'author': {'username': 'U9601'},
-            'body': 'Beautiful day in Scotland!'
-        },
-        {
-            'author': {'username': 'banter'},
-            'body': 'heheh'
-        }
-    ]
+    if commentform.validate_on_submit():
+        comment = Comment(body=comment.post.data, author=current_user)
+        db.session.add(comment)
+        db.session.commit()
     page = request.args.get('page', 1, type=int)
+    comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.timestamp.desc())
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('forum', page=posts.next_num) \
         if posts.has_next else None
     prev_url = url_for('forum', page=posts.prev_num) \
         if posts.has_prev else None
-    return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items)
+    return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items, comments=comments, commentsform=commentsform)
 
 @app.route('/results' , methods=['GET', 'POST'])
 def results():
