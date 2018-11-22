@@ -173,3 +173,11 @@ table, th, td {
 .matchinfo{
   margin-left: 150px;
 }
+
+.top5players{
+  width: 200px;
+  height: 300px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 10px 10px 5px grey;
+}
