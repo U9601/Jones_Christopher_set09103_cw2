@@ -31,10 +31,10 @@ matchlist23rd = matches["23-11-2018"]
 matchlist24th = matches["24-11-2018"]
 matchlist25th = matches["25-11-2018"]
 resultslist19th = results["19-11-2018"]
-resultslist18th = results["19-11-2018"]
-resultslist17th = results["19-11-2018"]
-resultslist16th = results["19-11-2018"]
-resultslist15th = results["19-11-2018"]
+resultslist18th = results["18-11-2018"]
+resultslist17th = results["17-11-2018"]
+resultslist16th = results["16-11-2018"]
+resultslist15th = results["15-11-2018"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
