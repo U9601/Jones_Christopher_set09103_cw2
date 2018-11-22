@@ -144,7 +144,7 @@ def forum():
         flash('Your post is now live!')
         return redirect(url_for('forum'))
     if commentform.validate_on_submit():
-        comment = Comment(body=comment.post.data, author=current_user)
+        comment = Comment(body=comment.comment.data, author=current_user)
         db.session.add(comment)
         db.session.commit()
     page = request.args.get('page', 1, type=int)
