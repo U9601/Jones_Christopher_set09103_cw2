@@ -869,7 +869,7 @@ def ImperialvsWild():
 
 @app.route('/resultsdetails/gambitvspugstar5', methods=['GET', 'POST'])
 def GambitvsPUGSTAR5():
-    name = 'yeahvsnoorg'
+    name = 'gambitvspugstar5'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -915,21 +915,6 @@ def TaintedMindsvsLegacy():
 @app.route('/resultsdetails/renegadesvsbreakaway', methods=['GET', 'POST'])
 def RenegadesvsBreakaway():
     name = 'renegadesvsbreakaway'
-    form = LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
-        if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password')
-            return redirect(url_for('login'))
-        login_user(user, remember=form.remember_me.data)
-    output = []
-    for x in resultslist18th:
-        output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
-
-@app.route('/resultsdetails/yeahvsnoorg', methods=['GET', 'POST'])
-def YeahvsNOORG():
-    name = 'yeahvsnoorg'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
