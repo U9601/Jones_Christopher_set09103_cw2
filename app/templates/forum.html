@@ -94,21 +94,22 @@
     <p> {{postform.submit() }}</p>
   </form>
   {% for post in posts %}
-    {% for comment in comments %}
     <p>
       {% include '_posts.html' %}
     </p>
     <form action "" method="post">
     {{ commentform.hidden_tag() }}
     <p>
-      {{ commentform.body.label }}<br>
-      {{ commentform.body(col=32, rows=4) }}<br>
-      {% for error in commentform.body.errors %}
+      {{ commentform.comment.label }}<br>
+      {{ commentform.comment(col=32, rows=4) }}<br>
+      {% for error in commentform.comment.errors %}
       <span style="color:red;">[{{ error }}]</span>
       {% endfor %}
     </p>
     {{ commentform.submit() }}
   </form>
+  {% for comment in comments %}
+    comments:<br> {{comment.body}}
   {% endfor %}
   {% endfor %}
   {% if prev_url %}
