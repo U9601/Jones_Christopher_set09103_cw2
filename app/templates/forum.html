@@ -88,7 +88,7 @@
     <p>
       {{ postform.post.label }}<br>
       {{ postform.post(col=32, rows=4) }}<br>
-      {% for error in postform.post.erros %}
+      {% for error in postform.post.errors %}
       <span style="color:red;">[{{ error }}]</span>
       {% endfor %}
     </p>
