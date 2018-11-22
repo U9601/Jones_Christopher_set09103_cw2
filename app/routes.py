@@ -170,21 +170,21 @@ def results():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-        output19th = []
-        for x in resultslist19th:
-            output19th.append(x)
-        output18th = []
-        for x in resultslist18th:
-            output18th.append(x)
-        output17th = []
-        for x in resultslist17th:
-            output17th.append(x)
-        output16th = []
-        for x in resultslist16th:
-            output16th.append(x)
-        output15th = []
-        for x in resultslist15th:
-            output15th.append(x)
+    output19th = []
+    for x in resultslist19th:
+        output19th.append(x)
+    output18th = []
+    for x in resultslist18th:
+        output18th.append(x)
+    output17th = []
+    for x in resultslist17th:
+        output17th.append(x)
+    output16th = []
+    for x in resultslist16th:
+        output16th.append(x)
+    output15th = []
+    for x in resultslist15th:
+        output15th.append(x)
     return render_template('results.html', form = form, name = name, output19th = output19th, output18th = output18, output17th = output17th, output16th = output16th, output15th = output15th)
 
 @app.route('/dashboard', methods=['GET', 'POST'])
