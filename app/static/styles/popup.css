@@ -83,7 +83,7 @@ button:hover {
 
 .top5teams {
  width: 200px;
- height: 200px;
+ height: 210px;
  padding: 15px;
  background-color: white;
  box-shadow: 10px 10px 5px grey;
@@ -176,7 +176,7 @@ table, th, td {
 
 .top5players{
   width: 200px;
-  height: 300px;
+  height: 400px;
   padding: 15px;
   background-color: white;
   box-shadow: 10px 10px 5px grey;
