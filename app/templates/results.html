@@ -94,7 +94,7 @@
         <p>
           {% if ((o["team"] == "DETONA" and o["team2"] == "cOOLkids")) %}
           <a href="/resultsdetails/dentonavscoolkids" style="text-decoration:none">
-            <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HAVU.png")  }}> {{o["team"]}} <font color="green">{{o["score1"]}}</font> - <font color="red">{{o["score2"]}} < <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/RR.png")  }}>
+            <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HAVU.png")  }}> {{o["team"]}} <font color="green">{{o["score1"]}}</font> - <font color="red">{{o["score2"]}} </font> <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/RR.png")  }}>
             {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
             <hr>
       </div>
