@@ -15,7 +15,7 @@
       <p>
         {{ commentform.comment.label }}<br>
         {{ commentform.comment(col=32, rows=4) }}<br>
-        {% for error in commentsform.comment.errors %}
+        {% for error in commentform.comment.errors %}
         <span style="color:red;">[{{ error }}]</span>
         {% endfor %}
       </p>
