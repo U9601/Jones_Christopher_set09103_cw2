@@ -700,7 +700,7 @@ def DentonavscOOLkids():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/yeahvsnoorg', methods=['GET', 'POST'])
 def YeahvsNOORG():
@@ -730,7 +730,7 @@ def LDLCvs3DMAX():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/windigoavsnemiga', methods=['GET', 'POST'])
 def WindigoavsNemiga():
@@ -745,7 +745,7 @@ def WindigoavsNemiga():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/windigovsvaliance', methods=['GET', 'POST'])
 def WindigovsValiance():
@@ -760,7 +760,7 @@ def WindigovsValiance():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/mvppkvsgosu', methods=['GET', 'POST'])
 def MVPPKvsGOSU():
@@ -775,7 +775,7 @@ def MVPPKvsGOSU():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/renegadesvstaintedminds', methods=['GET', 'POST'])
 def RenegadesvsTaintedMinds():
@@ -790,7 +790,7 @@ def RenegadesvsTaintedMinds():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/ordervstaintedminds', methods=['GET', 'POST'])
 def OrdervsTaintedMinds():
@@ -805,7 +805,7 @@ def OrdervsTaintedMinds():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/renegadesvsgrayhound', methods=['GET', 'POST'])
 def RenegadesvsGrayhound():
@@ -820,7 +820,7 @@ def RenegadesvsGrayhound():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/luminosityvsvitality', methods=['GET', 'POST'])
 def LuminosityvsVitality():
@@ -835,7 +835,7 @@ def LuminosityvsVitality():
     output = []
     for x in resultslist19th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/complexityvsvitality', methods=['GET', 'POST'])
 def compLexityvsVitality():
@@ -850,7 +850,7 @@ def compLexityvsVitality():
     output = []
     for x in resultslist18th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/imperialvswild', methods=['GET', 'POST'])
 def ImperialvsWild():
@@ -865,7 +865,7 @@ def ImperialvsWild():
     output = []
     for x in resultslist18th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/gambitvspugstar5', methods=['GET', 'POST'])
 def GambitvsPUGSTAR5():
@@ -880,7 +880,7 @@ def GambitvsPUGSTAR5():
     output = []
     for x in resultslist18th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/forzevspro100', methods=['GET', 'POST'])
 def forZevsPro100():
@@ -895,7 +895,7 @@ def forZevsPro100():
     output = []
     for x in resultslist18th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/taintedmindsvslegacy', methods=['GET', 'POST'])
 def TaintedMindsvsLegacy():
@@ -910,7 +910,7 @@ def TaintedMindsvsLegacy():
     output = []
     for x in resultslist18th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/renegadesvsbreakaway', methods=['GET', 'POST'])
 def RenegadesvsBreakaway():
@@ -925,7 +925,7 @@ def RenegadesvsBreakaway():
     output = []
     for x in resultslist18th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/roguevsvitality', methods=['GET', 'POST'])
 def RoguevsVitaltiy():
@@ -940,7 +940,7 @@ def RoguevsVitaltiy():
     output = []
     for x in resultslist17th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/euronicsvstricked', methods=['GET', 'POST'])
 def resultEURONICSvsTricked():
@@ -955,7 +955,7 @@ def resultEURONICSvsTricked():
     output = []
     for x in resultslist17th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/eunitedvsluminosity', methods=['GET', 'POST'])
 def eUnitedvsLuminosity():
@@ -970,7 +970,7 @@ def eUnitedvsLuminosity():
     output = []
     for x in resultslist17th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/fragstersvsrogue', methods=['GET', 'POST'])
 def FragstersvsRogue():
@@ -985,7 +985,7 @@ def FragstersvsRogue():
     output = []
     for x in resultslist16th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/ghostvsvitality', methods=['GET', 'POST'])
 def GhostvsVitality():
@@ -1000,7 +1000,7 @@ def GhostvsVitality():
     output = []
     for x in resultslist16th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/complexityvsenvyus', methods=['GET', 'POST'])
 def compLexityvsEnvyUs():
@@ -1015,7 +1015,7 @@ def compLexityvsEnvyUs():
     output = []
     for x in resultslist16th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/agovskinguin', methods=['GET', 'POST'])
 def AGOvsKinguin():
@@ -1045,7 +1045,7 @@ def OrdervsAvant():
     output = []
     for x in resultslist16th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/epsilionvskinguin', methods=['GET', 'POST'])
 def EpsilonvsKinguin():
@@ -1060,7 +1060,7 @@ def EpsilonvsKinguin():
     output = []
     for x in resultslist15th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/trickedvsnexus', methods=['GET', 'POST'])
 def TrickedvsNexus():
@@ -1075,35 +1075,7 @@ def TrickedvsNexus():
     output = []
     for x in resultslist15th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 
 
