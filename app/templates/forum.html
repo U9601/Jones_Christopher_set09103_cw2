@@ -84,7 +84,6 @@
   <h1> Hi, {{ current_user.username }}!</h1>
   <form action "" method="post">
     {{ postform.hidden_tag() }}
-    {{ commentform.hidden_tag() }}
     <p>
       {{ postform.post.label }}<br>
       {{ postform.post(col=32, rows=4) }}<br>
@@ -99,6 +98,17 @@
     <p>
       {% include '_posts.html' %}
     </p>
+    <form action "" method="post">
+    {{ commentform.hidden_tag() }}
+    <p>
+      {{ commentform.body.label }}<br>
+      {{ commentform.body(col=32, rows=4) }}<br>
+      {% for error in commentform.body.errors %}
+      <span style="color:red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    {{ commentform.submit() }}
+  </form>
   {% endfor %}
   {% endfor %}
   {% if prev_url %}

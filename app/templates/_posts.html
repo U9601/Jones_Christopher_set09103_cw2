@@ -5,7 +5,6 @@
 <body>
   <table>
     <tr valign="top">
-      {{ commentform.hidden_tag() }}
       <td><img src="{{ post.author.avatar(36) }}"></td>
       <td>
         <a href="{{ url_for('user', username=post.author.username) }}">
@@ -14,14 +13,6 @@
         says: <br> {{post.body }}
       </td>
       <td>
-      <p>
-        {{ commentform.body.label }}<br>
-        {{ commentform.body(col=32, rows=4) }}<br>
-        {% for error in commentform.body.errors %}
-        <span style="color:red;">[{{ error }}]</span>
-        {% endfor %}
-      </p>
-      {{ commentform.submit() }}
       comments: {{comments.body}}
     </td>
     </tr>
