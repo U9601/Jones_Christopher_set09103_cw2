@@ -97,6 +97,7 @@
     <p>
       {% include '_posts.html' %}
     </p>
+  {% endfor %}
     <form action "" method="post">
     {{ commentform.hidden_tag() }}
     <p>
@@ -109,8 +110,9 @@
     {{ commentform.submit() }}
   </form>
   {% for comment in comments %}
-    comments:<br> {{comment.body}}
-  {% endfor %}
+    <p>
+      comments:<br> {{comment.body}}
+    </p>
   {% endfor %}
   {% if prev_url %}
   <a href="{{ prev_url }}"> Newer posts </a>
