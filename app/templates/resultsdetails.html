@@ -76,1731 +76,1453 @@
 
   </div>
 
-<script>
-  // If user clicks anywhere outside of the modal, Modal will close
+  <script>
+    // If user clicks anywhere outside of the modal, Modal will close
 
-  var modal = document.getElementById('modal-wrapper');
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
-  }
-</script>
-{% if name == "DentonavscOOLkids" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>23:00</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>ESL Brazil Premier League Season 7</h3>
-      </center>
-      <h2 align=left>DETONA &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;cOOLkids</h2>
-      <h2 align=left><font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">1</font></h2>
+  </script>
+  {% if name == "DentonavscOOLkids" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>23:00</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>ESL Brazil Premier League Season 7</h3>
+        </center>
+        <h2 align=left>DETONA &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;cOOLkids</h2>
+        <h2 align=left>
+          <font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">1</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 2</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 2</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
+      </td>
+      <td>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=338101961?&autoplay=true&time=1h53m9s" height="720" width="800" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "YeahvsNOORG" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>21:00</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>ESL Brazil Premier Season 7 </h3>
+        </center>
+        <h2 align=left>Yeah! &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;NOORG</h2>
+        <h2 align=left>
+          <font color="red">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">16</font>
+        </h2>
       </div>
-    </td>
-    <td>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=338101961?&autoplay=true&time=1h53m9s"
-            height="720"
-            width="800"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-    </td>
-  </tr>
-</table>
-{% elif name == "YeahvsNOORG" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>21:00</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>ESL Brazil Premier Season 7 </h3>
-      </center>
-      <h2 align=left>Yeah! &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;NOORG</h2>
-      <h2 align=left><font color="red">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">16</font></h2>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 2</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 2</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+      </td>
+      <td>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=338101961?&autoplay=true&time=23m58s" height="720" width="800" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "LDLCvs3DMAX" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>18:00</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>United Masters League</h3>
+        </center>
+        <h2 align=left>LDLC &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;3DMAX</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
       </div>
-    </td>
-    <td>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=338101961?&autoplay=true&time=23m58s"
-            height="720"
-            width="800"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-    </td>
-  </tr>
-</table>
-{% elif name == "LDLCvs3DMAX" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>18:00</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>United Masters League</h3>
-      </center>
-      <h2 align=left>LDLC &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;&emsp;&emsp;&emsp;3DMAX</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Train</h3>
         <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=338020917?&autoplay=true&time=33m55s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+      </td>
+      <td>
+        <h3> Map 2 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=338020917?&autoplay=true&time=1h30m11s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "WindigoavsNemiga" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>16:00</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>PLG Grand Slam 2018</h3>
+        </center>
+        <h2 align=left>Windigo Academy &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Nemiga</h2>
+        <h2 align=left>
+          <font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">13</font>
+        </h2>
       </div>
-    </td>
-    <td>
-<h3> Map 1 - Train</h3>
-<hr>
-<div class="twitchbox">
-  <iframe
-      src="https://player.twitch.tv/?video=338020917?&autoplay=true&time=33m55s"
-      height="720"
-      width="600"
-      frameborder="0"
-      scrolling="no"
-      allowfullscreen="true">
-  </iframe>
-</div>
-</td>
-<td>
-  <h3> Map 2 - Mirage</h3>
-  <hr>
-  <div class="twitchbox">
-    <iframe
-        src="https://player.twitch.tv/?video=338020917?&autoplay=true&time=1h30m11s"
-        height="720"
-        width="600"
-        frameborder="0"
-        scrolling="no"
-        allowfullscreen="true">
-    </iframe>
-  </div>
-</td>
-</tr>
-</table>
-{% elif name == "WindigoavsNemiga" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>16:00</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>PLG Grand Slam 2018</h3>
-      </center>
-      <h2 align=left>Windigo Academy &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Nemiga</h2>
-      <h2 align=left><font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">13</font></h2>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+      </td>
+      <td>
+        <div class="twitchbox">
+          <button><a href={{ url_for('static', filename="GOTV/windigoAvsNemiga.rar")  }} download="WindigoavsNemiga.rar">Downlaod GOTV File</button>
         </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "WindigovsValiance" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>16:00</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>United Masters League</h3>
+        </center>
+        <h2 align=left>Windigo &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Valiance</h2>
+        <h2 align=left>
+          <font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
       </div>
-    </td>
-    <td>
-      <div class="twitchbox">
-        <button><a href={{ url_for('static', filename="GOTV/windigoAvsNemiga.rar")  }} download="WindigoavsNemiga.rar">Downlaod GOTV File</button>
-      </div>
-    </td>
-  </tr>
-</table>
-{% elif name == "WindigovsValiance" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>16:00</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>United Masters League</h3>
-      </center>
-      <h2 align=left>Windigo &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Valiance</h2>
-      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Dust 2</h3>
         <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=338020917?&autoplay=true&time=33m55s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Dust 2</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=338020917?&autoplay=true&time=33m55s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Map 2 - Train</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337976052?&autoplay=true&time=59m32s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337976052?&autoplay=true&time=59m32s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-</table>
-{% elif name == "MVPPKvsGOSU" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>06:40</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>WESG 2018 East Asia</h3>
+    </tr>
+  </table>
+  {% elif name == "MVPPKvsGOSU" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>06:40</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>WESG 2018 East Asia</h3>
         </center>
         <h2 align=left>MVP PK &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;GOSU</h2>
-        <h2 align=left><font color="green">2</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+        <h2 align=left>
+          <font color="green">2</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Inferno</h3>
         <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337881461?&autoplay=true&time=17m45s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Inferno</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337881461?&autoplay=true&time=17m45s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Map 2 - Nuke</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337881461?&autoplay=true&time=1h29m16s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337881461?&autoplay=true&time=1h29m16s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-</table>
-{% elif name == "RenegadesvsTaintedMinds" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>04:15</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Tainted Minds</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </tr>
+  </table>
+  {% elif name == "RenegadesvsTaintedMinds" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>04:15</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Tainted Minds</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 2</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 2</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
+      </td>
+      <td>
         <h3> Map 1 - Inferno</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337768787?&autoplay=true&time=4h19m39s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337768787?&autoplay=true&time=4h19m39s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
-        </td>
-        <td>
-          <h3> Map 2 - Cache</h3>
-          <hr>
-          <div class="twitchbox">
-            <iframe
-                src="https://player.twitch.tv/?video=337768787?&autoplay=true&time=5h18m39s"
-                height="720"
-                width="600"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen="true">
-            </iframe>
-          </div>
-        </td>
-  </tr>
-</table>
-{% elif name == "OrdervsTaintedMinds" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>01:00</h1>
-      </b>
-      <h4>20th of November 2018</h4>
-      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>Order &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Tainted Minds</h2>
-      <h2 align=left><font color="red">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Inferno</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=4h19m39s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Map 2 - Cache</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=5h18m39s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337768787?&autoplay=true&time=5h18m39s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
-      </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      <h3> Map 3 - Mirage</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337758894?&autoplay=false&time=3h36m30s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
     </tr>
-</table>
-{% elif name == "RenegadesvsGrayhound" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>00:00</h1>
-      </b>
-      <h4>20th of November 2018</h4>
-      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Grayhound</h2>
-      <h2 align=left><font color="red">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+  </table>
+  {% elif name == "OrdervsTaintedMinds" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>01:00</h1>
+        </b>
+        <h4>20th of November 2018</h4>
+        <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>Order &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Tainted Minds</h2>
+        <h2 align=left>
+          <font color="red">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Inferno</h3>
         <hr>
-        <h4> Best of 2</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=4h19m39s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
-        <br>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Overpass</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=10m17s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Map 2 - Cache</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=1h19m55s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=5h18m39s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      <h3> Map 3 - Mirage</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=2h39m08s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
+    </tr>
+    <tr>
+      <td>
       </td>
-  </tr>
-</table>
-{% elif name == "LuminosityvsVitality" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>23:50</h1>
-      </b>
-      <h4>19th of November 2018</h4>
-      <h3>DreamHack Open Atlanta 2018</h3>
-      </center>
-      <h2 align=left>Luminosity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
-      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+      <td>
+        <h3> Map 3 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337758894?&autoplay=false&time=3h36m30s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "RenegadesvsGrayhound" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>00:00</h1>
+        </b>
+        <h4>20th of November 2018</h4>
+        <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Grayhound</h2>
+        <h2 align=left>
+          <font color="red">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 2</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 2</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <br>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
+      </td>
+      <td>
+        <h3> Map 1 - Overpass</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=10m17s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Cache</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=1h19m55s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <h3> Map 3 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337768787?&autoplay=false&time=2h39m08s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "LuminosityvsVitality" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>23:50</h1>
+        </b>
+        <h4>19th of November 2018</h4>
+        <h3>DreamHack Open Atlanta 2018</h3>
+        </center>
+        <h2 align=left>Luminosity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+        <h2 align=left>
+          <font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
       </div>
-    </td>
-    <td>
-      <h3> Map 1 - Mirage</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=8h56m10s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 2</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=8h56m10s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
       </td>
       <td>
         <h3> Map 2 - Overpass</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=9h49m50s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=9h49m50s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      <h3> Winning Moment and Ceremony</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=10h29m32s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "compLexityvsVitality" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>20:20</h1>
-      </b>
-      <h4>18th of November 2018</h4>
-      <h3>DreamHack Open Atlanta 2018</h3>
-      </center>
-      <h2 align=left>compLexity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
-      <h2 align=left><font color="green">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">2</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of tba</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Dust 2</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337695819?&autoplay=false&time=17m15s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-      </td>
+    </tr>
+    <tr>
       <td>
-        <h3> Map 2 - Train</h3>
-        <hr>
-        <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337724545?&autoplay=false&time=2m20s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
-          </iframe>
-        </div>
-      </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      <h3> Map 3 - Nuke</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=7h07m47s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Winning Moment and Ceremony</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=7h49m45s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=10h29m32s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
-        </td>
-  </tr>
-</table>
-{% elif name == "ImperialvsWild" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>18:00</h1>
-      </b>
-      <h4>18th of November 2018</h4>
-      <h3>Americas Minor South America Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>Imperial &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Wild</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "compLexityvsVitality" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>20:20</h1>
+        </b>
+        <h4>18th of November 2018</h4>
+        <h3>DreamHack Open Atlanta 2018</h3>
+        </center>
+        <h2 align=left>compLexity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+        <h2 align=left>
+          <font color="green">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">2</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of tba</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Dust 2</h3>
         <hr>
-        <h4> Best of tba</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337695819?&autoplay=false&time=17m15s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+      </td>
+      <td>
+        <h3> Map 2 - Train</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337724545?&autoplay=false&time=2m20s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
         </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <h3> Map 3 - Nuke</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=7h07m47s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Winning Moment and Ceremony</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337536082?&autoplay=false&time=7h49m45s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "ImperialvsWild" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>18:00</h1>
+        </b>
+        <h4>18th of November 2018</h4>
+        <h3>Americas Minor South America Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>Imperial &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Wild</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
       </div>
-    </td>
-    <td>
-      <h3> Map 1 - Dust 2 Part 1</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337592517?&autoplay=false&time=1h05m40s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of tba</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Dust 2 Part 1</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337592517?&autoplay=false&time=1h05m40s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
       </td>
       <td>
         <h3> Map 1 - Dust 2 Part 2</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337621489?&autoplay=false"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337621489?&autoplay=false" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      <h3> Map 2 - Inferno</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337621489?&autoplay=false&time=1h20m38s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "GambitvsPUGSTAR5" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>15:00</h1>
-      </b>
-      <h4>18th of November 2018</h4>
-      <h3>CIS Minor Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>Gambit &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;PUGSTAR5</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of tba</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
+    </tr>
+    <tr>
       <td>
-        <h3> Map 1 - Mirage</h3>
-        <hr>
-        <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337444942?&autoplay=false&time=9h25m48s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
-          </iframe>
-        </div>
-        </td>
-        <td>
-          <h3> Map 2 - Overpass</h3>
-          <hr>
-          <div class="twitchbox">
-            <iframe
-                src="https://player.twitch.tv/?video=337444942?&autoplay=false&time=10h51m41s"
-                height="720"
-                width="600"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen="true">
-            </iframe>
-          </div>
-        </td>
-  </tr>
-</table>
-{% elif name == "forZevsPro100" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>15:00</h1>
-      </b>
-      <h4>18th of November 2018</h4>
-      <h3>CIS Minor Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>forZe &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Pro100</h2>
-      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of tba</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-      <td>
-        <h3> Map 1 - Mirage</h3>
-        <hr>
-        <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337526922?&autoplay=false&time=3h44m07s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
-          </iframe>
-        </div>
-        </td>
-        <td>
-          <h3> Map 2 - Inferno</h3>
-          <hr>
-          <div class="twitchbox">
-            <iframe
-                src="https://player.twitch.tv/?video=337526922?&autoplay=false&time=4h51m35s"
-                height="720"
-                width="600"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen="true">
-            </iframe>
-          </div>
-        </td>
-  </tr>
-</table>
-{% elif name == "TaintedMindsvsLegacy" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>06:25</h1>
-      </b>
-      <h4>18th of November 2018</h4>
-      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>Tainted &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;TaintedMindsvsLegacy</h2>
-      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 2</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Train</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=6h39m36s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Map 2 - Inferno</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=7h26m40s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337621489?&autoplay=false&time=1h20m38s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-</table>
-{% elif name == "RenegadesvsBreakaway" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>00:00</h1>
-      </b>
-      <h4>18th of November 2018</h4>
-      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
-      </center>
-      <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Breakaway</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </tr>
+  </table>
+  {% elif name == "GambitvsPUGSTAR5" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>15:00</h1>
+        </b>
+        <h4>18th of November 2018</h4>
+        <h3>CIS Minor Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>Gambit &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;PUGSTAR5</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 1</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of tba</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Mirage</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=52m26s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
-        <h3> Map 2 - Inferno</h3>
+      <td>
+        <h3> Map 1 - Mirage</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=1h10m32s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337444942?&autoplay=false&time=9h25m48s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "RoguevsVitaltiy" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>01:00</h1>
-      </b>
-      <h4>17th of November 2018</h4>
-      <h3>Alienware Liga Pro Gamers Club</h3>
-      </center>
-      <h2 align=left>Rogue &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
-      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 1</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Nuke</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=7h54m28s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Map 2 - Overpass</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=8h43m16s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337444942?&autoplay=false&time=10h51m41s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-</table>
-{% elif name == "EURONICSvsTricked" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>18:15</h1>
-      </b>
-      <h4>17th of November 2018</h4>
-      <h3>United Masters League</h3>
-      </center>
-      <h2 align=left>Liquid &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;North</h2>
-      <h2 align=left><font color="green">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">2</font></h2>
+    </tr>
+  </table>
+  {% elif name == "forZevsPro100" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>15:00</h1>
+        </b>
+        <h4>18th of November 2018</h4>
+        <h3>CIS Minor Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>forZe &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Pro100</h2>
+        <h2 align=left>
+          <font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 1</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of tba</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Dust 2</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=338784984?&autoplay=false&time=1h50s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
-        <h3> Map 2 - Nuke</h3>
+        <h3> Map 1 - Mirage</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=338784984?&autoplay=false&time=02h25s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337526922?&autoplay=false&time=3h44m07s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "eUnitedvsLuminosity" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>19:45</h1>
-      </b>
-      <h4>17th of November 2018</h4>
-      <h3></h3>
-      </center>
-      <h2 align=left>eUnited &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Luminosity</h2>
-      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 1</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Inferno</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=5h21m40s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-      </td>
-      <td>
-        <h3> Map 2 - Mirage</h3>
-        <hr>
-        <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=6h29m46s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
-          </iframe>
-        </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "FragstersvsRogue" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>21:55</h1>
-      </b>
-      <h4>16th of November 2018</h4>
-      <h3>DreamHack Open Atlanta 2018</h3>
-      </center>
-      <h2 align=left>Fragsters &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Rogue</h2>
-      <h2 align=left><font color="red">8</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">16</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Dust 2</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=2h58m01s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-      </td>
-      <td>
-        <h3> Map 2 - Cache</h3>
-        <hr>
-        <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=3h53m16s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
-          </iframe>
-        </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "GhostvsVitality" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>19:15</h1>
-      </b>
-      <h4>16th of November 2018</h4>
-      <h3>DreanHack Open Atlanta 2018</h3>
-      </center>
-      <h2 align=left>Ghost &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
-      <h2 align=left><font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">12</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Cache</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=336637637?&autoplay=false&time=1h58m12s"
-            height="720"
-            width="800"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-    </td>
-  </tr>
-</table>
-{% elif name == "compLexityvsEnvyUs" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>17:00</h1>
-      </b>
-      <h4>16th of November 2018</h4>
-      <h3>DreamHack Open Atlanta 2018</h3>
-      </center>
-      <h2 align=left>compLexity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;EnvyUs</h2>
-      <h2 align=left><font color="green">16</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">6</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 2</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Cache</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=336685704?&autoplay=false&time=27m01s"
-            height="720"
-            width="800"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-    </td>
-  </tr>
-</table>
-{% elif name == "AGOvsKinguin" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>15:05</h1>
-      </b>
-      <h4>16th of November 2018</h4>
-      <h3>WESG 2018 Poland Qualifier</h3>
-      </center>
-      <h2 align=left>AGO &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Kinguin</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Cache</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=336608556?&autoplay=false&time=22m11s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
-      </td>
-      <td>
-        <h3> Map 2 - Mirage</h3>
-        <hr>
-        <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=336608556?&autoplay=false&time=1h23m15s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
-          </iframe>
-        </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "OrdervsAvant" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>08:15</h1>
-      </b>
-      <h4>16th of November 2018</h4>
-      <h3>PLG Grand Slam 2018 Ocenia Open Qualfier</h3>
-      </center>
-      <h2 align=left>Order &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Avant</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
-    </div>
-  </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
-      <h3> Map 1 - Mirage</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=336535335?&autoplay=false&time=01m44s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
-      </div>
       </td>
       <td>
         <h3> Map 2 - Inferno</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=336535335?&autoplay=false&time=28m36s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337526922?&autoplay=false&time=4h51m35s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
       </td>
-  </tr>
-  <tr>
-    <td>
-    </td>
-    <td>
-      <h3> Map 3 - Cache</h3>
-      <hr>
-      <div class="twitchbox">
-        <iframe
-            src="https://player.twitch.tv/?video=336535335?&autoplay=false&time=1h24m58s"
-            height="720"
-            width="600"
-            frameborder="0"
-            scrolling="no"
-            allowfullscreen="true">
-        </iframe>
+    </tr>
+  </table>
+  {% elif name == "TaintedMindsvsLegacy" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>06:25</h1>
+        </b>
+        <h4>18th of November 2018</h4>
+        <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>Tainted Minds &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Legacy</h2>
+        <h2 align=left>
+          <font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
       </div>
-      </td>
-  </tr>
-</table>
-{% elif name == "EpsilonvsKinguin" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>20:30</h1>
-      </b>
-      <h4>15th of November 2018</h4>
-      <h3>ESEA MDL Season 29 Europe</h3>
-      </center>
-      <h2 align=left>Epsilon &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Kinguin</h2>
-      <h2 align=left><font color="red">1</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
+  <table>
+    <tr>
       <td>
-        <h3> Map 1 - Overpass</h3>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 2</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Train</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=336285096?&autoplay=false&time=25m31s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=6h39m36s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
-        </td>
-        <td>
-          <h3> Map 2 - Train</h3>
-          <hr>
-          <div class="twitchbox">
-            <iframe
-                src="https://player.twitch.tv/?video=336285096?&autoplay=false&time=1h44m35s"
-                height="720"
-                width="600"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen="true">
-            </iframe>
-          </div>
-        </td>
-      </tr>
-        <tr>
-          <td>
-          </td>
-          <td>
-            <h3> Map 3 - Cache</h3>
-            <hr>
-            <div class="twitchbox">
-              <iframe
-                  src="https://player.twitch.tv/?video=336285096?&autoplay=false&time=2h48m16s"
-                  height="720"
-                  width="600"
-                  frameborder="0"
-                  scrolling="no"
-                  allowfullscreen="true">
-              </iframe>
-            </div>
-            </td>
-  </tr>
-</table>
-{% elif name == "TrickedvsNexus" %}
-<div class="matchinfo">
-  <div class="container2">
-    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
-    <div class="centered"><b>
-        <h1>17:00</h1>
-      </b>
-      <h4>15th of November 2018</h4>
-      <h3>Kalashnikov CUP</h3>
-      </center>
-      <h2 align=left>Tricked &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Nexus</h2>
-      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">1</font></h2>
+      </td>
+      <td>
+        <h3> Map 2 - Inferno</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=7h26m40s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "RenegadesvsBreakaway" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>00:00</h1>
+        </b>
+        <h4>18th of November 2018</h4>
+        <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+        </center>
+        <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Breakaway</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
+      </div>
     </div>
   </div>
-</div>
-<table>
-  <tr>
-    <td>
-      <div class="mapinfo">
-        <h3> Maps </h3>
-        <hr>
-        <h4> Best of 3</h4>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 1</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
         </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-        <div class="container2">
-          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
-          <div class="centered"><b>TBA</b></div>
-        </div>
-      </div>
-    </td>
-    <td>
+      </td>
       <td>
         <h3> Map 1 - Mirage</h3>
         <hr>
         <div class="twitchbox">
-          <iframe
-              src="https://player.twitch.tv/?video=336213611?&autoplay=false&time=11m28s"
-              height="720"
-              width="600"
-              frameborder="0"
-              scrolling="no"
-              allowfullscreen="true">
+          <iframe src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=52m26s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
           </iframe>
         </div>
-        </td>
-        <td>
-          <h3> Map 2 - Inferno</h3>
+      </td>
+      <td>
+        <h3> Map 2 - Inferno</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337291897?&autoplay=false&time=1h10m32s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "RoguevsVitaltiy" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>01:00</h1>
+        </b>
+        <h4>17th of November 2018</h4>
+        <h3>Alienware Liga Pro Gamers Club</h3>
+        </center>
+        <h2 align=left>Rogue &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+        <h2 align=left>
+          <font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
           <hr>
-          <div class="twitchbox">
-            <iframe
-                src="https://player.twitch.tv/?video=336213611?&autoplay=false&time=01h07m01s"
-                height="720"
-                width="600"
-                frameborder="0"
-                scrolling="no"
-                allowfullscreen="true">
-            </iframe>
+          <h4> Best of 1</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
           </div>
-        </td>
-      </tr>
-        <tr>
-          <td>
-          </td>
-          <td>
-            <h3> Map 3 - Train</h3>
-            <hr>
-            <div class="twitchbox">
-              <iframe
-                  src="https://player.twitch.tv/?video=336213611?&autoplay=false&time=1h57m28s"
-                  height="720"
-                  width="600"
-                  frameborder="0"
-                  scrolling="no"
-                  allowfullscreen="true">
-              </iframe>
-            </div>
-            </td>
-  </tr>
-</table>
-{% endif %}
-{% endblock %}
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Nuke</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=7h54m28s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Overpass</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=8h43m16s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "EURONICSvsTricked" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>18:15</h1>
+        </b>
+        <h4>17th of November 2018</h4>
+        <h3>United Masters League</h3>
+        </center>
+        <h2 align=left>Liquid &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;North</h2>
+        <h2 align=left>
+          <font color="green">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">2</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 1</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Dust 2</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=338784984?&autoplay=false&time=1h50s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Nuke</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=338784984?&autoplay=false&time=02h25s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "eUnitedvsLuminosity" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>19:45</h1>
+        </b>
+        <h4>17th of November 2018</h4>
+        <h3></h3>
+        </center>
+        <h2 align=left>eUnited &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Luminosity</h2>
+        <h2 align=left>
+          <font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 1</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Inferno</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=5h21m40s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=6h29m46s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "FragstersvsRogue" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>21:55</h1>
+        </b>
+        <h4>16th of November 2018</h4>
+        <h3>DreamHack Open Atlanta 2018</h3>
+        </center>
+        <h2 align=left>Fragsters &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Rogue</h2>
+        <h2 align=left>
+          <font color="red">8</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">16</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Dust 2</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=2h58m01s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Cache</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=337060738?&autoplay=false&time=3h53m16s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "GhostvsVitality" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>19:15</h1>
+        </b>
+        <h4>16th of November 2018</h4>
+        <h3>DreanHack Open Atlanta 2018</h3>
+        </center>
+        <h2 align=left>Ghost &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+        <h2 align=left>
+          <font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">12</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Cache</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336637637?&autoplay=false&time=1h58m12s" height="720" width="800" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "compLexityvsEnvyUs" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>17:00</h1>
+        </b>
+        <h4>16th of November 2018</h4>
+        <h3>DreamHack Open Atlanta 2018</h3>
+        </center>
+        <h2 align=left>compLexity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;EnvyUs</h2>
+        <h2 align=left>
+          <font color="green">16</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">6</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 2</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Cache</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336685704?&autoplay=false&time=27m01s" height="720" width="800" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "AGOvsKinguin" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>15:05</h1>
+        </b>
+        <h4>16th of November 2018</h4>
+        <h3>WESG 2018 Poland Qualifier</h3>
+        </center>
+        <h2 align=left>AGO &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Kinguin</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Cache</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336608556?&autoplay=false&time=22m11s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336608556?&autoplay=false&time=1h23m15s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "OrdervsAvant" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>08:15</h1>
+        </b>
+        <h4>16th of November 2018</h4>
+        <h3>PLG Grand Slam 2018 Ocenia Open Qualfier</h3>
+        </center>
+        <h2 align=left>Order &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Avant</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336535335?&autoplay=false&time=01m44s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Inferno</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336535335?&autoplay=false&time=28m36s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <h3> Map 3 - Cache</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336535335?&autoplay=false&time=1h24m58s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "EpsilonvsKinguin" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>20:30</h1>
+        </b>
+        <h4>15th of November 2018</h4>
+        <h3>ESEA MDL Season 29 Europe</h3>
+        </center>
+        <h2 align=left>Epsilon &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Kinguin</h2>
+        <h2 align=left>
+          <font color="red">1</font>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <h3> Map 1 - Overpass</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336285096?&autoplay=false&time=25m31s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Train</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336285096?&autoplay=false&time=1h44m35s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <h3> Map 3 - Cache</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336285096?&autoplay=false&time=2h48m16s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% elif name == "TrickedvsNexus" %}
+  <div class="matchinfo">
+    <div class="container2">
+      <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+      <div class="centered"><b>
+          <h1>17:00</h1>
+        </b>
+        <h4>15th of November 2018</h4>
+        <h3>Kalashnikov CUP</h3>
+        </center>
+        <h2 align=left>Tricked &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Nexus</h2>
+        <h2 align=left>
+          <font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">1</font>
+        </h2>
+      </div>
+    </div>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <div class="mapinfo">
+          <h3> Maps </h3>
+          <hr>
+          <h4> Best of 3</h4>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+          <div class="container2">
+            <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+            <div class="centered"><b>TBA</b></div>
+          </div>
+        </div>
+      </td>
+      <td>
+      <td>
+        <h3> Map 1 - Mirage</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336213611?&autoplay=false&time=11m28s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+      <td>
+        <h3> Map 2 - Inferno</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336213611?&autoplay=false&time=01h07m01s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <h3> Map 3 - Train</h3>
+        <hr>
+        <div class="twitchbox">
+          <iframe src="https://player.twitch.tv/?video=336213611?&autoplay=false&time=1h57m28s" height="720" width="600" frameborder="0" scrolling="no" allowfullscreen="true">
+          </iframe>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {% endif %}
+  {% endblock %}
 
 </body>
 
