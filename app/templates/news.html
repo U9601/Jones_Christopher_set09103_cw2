@@ -21,7 +21,7 @@
     {% block content %}
     {% if user == current_user.username %}
     {% else %}
-    <a href="{{ url_for('dashboard') }}"> dashboard </a>
+    <a href="{{ url_for('user({current_user.username})') }}"> dashboard </a>
     <a href="{{ url_for('logout') }}">Logout</a>
     {% endif %}
     <div class="search-container">
@@ -134,7 +134,7 @@
   </script>
   <div class="row">
     <div class="column">
-      <img class="dImg" width="300" height="150" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+      <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
       <h3> Top 5 teams </h3>
       <div class="top5teams">
         {% for o in output %}
