@@ -61,7 +61,7 @@ class News(db.Model):
     body = db.Column(db.String(10000))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
-class Comment(db.model):
+class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True)
     body = db.Column(db.String(10000))
