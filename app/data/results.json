@@ -1,0 +1,219 @@
+{
+  "19-11-2018": [{
+        "date": "19-11-2018",
+        "team": "DETONA",
+        "team2": "cOOLkids",
+        "time": "23:00",
+        "event": "ESL Brazil Premier League Season 7",
+        "score1": "16",
+        "score2": "1",
+        "bo": "Mirage"
+      }, {
+        "team": "YeaH!",
+        "team2": "NOORG",
+        "time": "21:00",
+        "event": "ESL Brazil Premier League Season 7",
+        "score1": "2",
+        "score2": "16",
+        "bo": "Mirage"
+      }, {
+        "team": "LDLC",
+        "team2": "3DMAX",
+        "time": "18:00",
+        "event": "United Masters League",
+        "score1": "2",
+        "score2": "0",
+        "bo": "bo2"
+      }, {
+        "team": "Windigo Academy",
+        "team2": "Nemiga",
+        "time": "16:00",
+        "event": "PLG Grand Slam 2018",
+        "score1": "16",
+        "score2": "13",
+        "bo": "Mirage"
+      }, {
+        "team": "Windigo",
+        "team2": "Valinace",
+        "time": "16:00",
+        "event": "United Masters League",
+        "score1": "0",
+        "score2": "2",
+        "bo": "bo2"
+      }, {
+        "team": "MVP PK",
+        "team2": "GOSU",
+        "time": "06:40",
+        "event": "WESG 2018 East Asia",
+        "score1": "2",
+        "score2": "0",
+        "bo": "bo3"
+      }, {
+        "team": "Renegades",
+        "team2": "Tainted Minds",
+        "time": "04:15",
+        "event": "Asia Minor Ocenia Closed Qualifier - IEM Katowice",
+        "score1": "2",
+        "score2": "0",
+        "bo": "bo3"
+      }, {
+        "team": "Order",
+        "team2": "Tainted Minds",
+        "time": "01:00",
+        "event": "Aisa Minor Ocenia Closed Qualifier - IEM Katowice",
+        "score1": "1",
+        "score2": "2",
+        "bo": "bo3"
+     }, {
+         "team": "Renegades",
+         "team2": "Grayhound",
+         "time": "00:00",
+         "event": "Asia Minor Ocenia Closed Qualifier - IEM Katowice",
+         "score1": "1",
+         "score2": "2",
+         "bo": "bo3"
+     }, {
+       "team": "Luminosity",
+       "team2": "Vitality",
+       "time": "23:10",
+       "event": "DreamHack Open Atlanta 2018",
+       "score1": "0",
+       "score2": "2",
+       "bo": "bo3"
+  }],
+  "18-11-2018": [{
+      "date": "18-11-2018",
+      "team": "compLexity",
+      "team2": "Vitality",
+      "time": "20:20",
+      "event": "DreamHack Open Atlanta 2018",
+      "score1": "1",
+      "score2": "2",
+      "bo": "bo3"
+    }, {
+      "team": "Imperial",
+      "team2": "Wild",
+      "time": "18:00",
+      "event": "Americas Minor South America Closed Qualifer - IEM Katowice",
+      "score1": "2",
+      "score2": "0",
+      "bo": "bo3"
+    }, {
+      "team": "Gambit",
+      "team2": "PUHSTAR5",
+      "time": "15:00",
+      "event": "CS Minor Closed Qualifer - IEM Katowice",
+      "score1": "2",
+      "score2": "0",
+      "bo": "bo3"
+    }, {
+      "team": "forZe",
+      "team2": "pro100",
+      "time": "17:10",
+      "event": "CIS Minor Closed Qualifier - IEM Katowice",
+      "score1": "0",
+      "score2": "2",
+      "bo": "bo3"
+    }, {
+      "team": "Tainted Minds",
+      "team2": "Legacy",
+      "time": "06:25",
+      "event": "Asia Minor Ocenia Closed Qualifier - IEM Katowice",
+      "score1": "0",
+      "score2": "2",
+      "bo": "bo1"
+    }, {
+      "team": "Renegades",
+      "team2": "Breakaway",
+      "time": "00:00",
+      "event": "Asia Minor Ocenia Closed Qualifier - IEM Katowice",
+      "score1": "2",
+      "score2": "0",
+      "bo": "bo3"
+  }],
+  "17-11-2018": [{
+        "date": "17-11-2018",
+        "team": "Rogue",
+        "team2": "Vitality",
+        "time": "01:00",
+        "event": "Alienware Liga Pro Gamers Club",
+        "score1": "2",
+        "score2": "0",
+        "bo": "bo3"
+      }, {
+        "team": "EURONICS",
+        "team2": "Tricked",
+        "time": "22:15",
+        "event": "DreamHack Open Atlanta 2018",
+        "score1": "0",
+        "score2": "2",
+        "bo": "bo3"
+      }, {
+        "team": "eUnited",
+        "team2": " Luminosity",
+        "time": "19:45",
+        "event": "DreamHack Open Atlanta 2018",
+        "score1": "0",
+        "score2": "2",
+        "bo": "bo3"
+      }],
+      "16-11-2018":[{
+          "date": "16-11-2018",
+          "team": "Fragsters",
+          "team2": "Rogue",
+          "time": "21:55",
+          "event": "DreamHack Open Atlanta 2018",
+          "score1": "8",
+          "score2": "16",
+          "bo": "Inferno"
+        }, {
+          "team": "Ghost",
+          "team2": "Vitality",
+          "time": "19:15",
+          "event": "DreamHack Open Atlanta 2018",
+          "score1": "16",
+          "score2": "12",
+          "bo": "Cache"
+        }, {
+          "team": "compLexity",
+          "team2": "EnvyUs",
+          "time": "17:00",
+          "event": "DreamHack Open Atlanta 2018",
+          "score1": "16",
+          "score2": "6",
+          "bo": "Cache"
+        }, {
+          "team": "AGO",
+          "team2": "Kinguin",
+          "time": "15:05",
+          "event": "WESG 2018 Poland Qualifier 2",
+          "score1": "2",
+          "score2": "0",
+          "bo": "bo3"
+        }, {
+          "team": "ORDER",
+          "team2": "AVANT",
+          "time": "08:15",
+          "event": "PLG Grand Slam 2018 Ocenia Open Qualifer ",
+          "score1": "2",
+          "score2": "0",
+          "bo": "bo3"
+      }],
+      "15-11-2018": [{
+          "date": "24-11-2018",
+          "team": "Epsilon",
+          "team2": "Kinguin",
+          "time": "20:30",
+          "event": "ESEA MDL Season 29 Europe",
+          "score1": "1",
+          "score2": "2",
+          "bo": "bo3"
+        }, {
+          "team": "Tricked",
+          "team2": "Nexus",
+          "time": "17:00",
+          "event": "Kalashnikov CUP",
+          "score1": "2",
+          "score2": "1",
+          "bo": "bo3"
+      }],

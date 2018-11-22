@@ -18,6 +18,7 @@ top20teams = json.load(open("app/data/top20teams.json"))
 matches = json.load(open("app/data/matches.json"))
 top5players = json.load(open("app/data/top5players.json"))
 events = json.load(open("app/data/events.json"))
+results = json.load(open("app/data/results.json"))
 
 teamslist5 = top5teams["top5teams"]
 teamslist20 = top20teams["top20teams"]
@@ -29,6 +30,11 @@ matchlist22nd = matches["22-11-2018"]
 matchlist23rd = matches["23-11-2018"]
 matchlist24th = matches["24-11-2018"]
 matchlist25th = matches["25-11-2018"]
+resultslist19th = results["19-11-2018"]
+resultslist18th = results["19-11-2018"]
+resultslist17th = results["19-11-2018"]
+resultslist16th = results["19-11-2018"]
+resultslist15th = results["19-11-2018"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
@@ -164,7 +170,22 @@ def results():
             flash('Invalid username or password')
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('results.html', form = form, name = name)
+        output19th = []
+        for x in resultslist19th:
+            output19th.append(x)
+        output18th = []
+        for x in resultslist18th:
+            output18th.append(x)
+        output17th = []
+        for x in resultslist17th:
+            output17th.append(x)
+        output16th = []
+        for x in resultslist16th:
+            output16th.append(x)
+        output15th = []
+        for x in resultslist15th:
+            output15th.append(x)
+    return render_template('results.html', form = form, name = name, output19th = output19th, output18th = output18, output17th = output17th, output16th = output16th, output15th = output15th)
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
