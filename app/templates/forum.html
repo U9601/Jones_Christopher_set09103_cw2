@@ -109,9 +109,9 @@
     </p>
     {{ commentform.submit() }}
   </form>
-  {% for comment in comments %}
+  {% for c in comments %}
     <p>
-      comments:<br> {{comment.body}}
+      comments:<br> {{c.body}}
     </p>
   {% endfor %}
   {% if prev_url %}
