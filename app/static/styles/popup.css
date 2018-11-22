@@ -143,6 +143,7 @@ button:hover {
   width: 300px;
   background-color: white;
   display: inline-block;
+  box-shadow: 10px 10px 5px grey;
 }
 
 table, th, td {
