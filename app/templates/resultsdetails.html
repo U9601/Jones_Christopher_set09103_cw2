@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="{{ url_for('static',filename='pictures/favicon.ico') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/popup.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title> HLTV - News</title>
+  <div class="topnav">
+    <a class="active" href="/">News</a>
+    <a href="/matches">Matches</a>
+    <a href="/results">Results</a>
+    <a href="/top20teams"> Top 20 Teams</a>
+    <a href="/forum">Forum</a>
+    <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+    {% block content %}
+    {% if user == current_user.username %}
+    {% else %}
+    <a href="{{ url_for('user', username=current_user.username) }}"> Profile</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    {% endif %}
+    <div class="search-container">
+      <form action="/action_page.php">
+        <input class="different2" type="text" placeholder="Search.." name="search">
+        <button class="different" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+</head>
+
+<body>
+
+
+  <div id="modal-wrapper" class="modal">
+    <form class="modal-content animate" action="" method="POST" novalidate>
+      {{ form.hidden_tag() }}
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+        <img src="{{ url_for('static',filename='pictures/favicon.ico') }}" alt="Avatar" class="avatar">
+      </div>
+      <div class="button">
+        <div class="container">
+          <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+          <button>{{ form.submit() }}</button>
+          <p>
+            Forgot Your Password?
+            <a href="{{ url_for('reset_password_request')}}"> Click to Reset It</a>
+          </p>
+    </form>
+    <form method="GET" action="/register">
+      <button>Register</button>
+    </form>
+  </div>
+
+  </div>
+
+
+  </div>
+
+<script>
+  // If user clicks anywhere outside of the modal, Modal will close
+
+  var modal = document.getElementById('modal-wrapper');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+{% if name == "DentonavscOOLkids" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>23:00</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>ESL Brazil Premier League Season 7</h3>
+      </center>
+      <h2 align=left>DETONA &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;cOOLkids</h2>
+      <h2 align=left><font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">1</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 2</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "YeahvsNOORG" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>21:00</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>ESL Brazil Premier Season 7 </h3>
+      </center>
+      <h2 align=left>Yeah! &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;NOORG</h2>
+      <h2 align=left><font color="red">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">16</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 2</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "LDLCvs3DMAX" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>18:00</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>United Masters League</h3>
+      </center>
+      <h2 align=left>LDLC &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;3DMAX</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+<div class="twitchbox">
+  <div id="twitch-embed"></div>
+  <!-- Load the Twitch embed script -->
+  <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+  <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+  <script type="text/javascript">
+    new Twitch.Embed("twitch-embed", {
+      width: 854,
+      height: 480,
+      channel: "plg"
+    });
+  </script>
+</div>
+</td>
+</tr>
+</table>
+{% elif name == "WindigoavsNemiga" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>16:00</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>PLG Grand Slam 2018</h3>
+      </center>
+      <h2 align=left>Windigo Academy &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; Nemiga</h2>
+      <h2 align=left><font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">13</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "plg"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "WindigovsValiance" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>16:00</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>United Masters League</h3>
+      </center>
+      <h2 align=left>Windigo &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Valiance</h2>
+      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "uccacademy"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "MVPPKvsGOSU" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>06:40</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>WESG 2018 East Asia</h3>
+        </center>
+        <h2 align=left>MVP PK &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;GOSU</h2>
+        <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "gameagents"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "RenegadesvsTaintedMinds" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>04:15</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Tainted Minds</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 2</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "OrdervsTaintedMinds" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>01:00</h1>
+      </b>
+      <h4>20th of November 2018</h4>
+      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>Order &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Tainted Minds</h2>
+      <h2 align=left><font color="red">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "debionesports"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "RenegadesvsGrayhound" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>00:00</h1>
+      </b>
+      <h4>20th of November 2018</h4>
+      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Grayhound</h2>
+      <h2 align=left><font color="red">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 2</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <br>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "LuminosityvsVitality" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>23:50</h1>
+      </b>
+      <h4>19th of November 2018</h4>
+      <h3>DreamHack Open Atlanta 2018</h3>
+      </center>
+      <h2 align=left>Luminosity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 2</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "gamersclubcs"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "compLexityvsVitality" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>20:20</h1>
+      </b>
+      <h4>18th of November 2018</h4>
+      <h3>DreamHack Open Atlanta 2018</h3>
+      </center>
+      <h2 align=left>compLexity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+      <h2 align=left><font color="green">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of tba</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "ImperialvsWild" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>18:00</h1>
+      </b>
+      <h4>18th of November 2018</h4>
+      <h3>Americas Minor South America Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>Imperial &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Wild</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of tba</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "GambitvsPUGSTAR5" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>15:00</h1>
+      </b>
+      <h4>18th of November 2018</h4>
+      <h3>CIS Minor Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>Gambit &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;PUGSTAR5</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of tba</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "forZevsPro100" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>15:00</h1>
+      </b>
+      <h4>18th of November 2018</h4>
+      <h3>CIS Minor Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>forZe &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Pro100</h2>
+      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of tba</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "TaintedMindsvsLegacy" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>06:25</h1>
+      </b>
+      <h4>18th of November 2018</h4>
+      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>Tainted &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;TaintedMindsvsLegacy</h2>
+      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 2</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "RenegadesvsBreakaway" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>00:00</h1>
+      </b>
+      <h4>18th of November 2018</h4>
+      <h3>Asia Minor Ocenia Closed Qualifier - IEM Katowice</h3>
+      </center>
+      <h2 align=left>Renegades &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Breakaway</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 1</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "RoguevsVitaltiy" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>01:00</h1>
+      </b>
+      <h4>17th of November 2018</h4>
+      <h3>Alienware Liga Pro Gamers Club</h3>
+      </center>
+      <h2 align=left>Rogue &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 1</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "EURONICSvsTricked" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>18:15</h1>
+      </b>
+      <h4>17th of November 2018</h4>
+      <h3>DreamHack Open Atlanta 2018</h3>
+      </center>
+      <h2 align=left>Liquid &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;North</h2>
+      <h2 align=left><font color="green">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 1</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "eUnitedvsLuminosity" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>19:45</h1>
+      </b>
+      <h4>17th of November 2018</h4>
+      <h3></h3>
+      </center>
+      <h2 align=left>eUnited &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Luminosity</h2>
+      <h2 align=left><font color="red">0</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 1</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "FragstersvsRogue" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>21:55</h1>
+      </b>
+      <h4>16th of November 2018</h4>
+      <h3>DreamHack Open Atlanta 2018</h3>
+      </center>
+      <h2 align=left>Fragsters &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Rogue</h2>
+      <h2 align=left><font color="red">8</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">16</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "GhostvsVitality" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>19:15</h1>
+      </b>
+      <h4>16th of November 2018</h4>
+      <h3>DreanHack Open Atlanta 2018</h3>
+      </center>
+      <h2 align=left>Ghost &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Vitality</h2>
+      <h2 align=left><font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">12</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "compLexityvsEnvyUs" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>17:00</h1>
+      </b>
+      <h4>16th of November 2018</h4>
+      <h3>DreamHack Open Atlanta 2018</h3>
+      </center>
+      <h2 align=left>compLexity &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;EnvyUs</h2>
+      <h2 align=left><font color="green">16</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">6</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 2</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <div id="twitch-embed"></div>
+        <!-- Load the Twitch embed script -->
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+        <script type="text/javascript">
+          new Twitch.Embed("twitch-embed", {
+            width: 854,
+            height: 480,
+            channel: "um_league"
+          });
+        </script>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "AGOvsKinguin" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>15:05</h1>
+      </b>
+      <h4>16th of November 2018</h4>
+      <h3>WESG 2018 Poland Qualifier</h3>
+      </center>
+      <h2 align=left>AGO &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Kinguin</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "OrdervsAvant" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>08:15</h1>
+      </b>
+      <h4>16th of November 2018</h4>
+      <h3>PLG Grand Slam 2018 Ocenia Open Qualfier</h3>
+      </center>
+      <h2 align=left>Order &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Avant</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">0</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "EpsilonvsKinguin" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>20:30</h1>
+      </b>
+      <h4>15th of November 2018</h4>
+      <h3>ESEA MDL Season 29 Europe</h3>
+      </center>
+      <h2 align=left>Epsilon &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Kinguin</h2>
+      <h2 align=left><font color="red">1</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="green">2</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% elif name == "TrickedvsNexus" %}
+<div class="matchinfo">
+  <div class="container2">
+    <img class="dImg" width="850" height="250" src={{ url_for('static', filename="pictures/background .jpeg")  }}>
+    <div class="centered"><b>
+        <h1>17:00</h1>
+      </b>
+      <h4>15th of November 2018</h4>
+      <h3>Kalashnikov CUP</h3>
+      </center>
+      <h2 align=left>Tricked &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;Nexus</h2>
+      <h2 align=left><font color="green">2</font> &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<font color="red">1</font></h2>
+    </div>
+  </div>
+</div>
+<table>
+  <tr>
+    <td>
+      <div class="mapinfo">
+        <h3> Maps </h3>
+        <hr>
+        <h4> Best of 3</h4>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+        <div class="container2">
+          <img class="dImg" width="300" height="50" src={{ url_for('static', filename="pictures/tba.png")  }}>
+          <div class="centered"><b>TBA</b></div>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="twitchbox">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/gUSEwFPEp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </td>
+  </tr>
+</table>
+{% endif %}
+{% endblock %}
+
+</body>
+
+</html>

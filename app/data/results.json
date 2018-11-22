@@ -102,7 +102,7 @@
       "team": "Gambit",
       "team2": "PUGSTAR5",
       "time": "15:00",
-      "event": "CS Minor Closed Qualifer - IEM Katowice",
+      "event": "CIS Minor Closed Qualifer - IEM Katowice",
       "score1": "2",
       "score2": "0",
       "bo": "bo3"
@@ -137,8 +137,8 @@
         "team2": "Vitality",
         "time": "01:00",
         "event": "Alienware Liga Pro Gamers Club",
-        "score1": "2",
-        "score2": "0",
+        "score1": "0",
+        "score2": "2",
         "bo": "bo3"
       }, {
         "team": "EURONICS",
@@ -194,7 +194,7 @@
           "team": "ORDER",
           "team2": "AVANT",
           "time": "08:15",
-          "event": "PLG Grand Slam 2018 Ocenia Open Qualifer ",
+          "event": "PLG Grand Slam 2018 Ocenia Open Qualifier ",
           "score1": "2",
           "score2": "0",
           "bo": "bo3"

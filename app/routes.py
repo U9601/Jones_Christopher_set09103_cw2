@@ -328,7 +328,7 @@ def QuescovsforZe():
     return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/windigoavssmoke', methods=['GET', 'POST'])
-def quescovsforze():
+def WindigoAvsSmoke():
     name = 'WindigoAvsSmoke'
     form = LoginForm()
     if form.validate_on_submit():
@@ -689,7 +689,7 @@ def ECSGrandFinal():
 
 @app.route('/resultsdetails/dentonavscoolkids', methods=['GET', 'POST'])
 def DentonavscOOLkids():
-    name = 'dentonavscoolkids'
+    name = 'DentonavscOOLkids'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -704,7 +704,7 @@ def DentonavscOOLkids():
 
 @app.route('/resultsdetails/yeahvsnoorg', methods=['GET', 'POST'])
 def YeahvsNOORG():
-    name = 'yeahvsnoorg'
+    name = 'YeahvsNOORG'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -719,7 +719,7 @@ def YeahvsNOORG():
 
 @app.route('/resultsdetails/ldlcvs3dmax', methods=['GET', 'POST'])
 def LDLCvs3DMAX():
-    name = 'ldlcvs3dmax'
+    name = 'LDLCvs3DMAX'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -733,8 +733,8 @@ def LDLCvs3DMAX():
     return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/windigoavsnemiga', methods=['GET', 'POST'])
-def WindigovsNemiga():
-    name = 'windigoavsnemiga'
+def WindigoavsNemiga():
+    name = 'WindigoavsNemiga'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -749,7 +749,7 @@ def WindigovsNemiga():
 
 @app.route('/resultsdetails/windigovsvaliance', methods=['GET', 'POST'])
 def WindigovsValiance():
-    name = 'windigovsvaliance'
+    name = 'WindigovsValiance'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -764,7 +764,7 @@ def WindigovsValiance():
 
 @app.route('/resultsdetails/mvppkvsgosu', methods=['GET', 'POST'])
 def MVPPKvsGOSU():
-    name = 'mvppkvsgosu'
+    name = 'MVPPKvsGOSU'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -779,7 +779,7 @@ def MVPPKvsGOSU():
 
 @app.route('/resultsdetails/renegadesvstaintedminds', methods=['GET', 'POST'])
 def RenegadesvsTaintedMinds():
-    name = 'renegadesvstaintedminds'
+    name = 'RenegadesvsTaintedMinds'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -794,7 +794,7 @@ def RenegadesvsTaintedMinds():
 
 @app.route('/resultsdetails/ordervstaintedminds', methods=['GET', 'POST'])
 def OrdervsTaintedMinds():
-    name = 'ordervstaintedminds'
+    name = 'OrdervsTaintedMinds'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -809,7 +809,7 @@ def OrdervsTaintedMinds():
 
 @app.route('/resultsdetails/renegadesvsgrayhound', methods=['GET', 'POST'])
 def RenegadesvsGrayhound():
-    name = 'renegadesvsgrayhound'
+    name = 'RenegadesvsGrayhound'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -824,7 +824,7 @@ def RenegadesvsGrayhound():
 
 @app.route('/resultsdetails/luminosityvsvitality', methods=['GET', 'POST'])
 def LuminosityvsVitality():
-    name = 'luminosityvsvitality'
+    name = 'LuminosityvsVitality'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -839,7 +839,7 @@ def LuminosityvsVitality():
 
 @app.route('/resultsdetails/complexityvsvitality', methods=['GET', 'POST'])
 def compLexityvsVitality():
-    name = 'complexityvsvitality'
+    name = 'compLexityvsVitality'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -854,7 +854,7 @@ def compLexityvsVitality():
 
 @app.route('/resultsdetails/imperialvswild', methods=['GET', 'POST'])
 def ImperialvsWild():
-    name = 'imperialvswild'
+    name = 'ImperialvsWild'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -869,7 +869,7 @@ def ImperialvsWild():
 
 @app.route('/resultsdetails/gambitvspugstar5', methods=['GET', 'POST'])
 def GambitvsPUGSTAR5():
-    name = 'gambitvspugstar5'
+    name = 'GambitvsPUGSTAR5'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -884,7 +884,7 @@ def GambitvsPUGSTAR5():
 
 @app.route('/resultsdetails/forzevspro100', methods=['GET', 'POST'])
 def forZevsPro100():
-    name = 'yeahvsnoorg'
+    name = 'forZevsPro100'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -899,7 +899,7 @@ def forZevsPro100():
 
 @app.route('/resultsdetails/taintedmindsvslegacy', methods=['GET', 'POST'])
 def TaintedMindsvsLegacy():
-    name = 'taintedmindsvslegacy'
+    name = 'TaintedMindsvsLegacy'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -914,7 +914,7 @@ def TaintedMindsvsLegacy():
 
 @app.route('/resultsdetails/renegadesvsbreakaway', methods=['GET', 'POST'])
 def RenegadesvsBreakaway():
-    name = 'renegadesvsbreakaway'
+    name = 'RenegadesvsBreakaway'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -929,7 +929,7 @@ def RenegadesvsBreakaway():
 
 @app.route('/resultsdetails/roguevsvitality', methods=['GET', 'POST'])
 def RoguevsVitaltiy():
-    name = 'roguevsvitality'
+    name = 'RoguevsVitaltiy'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -944,7 +944,7 @@ def RoguevsVitaltiy():
 
 @app.route('/resultsdetails/euronicsvstricked', methods=['GET', 'POST'])
 def resultEURONICSvsTricked():
-    name = 'euronicsvstricked'
+    name = 'EURONICSvsTricked'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -959,7 +959,7 @@ def resultEURONICSvsTricked():
 
 @app.route('/resultsdetails/eunitedvsluminosity', methods=['GET', 'POST'])
 def eUnitedvsLuminosity():
-    name = 'eunitedvsluminosity'
+    name = 'eUnitedvsLuminosity'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -974,7 +974,7 @@ def eUnitedvsLuminosity():
 
 @app.route('/resultsdetails/fragstersvsrogue', methods=['GET', 'POST'])
 def FragstersvsRogue():
-    name = 'fragstersvsrogue'
+    name = 'FragstersvsRogue'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -989,7 +989,7 @@ def FragstersvsRogue():
 
 @app.route('/resultsdetails/ghostvsvitality', methods=['GET', 'POST'])
 def GhostvsVitality():
-    name = 'ghostvsvitality'
+    name = 'GhostvsVitality'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -1004,7 +1004,7 @@ def GhostvsVitality():
 
 @app.route('/resultsdetails/complexityvsenvyus', methods=['GET', 'POST'])
 def compLexityvsEnvyUs():
-    name = 'complexityvsenvyus'
+    name = 'compLexityvsEnvyUs'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -1019,7 +1019,7 @@ def compLexityvsEnvyUs():
 
 @app.route('/resultsdetails/agovskinguin', methods=['GET', 'POST'])
 def AGOvsKinguin():
-    name = 'agovskinguin'
+    name = 'AGOvsKinguin'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -1034,7 +1034,7 @@ def AGOvsKinguin():
 
 @app.route('/resultsdetails/ordervsavant', methods=['GET', 'POST'])
 def OrdervsAvant():
-    name = 'ordervsavant'
+    name = 'OrdervsAvant'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -1049,7 +1049,7 @@ def OrdervsAvant():
 
 @app.route('/resultsdetails/epsilionvskinguin', methods=['GET', 'POST'])
 def EpsilonvsKinguin():
-    name = 'epsilionvskinguin'
+    name = 'EpsilonvsKinguin'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -1064,7 +1064,7 @@ def EpsilonvsKinguin():
 
 @app.route('/resultsdetails/trickedvsnexus', methods=['GET', 'POST'])
 def TrickedvsNexus():
-    name = 'trickedvsnexus'
+    name = 'TrickedvsNexus'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
