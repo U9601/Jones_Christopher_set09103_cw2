@@ -132,7 +132,7 @@
       </a>
       <div class="rectangle2">
         {% elif ((o["team"] == "MVP PK" and o["team2"] == "GOSU")) %}
-        <a href="/resutdetails/mvppkvsgosu" style="text-decoration:none">
+        <a href="/resultdetails/mvppkvsgosu" style="text-decoration:none">
           <b>{{ o["time"] }}</b>&emsp;<img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/mvppk.png")  }}> {{o["team"]}} <font color="green">{{o["score1"]}}</font> - <font color="red">{{o["score2"]}} </font> <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/gosu.jpeg")  }}>
           {{o["team2"]}} {{o["event"]}} &emsp;{{ o["bo"] }}
           <hr>
