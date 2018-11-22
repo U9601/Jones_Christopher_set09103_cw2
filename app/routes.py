@@ -185,7 +185,7 @@ def results():
     output15th = []
     for x in resultslist15th:
         output15th.append(x)
-    return render_template('results.html', form = form, name = name, output19th = output19th, output18th = output18, output17th = output17th, output16th = output16th, output15th = output15th)
+    return render_template('results.html', form = form, name = name, output19th = output19th, output18th = output18th, output17th = output17th, output16th = output16th, output15th = output15th)
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
