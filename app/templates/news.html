@@ -159,19 +159,19 @@
         {% for p in players %}
         <p>
           {% if p["player"] == "Mareclo 'coldzera' David" %}
-          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/br.png")  }}>
           rating: {{ p["rating"]}}
           {% elif p["player"] == "Nikola 'Niko' Kovač" %}
-          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/liquidlogo.jpg")  }}>
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/boz.png")  }}>
           rating: {{ p["rating"]}}
           {% elif p["player"] == "Fernando 'fer' Alvarenga" %}
-          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/Navilogo.png")  }}>
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/br.png")  }}>
           rating: {{ p["rating"]}}
           {% elif p["player"] == "Håvard 'rain' Nygaard" %}
-          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/astralislogo.png")  }}>
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/norway.png")  }}>
           rating: {{ p["rating"]}}
           {% elif p["player"] == "Nicolai 'device' Reedtz" %}
-          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>
+          {{ p["pos"] }}: {{p["player"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/danish.png")  }}>
           rating: {{ p["rating"]}}
           {% endif %}
         {% endfor %}
@@ -183,19 +183,19 @@
         {% for e in listofevents %}
         <p>
           {% if e["event"] == "TOYOTA Master" %}
-          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/toyota.png")  }}>
           Days to go: {{ e["days"] }}
           {% elif e["event"] == "ECS S6 Finals" %}
-          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/ecs.png")  }}>
           Days to go: {{ e["days"] }}
           {% elif e["event"] == "SuperNova Malta" %}
-          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/supernova.png")  }}>
           Days to go: {{ e["days"] }}
           {% elif e["event"] == "DH Winter 2018" %}
-          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/dh.png")  }}>
           Days to go: {{ e["days"] }}
           {% elif e["event"] == "EPL S8 Finals" %}
-          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/fazelogo.png")  }}>
+          {{e["event"]}} <img class="dImg" width="20" height="20" src={{ url_for('static', filename="pictures/esl.png")  }}>
           Days to go: {{ e["days"] }}
           {% endif %}
         {% endfor %}
