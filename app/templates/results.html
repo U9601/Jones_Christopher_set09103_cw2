@@ -237,7 +237,7 @@
         {% elif ((o["team"] == "ECS S6 Finals - Group A Winners Match" and o["team2"] == "tba")) %}
         <a href="/matchdetails/ecsgroupawinner" style="text-decoration:none">
           <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/HAVU.png")  }}> {{o["team"]}} <font color="green">{{o["score1"]}}</font> - <font color="red">{{o["score2"]}} < <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/RR.png")  }}>
-          {{o{"team2"}}} {{o["team"]}} {{ o["bo"] }}
+          {{o["team2"]}} {{o["team"]}} {{ o["bo"] }}
           <hr>
       </div>
       </a>
