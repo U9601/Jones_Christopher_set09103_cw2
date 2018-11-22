@@ -943,7 +943,7 @@ def RoguevsVitaltiy():
     return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/euronicsvstricked', methods=['GET', 'POST'])
-def EURONICSvsTricked():
+def resultEURONICSvsTricked():
     name = 'euronicsvstricked'
     form = LoginForm()
     if form.validate_on_submit():
