@@ -151,7 +151,7 @@ def forum():
         if posts.has_prev else None
     return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items)
 
-@app.route('/forum/<post_id>' , methods=['GET', 'POST'])
+@app.route('/comments/<post_id>' , methods=['GET', 'POST'])
 @login_required
 def comments(post_id):
     post = Post.query.get(post_id)
