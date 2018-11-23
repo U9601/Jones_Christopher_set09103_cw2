@@ -107,20 +107,6 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
           </p>
-          <p>
-            {{ newsform.photo.label }}<br>
-            {{ newsform.photo }}<br>
-            {% for error in newsform.photo.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-          </p>
-          <p>
-            {{ newsform.picnumber.label }}<br>
-            {{ newsform.picnumber }}<br>
-            {% for error in newsform.picnumber.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-          </p>
           <button>{{ newsform.submit() }}</button>
         </form>
       </div>
