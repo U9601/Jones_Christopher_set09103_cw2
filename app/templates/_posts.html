@@ -13,15 +13,13 @@
           {{ post.author.username }}
         </a>
         says: <br> {{post.body }}
+        <a href ="{{ url_for('comments', post_id=post.id)}}">Comments</a>
       </div>
       </td>
       <td>
     </td>
   </tr>
   <tr>
-    <td>
-        <a href ="{{ url_for('comments', post_id=post.id)}}">Comments</a>
-    </td>
   </tr>
   </table>
 </body>
