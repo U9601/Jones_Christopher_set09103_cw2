@@ -80,30 +80,38 @@
     }
   </script>
 
-  <h1> Hi, {{ current_user.username }}!</h1>
-  <form action "" method="post">
-    {{ postform.hidden_tag() }}
-    <p>
-      {{ postform.post.label }}<br>
-      {{ postform.post(col=32, rows=4) }}<br>
-      {% for error in postform.post.errors %}
-      <span style="color:red;">[{{ error }}]</span>
+  <div class="row">
+    <div class="column">
+      <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+    </div>
+    <div class="column">
+      <h1> Hi, {{ current_user.username }}!</h1>
+      <form action "" method="post">
+        {{ postform.hidden_tag() }}
+        <p>
+          {{ postform.post.label }}<br>
+          {{ postform.post(col=32, rows=4) }}<br>
+          {% for error in postform.post.errors %}
+          <span style="color:red;">[{{ error }}]</span>
+          {% endfor %}
+        </p>
+        <p> {{postform.submit() }}</p>
+      </form>
+      {% for post in posts %}
+        <p>
+          {% include '_posts.html' %}
+        </p>
       {% endfor %}
-    </p>
-    <p> {{postform.submit() }}</p>
-  </form>
-  {% for post in posts %}
-    <p>
-      {% include '_posts.html' %}
-    </p>
-  {% endfor %}
-  {% if prev_url %}
-  <a href="{{ prev_url }}"> Newer posts </a>
-  {% endif %}
-  {% if next_url %}
-  <a href="{{ next_url }}"> Older posts </a>
-  {% endif %}
-  {% endblock %}
+      {% if prev_url %}
+      <a href="{{ prev_url }}"> Newer posts </a>
+      {% endif %}
+      {% if next_url %}
+      <a href="{{ next_url }}"> Older posts </a>
+      {% endif %}
+      {% endblock %}
+
+    </div>
+
 </body>
 
 </html>
