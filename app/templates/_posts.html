@@ -14,12 +14,12 @@
         </a>
         says: <br> {{post.body }}
       </div>
+      <button class="different"><a href ="{{ url_for('comments', post_id=post.id)}}">Comments</a></button>
       </td>
       <td>
     </td>
   </tr>
   <tr>
-      <button class="different"><a href ="{{ url_for('comments', post_id=post.id)}}">Comments</a></button>
   </tr>
   </table>
 </body>
