@@ -55,7 +55,7 @@ def news():
     newsform = NewsForm()
     if newsform.validate_on_submit():
         file = request.files['newspic']
-        filename = 'newspic' + '.png'
+        filename = newsform.data.picnumber+ '.png'
         file.save(os.path.join(app.root_path, 'static/pictures/newspics', filename))
         newspost = News(username=newsform.username.data, title=newsform.title.data, body=newsform.body.data, newspic=url_for('static', filename='pictures/newspics/' + filename))
         db.session.add(newspost)
