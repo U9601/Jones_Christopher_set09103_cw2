@@ -79,16 +79,18 @@
     }
   }
 </script>
-{% block content %}
-  <h1>An unexpected error has occurred</h1>
-  <p>The administrator has been notified. Sorry for the incovenience!</p>
-  <p><a href="{{ url_for('news') }}">Back to saftey</a></p>
+
 <div class="row">
   <div class="column">
     <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+  </div>
+  <div class="column">
+    <h1>An unexpected error has occurred</h1>
+    <p>The administrator has been notified. Sorry for the incovenience!</p>
+    <p><a href="{{ url_for('news') }}">Back to saftey</a></p>
+  </div>
     {% endblock %}
   </div>
-</div>
 <body>
 </body>
 </html>
