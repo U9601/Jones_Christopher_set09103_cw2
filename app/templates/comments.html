@@ -1,31 +1,133 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="shortcut icon" href="{{ url_for('static',filename='pictures/favicon.ico') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/popup.css') }}">
-</head>
-<body>
-  <form method="post" action="{{url_for('comments', post_id=post_id)}}">
-    {{ commentform.hidden_tag() }}
-    <p>
-      {{ commentform.comment.label }}<br>
-      {{ commentform.comment(col=32, rows=4) }}<br>
-      {% for error in commentform.comment.errors %}
-      <span style="color:red;">[{{ error }}]</span>
-      {% endfor %}
-    </p>
-  <p> {{commentform.submit() }}</p>
-  </form>
 
-  {% for comment in post.comments %}
-  <div class="rectangle5">
-    <td><img src="{{ post.author.avatar(36) }}"></td>
-    <font size="4"> {{comment.username}}</font><font size="2"> posted at: {{comment.timestamp}}</font>
-    <h4> {{comment.body}}</h4>
+<head>
+
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static',filename='pictures/favicon.ico') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/popup.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title> HLTV - News</title>
+    <div class="topnav">
+      <a class="active" href="/">News</a>
+      <a href="/matches">Matches</a>
+      <a href="/results">Results</a>
+      <a href="/top20teams"> Top 20 Teams</a>
+      <a href="/forum">Forum</a>
+      <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+      {% block content %}
+      {% if user == current_user.username %}
+      {% else %}
+      <a href="{{ url_for('user', username=current_user.username) }}"> Profile</a>
+      <a href="{{ url_for('logout') }}">Logout</a>
+      {% endif %}
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input class="different2" type="text" placeholder="Search.." name="search">
+          <button class="different" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </head>
+
+<body>
+  <div id="modal-wrapper" class="modal">
+    <form class="modal-content animate" action="" method="POST" novalidate>
+      {{ form.hidden_tag() }}
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close" title="Close PopUp">&times;</span>
+        <img src="{{ url_for('static',filename='pictures/favicon.ico') }}" alt="Avatar" class="avatar">
+      </div>
+      <div class="button">
+        <div class="container">
+          <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32) }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
+          <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+          <button>{{ form.submit() }}</button>
+          <p>
+            Forgot Your Password?
+            <a href="{{ url_for('reset_password_request')}}"> Click to Reset It</a>
+          </p>
+    </form>
+    <form method="GET" action="/register">
+      <button>Register</button>
+    </form>
   </div>
-  <hr>
-  {% endfor %}
+
+  </div>
+
+
+  </div>
+  <script>
+    // If user clicks anywhere outside of the modal, Modal will close
+
+    var modal = document.getElementById('modal-wrapper');
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+  <div class="row">
+    <div class="column">
+      <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+    </div>
+    <div class="column">
+      <h1>An unexpected error has occurred</h1>
+      <p>The administrator has been notified. Sorry for the incovenience!</p>
+      <p><a href="{{ url_for('news') }}">Back to saftey</a></p>
+    </div>
+    {% endblock %}
+  </div>
+
+
+  <div class="row">
+    <div class="column">
+      <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+    </div>
+    <div class="column">
+      <form method="post" action="{{url_for('comments', post_id=post_id)}}">
+        {{ commentform.hidden_tag() }}
+        <p>
+          {{ commentform.comment.label }}<br>
+          {{ commentform.comment(col=32, rows=4) }}<br>
+          {% for error in commentform.comment.errors %}
+          <span style="color:red;">[{{ error }}]</span>
+          {% endfor %}
+        </p>
+        <p> {{commentform.submit() }}</p>
+      </form>
+      {% for comment in post.comments %}
+      <div class="rectangle5">
+        <td><img src="{{ post.author.avatar(36) }}"></td>
+        <font size="4"> {{comment.username}}</font>
+        <font size="2"> posted at: {{comment.timestamp}}</font>
+        <h4> {{comment.body}}</h4>
+      </div>
+      <hr>
+      {% endfor %}
+    </div>
+    {% endblock %}
+  </div>
+
 </body>
+
 </html>
