@@ -95,6 +95,9 @@ class Comment(db.Model):
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
 
+class NewsBody(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
