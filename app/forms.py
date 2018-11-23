@@ -27,7 +27,7 @@ class NewsForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     title = StringField('Title', validators=[DataRequired()])
     body = StringField('Body', validators=[DataRequired()])
-    photo = FieldField('Photo', validators=[ FileRequired(),FileAllowed(['png'],'ONLY PNG PLZ!')])
+    photo = FileField('Photo', validators=[ FileRequired(),FileAllowed(['png'],'ONLY PNG PLZ!')])
     submit = SubmitField('Add News')
 
 class EditProfileForm(FlaskForm):
