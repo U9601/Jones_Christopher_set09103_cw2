@@ -149,7 +149,7 @@ def forum():
         if posts.has_next else None
     prev_url = url_for('forum', page=posts.prev_num) \
         if posts.has_prev else None
-    return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items, comments=comments.items, commentform=commentform)
+    return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items, comments=comments, commentform=commentform)
 
 @app.route('/forum/<post_id>' , methods=['GET', 'POST'])
 @login_required
