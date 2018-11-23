@@ -151,18 +151,6 @@ def forum():
         if posts.has_prev else None
     return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items)
 
-@app.route('/news/articles', methods=['GET', 'POST'])
-def articles():
-    form = LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
-        if user is None or not user.check_password(form.password.data):
-            flash('Invalid username or password')
-            return redirect(url_for('news'))
-        login_user(user, remember=form.remember_me.data)
-    return render_template('news_articals.html', form=form)
-
-
 @app.route('/news/<news_id>' , methods=['GET', 'POST'])
 def newsid(news_id):
     news = News.query.get(news_id)
@@ -176,7 +164,7 @@ def newsid(news_id):
             flash('Invalid username or password')
             return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
-    return redirect(url_for('articles', news_id=news_id, news=news, form=form))
+    return render_template(url_for('news_articles.html', news_id=news_id, news=news, form=form))
 
 @app.route('/comments/<post_id>' , methods=['GET', 'POST'])
 @login_required
