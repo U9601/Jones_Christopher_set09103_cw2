@@ -60,7 +60,6 @@ class News(db.Model):
     title = db.Column(db.String(100))
     body = db.Column(db.String(10000))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow)
-    picture = db.Column(db.String(100))
 
 class Comment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
