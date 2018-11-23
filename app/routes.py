@@ -151,6 +151,19 @@ def forum():
         if posts.has_prev else None
     return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items)
 
+@app.route('/news/articles', methods=['GET', 'POST'])
+def articles:
+    return render_template('news_articals.html')
+
+
+@app.route('/news/<news_id>' , methods=['GET', 'POST'])
+def newsid(news_id):
+    news = News.query.get(news_id)
+    newsbody = NewsBody(news_id=news.id)
+    db.session.add(newsbody)
+    db.session.commit()
+    return redirect(url_for('articles', news_id=news_id, news=news))
+
 @app.route('/comments/<post_id>' , methods=['GET', 'POST'])
 @login_required
 def comments(post_id):
