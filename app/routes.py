@@ -156,6 +156,7 @@ def forum():
 def comments(post_id):
     post = Post.query.get(post_id)
     commentform = CommentForm()
+    comment = Comment.query.filter_by(post_id=post.id).order_by(Comment.timestamp.desc())
     if commentform.validate_on_submit():
         comment = Comment(body=comment.comment.data, author=current_user, post_id=post.id)
         db.session.add(comment)
