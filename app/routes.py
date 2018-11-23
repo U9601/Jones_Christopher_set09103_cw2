@@ -63,7 +63,7 @@ def news():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     players = []
@@ -84,7 +84,7 @@ def matches():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output20th = []
     for x in matchlist20th:
@@ -116,7 +116,7 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     return render_template('login.html', title = 'Sign In', form = form, name = name)
 
@@ -135,7 +135,7 @@ def forum():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     if postform.validate_on_submit():
         post = Post(body=postform.post.data, author=current_user)
@@ -166,7 +166,7 @@ def comments(post_id):
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     return render_template('comments.html', commentform=commentform, post_id=post_id, post=post, form=form)
 
@@ -179,7 +179,7 @@ def results():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output19th = []
     for x in resultslist19th:
@@ -305,7 +305,7 @@ def HAVUvsRR():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -320,7 +320,7 @@ def SproutVSLDLC():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -335,7 +335,7 @@ def QuescovsforZe():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -350,7 +350,7 @@ def WindigoAvsSmoke():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -365,7 +365,7 @@ def FCBDvsWindigo():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -380,7 +380,7 @@ def threeDMAXvsAlternate():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -395,7 +395,7 @@ def TrickedvsVexed():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -410,7 +410,7 @@ def IsurusvsUruguay():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -425,7 +425,7 @@ def SproutvsLDLC2():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -440,7 +440,7 @@ def WildvsIsurus():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist20th:
@@ -455,7 +455,7 @@ def W7MvsFuria():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist21st:
@@ -470,7 +470,7 @@ def EURONICSvsTricked():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist21st:
@@ -485,7 +485,7 @@ def HAVUvsx6tence():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist21st:
@@ -500,7 +500,7 @@ def AstvsC9():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist22nd:
@@ -515,7 +515,7 @@ def VexedvsValiance():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist22nd:
@@ -530,7 +530,7 @@ def MouzvsMIBR():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist22nd:
@@ -545,7 +545,7 @@ def NRGvsNIP():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist22nd:
@@ -560,7 +560,7 @@ def LiquidvsNorth():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist22nd:
@@ -575,7 +575,7 @@ def ECSGroupAWinner():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist22nd:
@@ -590,7 +590,7 @@ def ECSGroupBWinner():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist23rd:
@@ -605,7 +605,7 @@ def ECSGroupAElim():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist23rd:
@@ -620,7 +620,7 @@ def ExpertvsLDLC():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist23rd:
@@ -635,7 +635,7 @@ def ECSGroupBElim():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist23rd:
@@ -650,7 +650,7 @@ def ECSGroupBDecider():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist23rd:
@@ -665,7 +665,7 @@ def ECSSemiFinal1():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist24th:
@@ -680,7 +680,7 @@ def ECSSemiFinal2():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist24th:
@@ -695,7 +695,7 @@ def ECSGrandFinal():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in matchlist25th:
@@ -710,7 +710,7 @@ def DentonavscOOLkids():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -725,7 +725,7 @@ def YeahvsNOORG():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -740,7 +740,7 @@ def LDLCvs3DMAX():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -755,7 +755,7 @@ def WindigoavsNemiga():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -770,7 +770,7 @@ def WindigovsValiance():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -785,7 +785,7 @@ def MVPPKvsGOSU():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -800,7 +800,7 @@ def RenegadesvsTaintedMinds():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -815,7 +815,7 @@ def OrdervsTaintedMinds():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -830,7 +830,7 @@ def RenegadesvsGrayhound():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -845,7 +845,7 @@ def LuminosityvsVitality():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist19th:
@@ -860,7 +860,7 @@ def compLexityvsVitality():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist18th:
@@ -875,7 +875,7 @@ def ImperialvsWild():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist18th:
@@ -890,7 +890,7 @@ def GambitvsPUGSTAR5():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist18th:
@@ -905,7 +905,7 @@ def forZevsPro100():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist18th:
@@ -920,7 +920,7 @@ def TaintedMindsvsLegacy():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist18th:
@@ -935,7 +935,7 @@ def RenegadesvsBreakaway():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist18th:
@@ -950,7 +950,7 @@ def RoguevsVitaltiy():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist17th:
@@ -965,7 +965,7 @@ def resultEURONICSvsTricked():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist17th:
@@ -980,7 +980,7 @@ def eUnitedvsLuminosity():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist17th:
@@ -995,7 +995,7 @@ def FragstersvsRogue():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist16th:
@@ -1010,7 +1010,7 @@ def GhostvsVitality():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist16th:
@@ -1025,7 +1025,7 @@ def compLexityvsEnvyUs():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist16th:
@@ -1040,7 +1040,7 @@ def AGOvsKinguin():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist16th:
@@ -1055,7 +1055,7 @@ def OrdervsAvant():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist16th:
@@ -1070,7 +1070,7 @@ def EpsilonvsKinguin():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist15th:
@@ -1085,7 +1085,7 @@ def TrickedvsNexus():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('login'))
+            return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
     output = []
     for x in resultslist15th:
