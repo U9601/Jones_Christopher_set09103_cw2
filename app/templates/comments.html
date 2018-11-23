@@ -6,6 +6,8 @@
   <link rel="shortcut icon" href="{{ url_for('static',filename='pictures/favicon.ico') }}" />
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/popup.css') }}">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <form method="post" action="{{url_for('comments', post_id=post_id)}}">
@@ -17,7 +19,7 @@
       <span style="color:red;">[{{ error }}]</span>
       {% endfor %}
     </p>
-    <button><p> {{commentform.submit() }}</p></button>
+    <button class="button  search">{{commentform.submit() }}</p></button><br/>
   </form>
 
   {% for comment in post.comments %}
