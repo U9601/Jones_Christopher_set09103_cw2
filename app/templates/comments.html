@@ -16,6 +16,7 @@
   </form>
 
   {% for comment in post.comments %}
+    <h3> {{comment.username}}</h5>
     <h4> {{comment.body}}</h4>
   {% endfor %}
 </body>
