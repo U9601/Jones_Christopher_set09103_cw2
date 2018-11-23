@@ -153,7 +153,14 @@ def forum():
 
 @app.route('/news/articles', methods=['GET', 'POST'])
 def articles():
-    return render_template('news_articals.html')
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('news'))
+        login_user(user, remember=form.remember_me.data)
+    return render_template('news_articals.html', form=form)
 
 
 @app.route('/news/<news_id>' , methods=['GET', 'POST'])
@@ -162,7 +169,14 @@ def newsid(news_id):
     newsbody = NewsBody(news_id=news.id)
     db.session.add(newsbody)
     db.session.commit()
-    return redirect(url_for('articles', news_id=news_id, news=news))
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('news'))
+        login_user(user, remember=form.remember_me.data)
+    return redirect(url_for('articles', news_id=news_id, news=news, form=form))
 
 @app.route('/comments/<post_id>' , methods=['GET', 'POST'])
 @login_required
