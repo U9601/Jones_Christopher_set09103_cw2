@@ -74,8 +74,8 @@ class Comment(db.Model):
     post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
 
 followers.db.Table('followers',
-        db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
-        db.Column('followed_id', db.integer, db.ForeignKey('user.id'))
+    db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
+    db.Column('followed_id', db.integer, db.ForeignKey('user.id'))
 )
 
 @login.user_loader
