@@ -55,7 +55,7 @@ class Post(db.Model):
         return '<Post {}>'.format(self.body)
 
     def postavatar(self, size):
-        digest = md5(author.email.lower().encode('utf-8')).hexdigest()
+        digest = md5(post.author.email.lower().encode('utf-8')).hexdigest()
         return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
 
 class News(db.Model):
