@@ -157,7 +157,7 @@ def comments(post_id):
     post = Post.query.get(post_id)
     commentform = CommentForm()
     if commentform.validate_on_submit():
-        comment = Comment(body=commentform.comment.data, changeMe=current_user, post_id=post.id, username=current_user.username, timestamp=datetime.utcnow())
+        comment = Comment(body=commentform.comment.data, post_id=post.id, username=current_user.username, timestamp=datetime.utcnow())
         db.session.add(comment)
         db.session.commit()
         return redirect(url_for("comments", post_id=post.id))
@@ -216,7 +216,7 @@ def register():
         db.session.add(user)
         db.session.commit()
         flash('You are now a user Pog')
-        return redirect(url_for('dashboard'))
+        return redirect(url_for('news'))
     return render_template('register.html', name = name, form = form)
 
 @app.route('/user/<username>')
@@ -292,9 +292,6 @@ def top20teams():
     for x in teamslist20:
         output.append(x)
     return render_template('top20teams.html', form=form, output=output)
-
-UPLOAD_FOLDER = '/app/static/pictures'
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 
 @app.route('/matchdetails/havuvsrr', methods=['GET', 'POST'])
