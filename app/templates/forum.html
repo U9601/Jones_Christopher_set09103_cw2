@@ -98,7 +98,7 @@
       {% include '_posts.html' %}
     </p>
   {% endfor %}
-  <a href ="{{ url_for('comments', post_id=(post_id))}}">
+  <button><a href ="{{ url_for('comments', post_id=(post_id))}}"></a></button>
   {% if prev_url %}
   <a href="{{ prev_url }}"> Newer posts </a>
   {% endif %}
