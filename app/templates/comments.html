@@ -12,13 +12,13 @@
       <span style="color:red;">[{{ error }}]</span>
       {% endfor %}
     </p>
-    <p> {{commentform.submit() }}</p>
+    <button><p> {{commentform.submit() }}</p></button>
   </form>
 
   {% for comment in post.comments %}
   <div class="rectangle">
     <td><img src="{{ post.author.avatar(36) }}"></td>
-    <h3> {{comment.username}}</h3><h5> {{comment.timestamp}}</h5>
+    <font size="15"> {{comment.username}}</font><font size="8"> posted at: {{comment.timestamp}}</font>
     <h4> {{comment.body}}</h4>
   </div>
   <hr>
