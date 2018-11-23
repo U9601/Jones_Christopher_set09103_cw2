@@ -1,7 +1,7 @@
 from __future__ import print_function
 from flask import *
 from flask_login import current_user, login_user, login_required, logout_user
-from flask.ext.uploads import *
+from werkzeug.utils import secure_filename
 from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm, CommentForm
 from app.models import User, Post, News, Comment
 from app.email import send_password_reset_email
@@ -279,17 +279,25 @@ def top20teams():
         output.append(x)
     return render_template('top20teams.html', form=form, output=output)
 
-photos = Uploadset('photos', IMAGES)
+UPLOAD_FOLDER = '/app/static/pictures'
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-app.config['UPLOADED_PHOTOS_DEST']= 'static/pictures'
+app.config['UPLOAD_FOLDER']= UPLOAD_FOLDER
 configure_uploads(app, photos)
 
 @app.route('/upload', methods=['GET','POST'])
 def upload():
-    if request.method == 'POST' and 'photo' in request.files:
-        filename = photos.save(request.files['photo'])
-        return filename
-    return render_template('news.html')
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect('news')
+        file = request.files['file']
+        if file.filename == '':
+            return redirect('news')
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    return render_template('news.html', file=file)
 
 @app.route('/matchdetails/havuvsrr', methods=['GET', 'POST'])
 def HAVUvsRR():
