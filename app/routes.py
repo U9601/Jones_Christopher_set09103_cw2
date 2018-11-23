@@ -1,7 +1,7 @@
 from __future__ import print_function
 from flask import *
 from flask_login import current_user, login_user, login_required, logout_user
-from flask_uploads import *
+from flask.ext.uploads import *
 from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm, CommentForm
 from app.models import User, Post, News, Comment
 from app.email import send_password_reset_email
