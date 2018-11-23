@@ -16,9 +16,11 @@
   </form>
 
   {% for comment in post.comments %}
-    <h3> {{comment.username}}</h5>
-    <h5> {{comment.timestamp}}</h5>
+  <div class="rectangle">
+    <h3> {{comment.username}}</h3><h5> {{comment.timestamp}}</h5>
     <h4> {{comment.body}}</h4>
+  </div>
+  <hr>
   {% endfor %}
 </body>
 </html>
