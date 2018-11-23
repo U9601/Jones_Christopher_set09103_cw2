@@ -152,7 +152,7 @@ def forum():
     return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items)
 
 @app.route('/news/articles', methods=['GET', 'POST'])
-def articles:
+def articles():
     return render_template('news_articals.html')
 
 
