@@ -161,7 +161,7 @@ def comments(post_id):
         db.session.add(comment)
         db.session.commit()
     comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.timestamp.desc())
-    return render_template('forum.html', comments = comments, commentform=commentform, post_id=post_id)
+    return render_template('comments.html', comments = comments, commentform=commentform, post_id=post_id)
 
 
 @app.route('/results' , methods=['GET', 'POST'])
