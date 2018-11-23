@@ -7,10 +7,14 @@
     <tr valign="top">
       <td><img src="{{ post.author.avatar(36) }}"></td>
       <td>
+        <div class="rectangle5">
         <a href="{{ url_for('user', username=post.author.username) }}">
-          {{ post.author.username }}
+          <font size="4"> {{post.author.username}}</font>
+          <font size="2"> posted at: {{post.timestamp}}</font>
         </a>
         says: <br> {{post.body }}
+      </div>
+      <hr>
       </td>
       <td>
     </td>
