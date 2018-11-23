@@ -78,7 +78,7 @@
 
 
   <div id="modal-wrapper2" class="modal">
-    <form class="modal-content animate" action="" method="POST" novalidate>
+    <form class="modal-content animate" enctype="multipart/form-data" action="{{ url_for('upload') }}" method="POST" novalidate>
       {{ newsform.hidden_tag() }}
       <div class="imgcontainer">
         <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
@@ -107,6 +107,9 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
           </p>
+          <p>
+            <input type=file name=photo>
+            <input type="submit">
           <button>{{ newsform.submit() }}</button>
         </form>
       </div>

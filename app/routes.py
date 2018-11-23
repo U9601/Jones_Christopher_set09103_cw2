@@ -1,6 +1,7 @@
 from __future__ import print_function
 from flask import *
 from flask_login import current_user, login_user, login_required, logout_user
+from flask_uploads import Uploadset, configure_uploads, IMAGES
 from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm, CommentForm
 from app.models import User, Post, News, Comment
 from app.email import send_password_reset_email
@@ -277,6 +278,18 @@ def top20teams():
     for x in teamslist20:
         output.append(x)
     return render_template('top20teams.html', form=form, output=output)
+
+photos = Uploadset('photos', IMAGES)
+
+app.config['UPLOADED_PHOTOS_DEST']= 'static/pictures'
+configure_uploads(app, photos)
+
+@app.route('/upload', methods=['GET','POST'])
+def upload():
+    if request.method == 'POST' and 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        return filename
+    return render_template('news.html')
 
 @app.route('/matchdetails/havuvsrr', methods=['GET', 'POST'])
 def HAVUvsRR():
