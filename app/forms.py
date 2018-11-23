@@ -60,6 +60,6 @@ class PostForm(FlaskForm):
     submit = SubmitField('submit')
 
 class CommentForm(FlaskForm):
-    comment = TextAreaField('comment something', validators=[
+    comment = StringField('comment something', validators=[
         DataRequired(), Length(min=1, max=140)])
     submit = SubmitField('comment')
