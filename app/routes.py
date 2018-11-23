@@ -149,8 +149,8 @@ def forum():
         db.session.add(comment)
         db.session.commit()
     page = request.args.get('page', 1, type=int)
-    comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.timestamp.desc())
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
+    comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.timestamp.desc())
     next_url = url_for('forum', page=posts.next_num) \
         if posts.has_next else None
     prev_url = url_for('forum', page=posts.prev_num) \
