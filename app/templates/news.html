@@ -78,7 +78,7 @@
 
 
   <div id="modal-wrapper2" class="modal">
-    <form class="modal-content animate" enctype="multipart/form-data" action="{{ url_for('upload') }}" method="POST" novalidate>
+    <form class="modal-content animate" action="" method="POST" novalidate>
       {{ newsform.hidden_tag() }}
       <div class="imgcontainer">
         <span onclick="document.getElementById('modal-wrapper2').style.display='none'" class="close" title="Close PopUp">&times;</span>
@@ -109,7 +109,7 @@
           </p>
           <p>
             {{ newsform.picture.label }}<br>
-            <input type=file name=photo>
+            {{ newsform.picture }}<br>
             {% for error in newsform.picture.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
@@ -218,7 +218,7 @@
           <div class="w3-col l8 s12">
             <!-- Blog entry -->
             <div class="w3-card-4 w3-margin w3-white">
-              <img width="20" height="" src="{{ url_for('static', filename="pictures/astralislogo.png")  }}" alt="Nature" style="width:100%">
+              <img width="20" height="" src="{{ url_for('static', filename="{{news.picture}}")  }}" alt="Nature" style="width:100%">
               <div class="w3-container">
                 <h3><b>{{new.title}}</b></h3>
                 <h5><span class="w3-opacity">{{new.timestamp}}</span></h5>
