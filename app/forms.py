@@ -1,4 +1,4 @@
-from flask_wtf import FlaskForm
+from flask_wtf import FlaskForm, FileField, FileRequired, FileAllowed
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
@@ -26,7 +26,7 @@ class NewsForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     title = StringField('Title', validators=[DataRequired()])
     body = StringField('Body', validators=[DataRequired()])
-    picture = StringField('Upload', validators=[DataRequired()])
+    photo = FieldField('Photo', validators=[ FileRequired(),FileAllowed(['png'],'ONLY PNG PLZ!')])
     submit = SubmitField('Add News')
 
 class EditProfileForm(FlaskForm):

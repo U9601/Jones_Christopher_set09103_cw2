@@ -54,7 +54,10 @@ def news():
         teams.append(teamname)
     newsform = NewsForm()
     if newsform.validate_on_submit():
-        newspost = News(username=newsform.username.data, title=newsform.title.data, body=newsform.body.data)
+        file = request.files['newspic']
+        filename = 'newspic' + '.png'
+        file.save(os.path.join(app.root_path, 'static/pictures/newspics', filename))
+        newspost = News(username=newsform.username.data, title=newsform.title.data, body=newsform.body.data, profilepic=url_for('static', filename='pictures/newspics/' + filename))
         db.session.add(newspost)
         db.session.commit()
         flash('You have created a post')
@@ -64,7 +67,7 @@ def news():
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
-        login_user(user, remember=form.remember_me.data)
+        login_user(user, remember=form.remember_me.data
     output = []
     players = []
     listofevents = []
@@ -296,24 +299,6 @@ def top20teams():
 UPLOAD_FOLDER = '/app/static/pictures'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-@app.route('/upload', methods=['GET','POST'])
-def upload():
-    if request.method == 'POST':
-        if 'file' not in request.files:
-            flash('No file part')
-            return redirect('news')
-        file = request.files['file']
-        if file.filename == '':
-            return redirect('news')
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    return render_template('news.html', file=file)
-
-@app.route('/news/<filename>')
-def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'],
-                               filename)
 
 @app.route('/matchdetails/havuvsrr', methods=['GET', 'POST'])
 def HAVUvsRR():
