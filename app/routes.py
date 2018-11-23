@@ -157,7 +157,7 @@ def comments(post_id):
     post = Post.query.get(post_id)
     commentform = CommentForm()
     if commentform.validate_on_submit():
-        comment = Comment(body=commentform.comment.data, post_id=post.id, username=current_user.username, timestamp=datetime.utcnow())
+        comment = Comment(body=commentform.comment.data, changeMe=current_user, post_id=post.id, username=current_user.username, timestamp=datetime.utcnow())
         db.session.add(comment)
         db.session.commit()
         return redirect(url_for("comments", post_id=post.id))
