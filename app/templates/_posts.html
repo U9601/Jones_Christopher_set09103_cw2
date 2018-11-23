@@ -13,7 +13,7 @@
           <font size="2"> posted at: {{post.timestamp}}</font>
         </a>
         says: <br> {{post.body }}
-        <button><a href ="{{ url_for('comments', post_id=post.id)}}">Comments</a><button>
+        <a href ="{{ url_for('comments', post_id=post.id)}}">Comments</a>
       </div>
       <hr>
       </td>
