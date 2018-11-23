@@ -282,9 +282,6 @@ def top20teams():
 UPLOAD_FOLDER = '/app/static/pictures'
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
-app.config['UPLOAD_FOLDER']= UPLOAD_FOLDER
-configure_uploads(app, photos)
-
 @app.route('/upload', methods=['GET','POST'])
 def upload():
     if request.method == 'POST':
