@@ -83,10 +83,10 @@
   {% block content %}
     <h1> File Not Found</h1>
     <p><a href="{{ url_for('news') }}">Back to saftey</a></p>
-  {% endblock %}
   <div class="row">
     <div class="column">
       <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
+      {% endblock %}
     </div>
   </div>
 </body>
