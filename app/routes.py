@@ -157,7 +157,7 @@ def comments(post_id):
     post = Post.query.get(post_id)
     commentform = CommentForm()
     if commentform.validate_on_submit():
-        comment = Comment(body=comment.comment.data, author=current_user, post_id=post.id)
+        global comment = Comment(body=comment.comment.data, author=current_user, post_id=post.id)
         db.session.add(comment)
         db.session.commit()
     return render_template('comments.html', commentform=commentform, post_id=post_id, post=post)
