@@ -17,6 +17,7 @@
 
   {% for comment in post.comments %}
   <div class="rectangle">
+    <td><img src="{{ post.author.avatar(36) }}"></td>
     <h3> {{comment.username}}</h3><h5> {{comment.timestamp}}</h5>
     <h4> {{comment.body}}</h4>
   </div>
