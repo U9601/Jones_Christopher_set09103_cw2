@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-  <form action "" method="post">
+  <form action "" method="post" action="{{url_for('comments', post_id=(post_id))}}">
     {{ commentform.hidden_tag() }}
     <p>
       {{ commentform.comment.label }}<br>
