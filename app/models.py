@@ -43,9 +43,6 @@ class User(UserMixin, db.Model):
             return
         return User.query.get(id)
 
-    def getEmail(self):
-        return self.email
-
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -56,10 +53,6 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
-
-    def postavatar(author, size):
-        digest = md5(Post.author.getEmail.lower().encode('utf-8')).hexdigest()
-        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
 
 class News(db.Model):
     id = db.Column(db.Integer, primary_key=True)
