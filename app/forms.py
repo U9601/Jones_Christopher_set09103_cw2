@@ -55,11 +55,11 @@ class ResetPasswordForm(FlaskForm):
         submit = SubmitField('Request Password Reset')
 
 class PostForm(FlaskForm):
-    post = TextAreaField('say something', validators=[
+    post = TextAreaField('Posts Section', validators=[
         DataRequired(), Length(min=1, max=140)])
     submit = SubmitField('submit')
 
 class CommentForm(FlaskForm):
-    comment = StringField('comment something', validators=[
+    comment = StringField('Comment Section', validators=[
         DataRequired(), Length(min=1, max=140)])
     submit = SubmitField('comment')
