@@ -296,6 +296,11 @@ def upload():
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
     return render_template('news.html', file=file)
 
+@app.route('/news/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'],
+                               filename)
+
 @app.route('/matchdetails/havuvsrr', methods=['GET', 'POST'])
 def HAVUvsRR():
     name = 'HAVUvsRR'

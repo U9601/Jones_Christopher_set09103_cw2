@@ -108,8 +108,12 @@
             {% endfor %}
           </p>
           <p>
+            {{ newsform.picture.label }}<br>
             <input type=file name=photo>
-            <input type="submit">
+            {% for error in newsform.picture.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+          </p>
           <button>{{ newsform.submit() }}</button>
         </form>
       </div>
