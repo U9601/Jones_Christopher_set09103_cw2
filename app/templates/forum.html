@@ -97,23 +97,9 @@
     <p>
       {% include '_posts.html' %}
     </p>
+  <a href ="{{ url_for('comments, post_id=(post_id'))}}">
   {% endfor %}
-    <form action "" method="post">
-    {{ commentform.hidden_tag() }}
-    <p>
-      {{ commentform.comment.label }}<br>
-      {{ commentform.comment(col=32, rows=4) }}<br>
-      {% for error in commentform.comment.errors %}
-      <span style="color:red;">[{{ error }}]</span>
-      {% endfor %}
-    </p>
-    {{ commentform.submit() }}
-  </form>
-  {% for c in comments %}
-    <p>
-      comments:<br> {{c.body}}
-    </p>
-  {% endfor %}
+  <a href = "{{ url_for()}}"
   {% if prev_url %}
   <a href="{{ prev_url }}"> Newer posts </a>
   {% endif %}

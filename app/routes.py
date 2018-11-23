@@ -130,7 +130,6 @@ def logout():
 def forum():
     name = ''
     postform = PostForm()
-    commentform = CommentForm()
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
@@ -144,18 +143,26 @@ def forum():
         db.session.commit()
         flash('Your post is now live!')
         return redirect(url_for('forum'))
-    if commentform.validate_on_submit():
-        comment = Comment(body=comment.comment.data, author=current_user)
-        db.session.add(comment)
-        db.session.commit()
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
-    comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.timestamp.desc())
     next_url = url_for('forum', page=posts.next_num) \
         if posts.has_next else None
     prev_url = url_for('forum', page=posts.prev_num) \
         if posts.has_prev else None
     return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items, comments=comments.items, commentform=commentform)
+
+@app.route('/forum/<post_id>' , methods=['GET', 'POST'])
+@login_required
+def comments(post_id):
+    post = Post.query.get(post_id)
+    commentform = CommentForm()
+    if commentform.validate_on_submit():
+        comment = Comment(body=comment.comment.data, author=current_user, post_id=post.id)
+        db.session.add(comment)
+        db.session.commit()
+    comments = Comment.query.filter_by(post_id=post.id).order_by(Comment.timestamp.desc())
+    return render_template('forum.html', comments = comments, commentform=commentform, post_id=post_id)
+
 
 @app.route('/results' , methods=['GET', 'POST'])
 def results():

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <form action "" method="post">
+    {{ commentform.hidden_tag() }}
+    <p>
+      {{ commentform.comment.label }}<br>
+      {{ commentform.comment(col=32, rows=4) }}<br>
+      {% for error in commentform.comment.errors %}
+      <span style="color:red;">[{{ error }}]</span>
+      {% endfor %}
+    </p>
+    <p> {{commentform.submit() }}</p>
+  </form>
+
+  {% for comment in post.comments %}
+    <h4> {{comment.body}}</h4>
+</body>
+</html>
