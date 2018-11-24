@@ -33,7 +33,7 @@ class User(UserMixin, db.Model):
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
     liked = db.relationship(
-        'PostLike', foreign_keys='Postlike.user_id',
+        'PostLike', foreign_keys='PostLike.user_id',
         backref='user', lazy='dynamic')
 
     def __repr__(self):
