@@ -341,6 +341,7 @@ def reset_password(token):
 @login_required
 def send_message(recipient):
     user = User.query.filter_by(username=recipient).first_or_404()
+    posts = user.posts.order_by(Post.timestamp.desc())
     form = MessageForm()
     if form.validate_on_submit():
         msg = Message(author=current_user, recipient=user,
@@ -355,7 +356,7 @@ def send_message(recipient):
             return redirect(url_for('news'))
         login_user(user, remember=loginform.remember_me.data)
         return redirect(url_for('user', username=recipient))
-    return render_template('send_message.html', form=form, recipient=recipient, loginform=loginform)
+    return render_template('send_message.html', form=form, recipient=recipient, loginform=loginform, posts=posts)
 
 @app.route('/messages')
 @login_required
