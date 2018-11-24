@@ -12,7 +12,7 @@ followers = db.Table('followers',
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
 )
 
-likes = db.Table('like',
+likers = db.Table('like',
     db.Column('liker_id', db.Integer, db.ForeignKey('post.id')),
     db.Column('liked_id', db.Integer, db.ForeignKey('post.id'))
 )
