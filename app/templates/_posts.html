@@ -18,7 +18,7 @@
       <br>
       <button class="different"><a href ="{{ url_for('comments', post_id=post.id)}}">Comments</a></button>
       <button class="different"><p> {{ user.liked.count() }} likes</p></button>
-      {% elif not current_user.is_following(user) %}
+      {% if not current_user.is_following(user) %}
         <p> <a href="{{ url_for('like', post_id=post.id) }}">Like</a></p>
       {% else %}
       <p><a href="{{ url_for('unlike', post_id=post.id) }}">Unlike</a></p>
