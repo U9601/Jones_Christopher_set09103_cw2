@@ -164,7 +164,7 @@ def newsid(news_id):
             flash('Invalid username or password')
             return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
-    return render_template(url_for('news_articles.html', news_id=news_id, news=news, form=form))
+    return render_template('news_articles.html', news_id=news_id, news=news, form=form))
 
 @app.route('/comments/<post_id>' , methods=['GET', 'POST'])
 @login_required
