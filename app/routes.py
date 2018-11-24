@@ -129,7 +129,6 @@ def logout():
 @login_required
 def forum():
     name = ''
-    user = ''
     postform = PostForm()
     form = LoginForm()
     if form.validate_on_submit():
@@ -150,6 +149,7 @@ def forum():
         if posts.has_next else None
     prev_url = url_for('forum', page=posts.prev_num) \
         if posts.has_prev else None
+    user = User.query.filter_by(current_user).first_or_404()
     return render_template('forum.html', form = form, name = name, postform = postform, next_url=next_url, prev_url=prev_url, posts = posts.items, user=user)
 
 @app.route('/news/<news_id>' , methods=['GET', 'POST'])

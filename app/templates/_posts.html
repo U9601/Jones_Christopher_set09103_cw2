@@ -21,7 +21,7 @@
       {% if not post.author.is_following(post) %}
       <button class="different">  <p> <a href="{{ url_for('like', username=user.username) }}">Like</a></p>,<button>
       {% else %}
-      <button><p><a href="{{ url_for('unlike', username=user.username) }}">Unlike</a></p></button>
+      <button class="different"><p><a href="{{ url_for('unlike', username=user.username) }}">Unlike</a></p></button>
       {% endif %}
       </td>
       <td>
