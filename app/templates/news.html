@@ -26,9 +26,11 @@
       <a href="{{ url_for('messages') }}">
           {{('Messages')}}
           {% set new_messages = current_user.new_messages() %}
-          {% if new_messages %}
-          <span class="badge">{{ new_messages }}</span>
-          {% endif %}
+          <span id="message_count" class="badge"
+                  style="visibility: {% if new_messages %}visible
+                                      {% else %}hidden {% endif %};">
+                  {{new_messages}}
+          </span>
       </a>
     </li>
     <a href="{{ url_for('logout') }}">Logout</a>
@@ -41,6 +43,14 @@
       </form>
     </div>
   </div>
+  {% block scripts %}
+    <script>
+      function set_message_count(n){
+        $('#message_count').text(n);
+        $('#message_count').css('visibility', n ? 'visible' : 'hidden');
+      }
+    </script>
+  {% endblock %}
 </head>
 
 <body>
