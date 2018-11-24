@@ -275,6 +275,38 @@ def unfollow(username):
     flash('You are not following {}.'.format(username))
     return redirect(url_for('user', username=username))
 
+@app.route('/like/<post_id>')
+@login_required
+def like(post_id):
+    post = Post.query.filter_by(post_id=post_id).first()
+    user = User.query.filter_by(username=username).first()
+    if post is None:
+        flash('Post {} not found'.format(post))
+        return redirect(url_for('news'))
+    if user == current_user
+        flash('You cannot like yourself!')
+        return redirect(url_for('forum', username=username))
+    current_user.like(user)
+    db.session.commit()
+    flash('You have now liked {}!'.format(post))
+    return redirect(url_for('forum', post=post))
+
+@app.route('/unlike/<post_id>')
+@login_required
+def unlike(post_id):
+    post = Post.query.filter_by(post_id=post_id).first()
+    user = User.query.filter_by(username=username).first()
+    if post is None:
+        flash('Post {} not found.'.format(post))
+        return redirect(url_for('news'))
+    if user == current_user:
+        flash('You cannot unlike yourself!')
+        return redirect(url_for('forum', username=username))
+    current_user.unlike(user)
+    db.session.commit()
+    flash('You are not following {}.'.format(post))
+    return redirect(url_for('forum', post=post))
+
 @app.before_request
 def before_request():
     if current_user.is_authenticated:

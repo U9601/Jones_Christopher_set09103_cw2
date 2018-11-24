@@ -12,6 +12,11 @@ followers = db.Table('followers',
     db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
 )
 
+likes = db.Table('like',
+    db.Column('liker_id', db.Integer, db.ForeignKey('post.id')),
+    db.Column('liked_id', db.Integer, db.ForeignKey('post.id'))
+)
+
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
@@ -25,6 +30,11 @@ class User(UserMixin, db.Model):
         primaryjoin=(followers.c.follower_id == id),
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
+    liked = db.relationship(
+        'Post', secondary=followers,
+        primaryjoin=(likes.c.liker_id == id),
+        secondaryjoin=(likes.c.liked_id == id),
+        backref=db.backref('liked', lazy='dynamic'), lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -68,6 +78,24 @@ class User(UserMixin, db.Model):
         followed = Post.query.join(
             followers, (followers.c.followed_id == Post.user_id)).filter(
                 followers.c.follower_id == self.id)
+        own = Post.query.filter_by(user_id=self.id)
+        return followed.union(own).order_by(Post.timestamp.desc())
+
+    def like(self, user):
+        if not self.is_liked(user):
+            self.followed.append(user)
+
+    def unlike(self, user):
+        if self.is_liked(user):
+            self.followed.remove(user)
+
+    def is_liked(self, user):
+        return self.followed.filter(likes.c.liked_id == user.id).count() > 0
+
+    def liked_posts(self):
+        liked = Post.query.join(
+            liked, (likes.c.liked_id == Post.user_id)).filter(
+                likes.c.liker_id == self.id)
         own = Post.query.filter_by(user_id=self.id)
         return followed.union(own).order_by(Post.timestamp.desc())
 
