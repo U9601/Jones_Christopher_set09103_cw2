@@ -3,5 +3,5 @@ from app.models import User, Post, Notification, Message, News, NewsBody, PostLi
 
 @app.shell_context_processor
 def make_sell_context():
-    reutrn {'db': db, 'User': User, 'Post': Post, 'Notification': Notfication, 'Message': Message,
+    return {'db': db, 'User': User, 'Post': Post, 'Notification': Notfication, 'Message': Message,
             'News': News, 'NewsBody': NewsBody, 'PostLike': PostLike, 'Comment': Comment}
