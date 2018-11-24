@@ -306,13 +306,13 @@ def before_request():
 @login_required
 def edit_profile():
     loginform = LoginForm()
-    if form.validate_on_submit():
+    form = EditProfileForm(current_user.username)
+    if loginform.validate_on_submit():
         user = User.query.filter_by(username=loginform.username.data).first()
         if user is None or not user.check_password(loginform.password.data):
             flash('Invalid username or password')
             return redirect(url_for('news'))
-        login_user(user, remember=form.remember_me.data)
-    form = EditProfileForm(current_user.username)
+        login_user(user, remember=loginform.remember_me.data)
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
