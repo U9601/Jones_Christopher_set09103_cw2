@@ -156,6 +156,16 @@ button:hover {
   margin-left: 20px;
 }
 
+.rectangl6 {
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  border: black;
+  display: inline-block;
+  box-shadow: 10px 10px 5px grey;
+  margin-left: 20px;
+}
+
 table, th, td {
     border: 0px solid white;
 }
