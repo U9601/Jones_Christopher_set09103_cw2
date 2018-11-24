@@ -102,18 +102,18 @@
                 {% else %}
                 <p><a href="{{ url_for('unfollow', username=user.username) }}">Unfollow</a></p>
                 {% endif %}
+                {% if user != current_user %}
+                <p>
+                  <button class=different><a href="{{ url_for('send_message', recipient=user.username)}}" style="text-decoration:none">
+                    {{_('Send private message')}} <img class="dImg" width="150" height="100" src={{ url_for('static', filename="pictures/directmessage.png")  }}>
+                  </a></button>
+                </p>
+                {% endif %}
           </td>
         </tr>
       </table>
     </div>
     <div class="column">
-      {% if user != current_user %}
-      <p>
-        <button class=different><a href="{{ url_for('send_message', recipient=user.username)}}" style="text-decoration:none">
-          {{_('Send private message')}} <img class="dImg" width="150" height="100" src={{ url_for('static', filename="pictures/directmessage.png")  }}>
-        </a></button>
-      </p>
-      {% endif %}
       <h3> {{user.username}} Posts </h3>
       {% for post in posts %}
       {% include '_posts.html' %}
