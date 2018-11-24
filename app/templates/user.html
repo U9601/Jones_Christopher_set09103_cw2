@@ -127,6 +127,7 @@
             <h1>User: {{user.username}}</h1>
             {% if user.username == "U9601" %}
             <h1> ADMIN Pog <img class="dImg" width="150" height="100" src={{ url_for('static', filename="pictures/pog.png")  }}></h1>
+            {% endif %}
             {% if user.about_me %}<p>{{ user.about_me }}
               <p>{% endif %}
                 {% if user.last_seen %}<p> Last seen on: {{(user.last_seen) }}</p>{% endif %}
