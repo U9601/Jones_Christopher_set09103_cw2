@@ -353,6 +353,13 @@ def send_message(recipient):
 @app.route('/messages')
 @login_required
 def messages():
+    form = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        if user is None or not user.check_password(form.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('login'))
+        login_user(user, remember=form.remember_me.data)
     current_user.last_message_read_time = datetime.utcnow()
     db.session.commit()
     page = request.args.get('page', 1, type=int)
@@ -363,7 +370,7 @@ def messages():
     prev_url = url_for('messages', page=messages.prev_num) \
         if messages.has_prev else None
     return render_template('messages.html', messages=messages.items,
-                            next_url=next_url, prev_url=prev_url)
+                            next_url=next_url, prev_url=prev_url, form=form)
 
 
 @app.route('/top20teams', methods=['GET', 'POST'])
