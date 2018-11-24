@@ -356,7 +356,7 @@ def messages():
     current_user.last_message_read_time = datetime.utcnow()
     db.session.commit()
     page = request.args.get('page', 1, type=int)
-    messages = current.user.messages_received.order_by(Message.timestamp.desc().paginate(
+    messages = current.user.messages_received.order_by(Message.timestamp.desc()).paginate(
         page, current_app.config['POSTS_PER_PAGE'], False)
     next_url = url_for('messages', page=messages.next_num) \
         if messages.has_next else None
