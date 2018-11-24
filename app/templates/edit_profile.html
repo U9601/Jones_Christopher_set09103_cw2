@@ -79,20 +79,20 @@
       <div class="button">
         <div class="container">
           <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
+            {{ loginform.username.label }}<br>
+            {{ loginform.username(size=32) }}<br>
+            {% for error in loginform.username.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
           </p>
           <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
+            {{ loginform.password.label }}<br>
+            {{ loginform.password(size=32) }}<br>
+            {% for error in loginform.password.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
           </p>
-          <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+          <p>{{ loginform.remember_me() }} {{ loginform.remember_me.label }}</p>
           <button>{{ form.submit() }}</button>
           <p>
             Forgot Your Password?
@@ -126,22 +126,22 @@
     <div class="column">
       <h1> Edit Profile</h1>
       <form action="" method="post">
-        {{ loginform.hidden_tag() }}
+        {{ form.hidden_tag() }}
         <p>
-          {{ loginform.username.label }}<br>
-          {{ loginform.username(size=32) }}<br>
-          {% for error in loginform.username.errors %}
+          {{ form.username.label }}<br>
+          {{ form.username(size=32) }}<br>
+          {% for error in form.username.errors %}
           <span style="color: red;">[{{ error }}]</span>
           {% endfor %}
         </p>
         <p>
-          {{ loginform.about_me.label }}<br>
-          {{ loginform.about_me(cols=50, rows=4) }}<br>
-          {% for error in loginform.about_me_errors %}
+          {{ form.about_me.label }}<br>
+          {{ form.about_me(cols=50, rows=4) }}<br>
+          {% for error in form.about_me_errors %}
           <span style="color: red;">[{{ error }}]</span>
           {% endfor %}
         </p>
-        <p>{{ loginform.submit() }}</p>
+        <p>{{ form.submit() }}</p>
       </form>
     </div>
   </div>
