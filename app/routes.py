@@ -240,7 +240,7 @@ def register():
         db.session.commit()
         flash('You are now a user Pog')
         return redirect(url_for('news'))
-    return render_template('register.html', name = name, form = form, loginform=Loginform)
+    return render_template('register.html', name = name, form = form, loginform=loginform)
 
 @app.route('/user/<username>')
 @login_required
