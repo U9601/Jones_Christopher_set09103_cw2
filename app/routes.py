@@ -311,11 +311,11 @@ def edit_profile():
         current_user.about_me = form.about_me.data
         db.session.commit()
         flash('Your changes have been saved Pog')
-        return redirect(url_for('user', username=current_user.username))
+        return redirect(url_for('news'))
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
-    return render_template('user.html', title='Edit Profile', form = form, username=current_user.username)
+    return render_template('news', title='Edit Profile', form = form)
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
