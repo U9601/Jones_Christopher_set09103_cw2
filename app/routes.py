@@ -3,7 +3,7 @@ from flask import *
 from flask_login import current_user, login_user, login_required, logout_user
 from werkzeug.utils import secure_filename
 from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm, CommentForm, MessageForm
-from app.models import User, Post, News, Comment, NewsBody, PostLike, Message
+from app.models import User, Post, News, Comment, NewsBody, PostLike, Message, Notification
 from app.email import send_password_reset_email
 from app import app, db
 from werkzeug.urls import url_parse
