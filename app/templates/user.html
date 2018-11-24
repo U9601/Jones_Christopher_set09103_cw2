@@ -126,7 +126,7 @@
           <td>
             <h1>User: {{user.username}}</h1>
             {% if user.username == "U9601" %}
-            <h1> ADMIN Pog <img class="dImg" width="150" height="100" src={{ url_for('static', filename="pictures/pog.png")  }}></h1>
+            <h1> ADMIN <img class="dImg" width="100" height="50" src={{ url_for('static', filename="pictures/pog.png")  }}></h1>
             {% endif %}
             {% if user.about_me %}<p>{{ user.about_me }}
               <p>{% endif %}
