@@ -276,36 +276,16 @@ def unfollow(username):
     flash('You are not following {}.'.format(username))
     return redirect(url_for('user', username=username))
 
-@app.route('/like/<post_id>')
+@app.route('/like/<int:post_id>/<action>')
 @login_required
-def like(post_id):
-    user = User.query.get(current_user.username)
-    post = Post.query.get(post_id)
-    if post is None:
-        flash('User {} not found'.format(post))
-        return redirect(url_for('news'))
-    if user == current_user:
-        flash('You cannot like yourself!')
-        return redirect(url_for('forum'))
-    current_user.like(post)
-    db.session.commit()
-    flash('You have now liked {}!'.format(post))
-    return redirect(url_for('forum'))
-
-@app.route('/unlike/<post_id>')
-@login_required
-def unlike(post_id):
-    ser = User.query.get(current_user.username)
-    post = Post.query.get(post_id)
-    if post is None:
-        flash('Post {} not found.'.format(post))
-        return redirect(url_for('news'))
-    if user == current_user:
-        flash('You cannot unlike yourself!')
-        return redirect(url_for('forum'))
-    current_user.unlike(post)
-    db.session.commit()
-    flash('You are not following {}.'.format(post))
+def like_action(post_id, action):
+    post = Post.query.filter_by(id=post_id).first_or_404()
+    if action == "like":
+        current_user.like_post(post)
+        db.session.commit()
+    if action == 'unlike':
+        current_user.unlike_post(post)
+        db.session.commit()
     return redirect(url_for('forum'))
 
 @app.before_request
