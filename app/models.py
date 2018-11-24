@@ -34,7 +34,7 @@ class User(UserMixin, db.Model):
         'User', secondary=likes,
         primaryjoin=(likes.c.liker_id == id),
         secondaryjoin=(likes.c.liked_id == id),
-        backref=db.backref('liked', lazy='dynamic'), lazy='dynamic')
+        backref=db.backref('likes', lazy='dynamic'), lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
