@@ -18,13 +18,13 @@
     <a href="/top20teams"> Top 20 Teams</a>
     <a href="/forum">Forum</a>
     <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
-    {% block scripts %}
     {% block content %}
     {% if user == current_user.username %}
     {% else %}
     <a href="{{ url_for('user', username=current_user.username) }}"> Profile</a>
     <a href="{{ url_for('logout') }}">Logout</a>
     {% endif %}
+    {% endblock %}
     <div class="search-container">
       <form action="/action_page.php">
         <input class="different2" type="text" placeholder="Search.." name="search">
@@ -32,6 +32,7 @@
       </form>
     </div>
   </div>
+  {% block scripts %}
    {{ super() }}
    {{ moment.include_moment() }}
   {% endblock %}
@@ -255,7 +256,6 @@
         <button onclick="document.getElementById('modal-wrapper2').style.display='block'"> add news </button>
         <h3> Look at me, Look at me, I am the Admin Now U9601 </h3>
         {% endif %}
-        {% endblock %}
       </div>
   </div>
 </body>
