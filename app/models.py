@@ -13,8 +13,8 @@ followers = db.Table('followers',
 )
 
 likes = db.Table('like',
-    db.Column('liker_id', db.Integer, db.ForeignKey('post.id')),
-    db.Column('liked_id', db.Integer, db.ForeignKey('post.id'))
+    db.Column('liker_id', db.Integer, db.ForeignKey('user.id')),
+    db.Column('liked_id', db.Integer, db.ForeignKey('user.id'))
 )
 
 class User(UserMixin, db.Model):
