@@ -93,10 +93,12 @@
     </div>
     <div class="column">
       <div class="rectangle5">
-        <td>{{ news.body }}
+        <td><h2>{{ news.title }}</h2>
+        <h4> Written by: {{news.username}}</h4>
+        <h5>{{news.timestamp}}</h5>
         <hr>
+        <h3> {{news.boy}}</h3>
       </div>
-      <hr>
     </div>
     {% endblock %}
   </div>
