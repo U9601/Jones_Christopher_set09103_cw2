@@ -90,13 +90,13 @@ class User(UserMixin, db.Model):
             self.followed.remove(post)
 
     def is_liked(self, user):
-        return self.followed.filter(likes.c.liked_id == post.id).count() > 0
+        return self.followed.filter(likes.c.liked_id == user.id).count() > 0
 
     def liked_posts(post):
         liked = Post.query.join(
             liked, (likes.c.liked_id == Post.user_id)).filter(
                 likes.c.liker_id == self.id)
-        own = Post.query.filter_by(post_id=self.id)
+        own = Post.query.filter_by(user_id=self.id)
         return followed.union(own).order_by(Post.timestamp.desc())
 
 class Post(db.Model):
