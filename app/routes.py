@@ -223,6 +223,13 @@ def dashboard():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     name = ''
+    loginform = LoginForm()
+    if loginform.validate_on_submit():
+        user = User.query.filter_by(username=loginform.username.data).first()
+        if user is None or not user.check_password(loginform.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('news'))
+        login_user(user, remember=loginform.remember_me.data)
     if current_user.is_authenticated:
         return redirect(url_for('news'))
     form = RegistrationForm()
@@ -233,7 +240,7 @@ def register():
         db.session.commit()
         flash('You are now a user Pog')
         return redirect(url_for('news'))
-    return render_template('register.html', name = name, form = form)
+    return render_template('register.html', name = name, form = form, loginform=Loginform)
 
 @app.route('/user/<username>')
 @login_required
