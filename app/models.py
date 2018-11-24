@@ -92,7 +92,7 @@ class User(UserMixin, db.Model):
     def is_liked(self, user):
         return self.followed.filter(likes.c.liked_id == user.id).count() > 0
 
-    def liked_posts(post):
+    def liked_posts(self):
         liked = Post.query.join(
             liked, (likes.c.liked_id == Post.user_id)).filter(
                 likes.c.liker_id == self.id)
