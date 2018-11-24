@@ -57,9 +57,13 @@ class ResetPasswordForm(FlaskForm):
 class PostForm(FlaskForm):
     post = TextAreaField('Posts Section', validators=[
         DataRequired(), Length(min=1, max=140)])
-    submit = SubmitField('submit')
+    submit = SubmitField('Submit')
 
 class CommentForm(FlaskForm):
     comment = StringField('Comment Section', validators=[
         DataRequired(), Length(min=1, max=140)])
-    submit = SubmitField('comment')
+    submit = SubmitField('Comment')
+
+class MessageForm(FlaskForm):
+    message = TextAreaField(_l('Message'), validators=[DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField(_l('Submit'))
