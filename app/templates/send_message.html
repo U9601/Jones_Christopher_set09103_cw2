@@ -127,8 +127,8 @@
     <div class="column">
       <div class="col-md-4">
         {{ wtf.quick_form(form)}}
+        <h1> {{ _('Send Message to %(recipient)s', recipient=recipient) }}</h1>
       </div>
-    <h1> {{ _('Send Message to %(recipient)s', recipient=recipient) }}</h1>
     </div>
   {% endblock %}
 </body>
