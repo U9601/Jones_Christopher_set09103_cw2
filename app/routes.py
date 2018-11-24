@@ -305,6 +305,13 @@ def before_request():
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
+    loginform = LoginForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=loginform.username.data).first()
+        if user is None or not user.check_password(loginform.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('news'))
+        login_user(user, remember=form.remember_me.data)
     form = EditProfileForm(current_user.username)
     if form.validate_on_submit():
         current_user.username = form.username.data
@@ -315,7 +322,7 @@ def edit_profile():
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
-    return render_template('edit_profile.html', title='Edit Profile', form = form)
+    return render_template('edit_profile.html', title='Edit Profile', form = form, loginform=loginform)
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
