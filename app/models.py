@@ -90,7 +90,7 @@ class User(UserMixin, db.Model):
         if self.is_liked(post):
             PostLike.query.filter_by(
                 user_id=self.id,
-                post_id=post_id == post.id).count() > 0
+                post_id=post.id).delete()
 
     def is_liked(self, post):
         return PostLike.query.filter(
