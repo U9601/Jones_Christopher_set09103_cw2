@@ -39,7 +39,7 @@ class EditProfileForm(FlaskForm):
 
     def __init__(self, orginal_user, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)
-        self.original_username = orginal_username
+        self.original_username = original_username
 
     def validate_username(self, username):
         if username.data != self.original_username:
