@@ -87,8 +87,8 @@
   </script>
   {% block app_content %}
     <h1>{{ ('Messages') }}</h1>
-    {% for post in posts %}
-        {% include '_posts.html' %}
+    {% for post in messages %}
+        {{post}}
     {% endfor %}
     <nav aria-label="...">
         <ul class="pager">
