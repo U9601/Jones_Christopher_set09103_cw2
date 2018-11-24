@@ -107,7 +107,7 @@
       <div class="rectangle5">
         <td><img src="{{ post.author.avatar(36)}}"></td>
         <font size="4"> {{comment.username}}</font>
-        <font size="2"> posted at: {{comment.timestamp}}</font>
+        <font size="2"> posted at: {{moment(comment.timestamp).format('LLLL')}}</font>
         <hr>
         <h4> {{comment.body}}</h4>
       </div>
