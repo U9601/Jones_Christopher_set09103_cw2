@@ -333,6 +333,13 @@ def edit_profile():
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
+    loginform = LoginForm()
+    if loginform.validate_on_submit():
+        user = User.query.filter_by(username=loginform.username.data).first()
+        if user is None or not user.check_password(loginform.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('news'))
+        login_user(user, remember=loginform.remember_me.data)
     if current_user.is_authenticated:
         return redirect(url_for('news'))
     form = ResetPasswordRequestForm()
@@ -342,10 +349,17 @@ def reset_password_request():
             send_password_reset_email(user)
         flash('Check your emails')
         return redirect(url_for('news'))
-    return render_template('reset_password_request.html', title ='Reset Password', form = form)
+    return render_template('reset_password_request.html', title ='Reset Password', form = form, loginform=loginform)
 
 @app.route('/reset_password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
+    loginform = LoginForm()
+    if loginform.validate_on_submit():
+        user = User.query.filter_by(username=loginform.username.data).first()
+        if user is None or not user.check_password(loginform.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('news'))
+        login_user(user, remember=loginform.remember_me.data)
     if current_user.is_authenticated:
         return redirect(url_for('news'))
     user = User.verify_reset_password_token(token)
@@ -357,7 +371,7 @@ def reset_password(token):
         db.session.commit()
         flash('Your password has been reset.')
         return redirect(url_for('news'))
-    return render_template('reset_password.html', form=form)
+    return render_template('reset_password.html', form=form, loginform=loginform)
 
 @app.route('/send_message/<recipient>', methods=['GET', 'POST'])
 @login_required

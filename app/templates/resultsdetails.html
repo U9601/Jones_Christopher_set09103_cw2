@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="shortcut icon" href="{{ url_for('static',filename='pictures/favicon.ico') }}" />
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/popup.css') }}">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <title> HLTV - News</title>
-  <div class="topnav">
-    <a class="active" href="/">News</a>
-    <a href="/matches">Matches</a>
-    <a href="/results">Results</a>
-    <a href="/top20teams"> Top 20 Teams</a>
-    <a href="/forum">Forum</a>
-    <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
-    {% block content %}
-    {% if user == current_user.username %}
-    {% else %}
-    <a href="{{ url_for('user', username=current_user.username) }}"> Profile</a>
-    <a href="{{ url_for('logout') }}">Logout</a>
-    {% endif %}
-    <div class="search-container">
-      <form action="/action_page.php">
-        <input class="different2" type="text" placeholder="Search.." name="search">
-        <button class="different" type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" href="{{ url_for('static',filename='pictures/favicon.ico') }}" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/popup.css') }}">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title> HLTV - News</title>
+<div class="topnav">
+  <a class="active" href="/">News</a>
+  <a href="/matches">Matches</a>
+  <a href="/results">Results</a>
+  <a href="/top20teams"> Top 20 Teams</a>
+  <a href="/forum">Forum</a>
+  <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+  {% block content %}
+  {% if user == current_user.username %}
+  {% else %}
+  <a href="{{ url_for('user', username=current_user.username) }}"> Profile</a>
+    <a href="{{ url_for('messages') }}">
+        {{_('Messages')}}
+        {% set new_messages = current_user.new_messages() %}
+        <span id="message_count" class="badge"
+                style="visibility: {% if new_messages %}visible
+                                    {% else %}hidden {% endif %};">
+                {{new_messages}}
+        </span>
+    </a>
+  <a href="{{ url_for('logout') }}">Logout</a>
+  {% endif %}
+  {% endblock %}
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input class="different2" type="text" placeholder="Search.." name="search">
+      <button class="different" type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
+</div>
+{% block scripts %}
+  <script>
+    function set_message_count(n){
+      $('#message_count').text(n);
+      $('#message_count').css('visibility', n ? 'visible' : 'hidden');
+    }
+
+  {% if current_user.is_authenticated %}
+   $(function() {
+       var since = 0;
+       setInterval(function() {
+           $.ajax('{{ url_for('notifications') }}?since=' + since).done(
+               function(notifications) {
+                   for (var i = 0; i < notifications.length; i++) {
+                       if (notifications[i].name == 'unread_message_count')
+                           set_message_count(notifications[i].data);
+                       since = notifications[i].timestamp;
+                   }
+               }
+           );
+       }, 10000);
+   });
+   {% endif %}
+  </script>
+{% endblock %}
 </head>
 
 <body>
