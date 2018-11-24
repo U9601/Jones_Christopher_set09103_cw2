@@ -294,7 +294,7 @@ def like(username):
 @login_required
 def unlike(username):
     user = User.query.filter_by(username=username).first()
-    if usernmae is username:
+    if user is None:
         flash('Post {} not found.'.format(post))
         return redirect(url_for('news'))
     if user == current_user:
