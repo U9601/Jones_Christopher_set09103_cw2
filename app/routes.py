@@ -285,11 +285,11 @@ def like(username):
         return redirect(url_for('news'))
     if user == current_user:
         flash('You cannot like yourself!')
-        return redirect(url_for('forum', username=username))
+        return redirect(url_for('forum'))
     current_user.like(user)
     db.session.commit()
     flash('You have now liked {}!'.format(username))
-    return redirect(url_for('forum', username=username))
+    return redirect(url_for('forum'))
 
 @app.route('/unlike/<username>')
 @login_required
@@ -300,11 +300,11 @@ def unlike(username):
         return redirect(url_for('news'))
     if user == current_user:
         flash('You cannot unlike yourself!')
-        return redirect(url_for('forum', username=username))
+        return redirect(url_for('forum'))
     current_user.unlike(user)
     db.session.commit()
     flash('You are not following {}.'.format(username))
-    return redirect(url_for('forum', username=username))
+    return redirect(url_for('forum'))
 
 @app.before_request
 def before_request():
