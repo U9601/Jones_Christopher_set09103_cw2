@@ -22,7 +22,6 @@
     {% if user == current_user.username %}
     {% else %}
     <a href="{{ url_for('user', username=current_user.username) }}"> Profile</a>
-    <li>
       <a href="{{ url_for('messages') }}">
           {{_('Messages')}}
           {% set new_messages = current_user.new_messages() %}
@@ -32,7 +31,6 @@
                   {{new_messages}}
           </span>
       </a>
-    </li>
     <a href="{{ url_for('logout') }}">Logout</a>
     {% endif %}
     {% endblock %}
