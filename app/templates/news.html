@@ -18,6 +18,7 @@
     <a href="/top20teams"> Top 20 Teams</a>
     <a href="/forum">Forum</a>
     <a onclick="document.getElementById('modal-wrapper').style.display='block'">Sign in</a>
+    {% block scripts %}
     {% block content %}
     {% if user == current_user.username %}
     {% else %}
@@ -31,7 +32,6 @@
       </form>
     </div>
   </div>
-  {% block scripts %}
    {{ super() }}
    {{ moment.include_moment() }}
   {% endblock %}
