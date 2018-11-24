@@ -83,21 +83,21 @@ class User(UserMixin, db.Model):
 
     def like(self, post):
         if not self.is_liked(post):
-            self.followed.append(post)
+            self.likes.append(post)
 
     def unlike(self, post):
         if self.is_liked(post):
-            self.followed.remove(post)
+            self.likes.remove(post)
 
     def is_liked(self, post):
-        return self.followed.filter(likes.c.liked_id == post.id).count() > 0
+        return self.likes.filter(likes.c.liked_id == post.id).count() > 0
 
     def liked_posts(self):
         liked = Post.query.join(
             liked, (likes.c.liked_id == Post.user_id)).filter(
                 likes.c.liker_id == self.id)
         own = Post.query.filter_by(user_id=self.id)
-        return followed.union(own).order_by(Post.timestamp.desc())
+        return liked.union(own).order_by(Post.timestamp.desc())
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
