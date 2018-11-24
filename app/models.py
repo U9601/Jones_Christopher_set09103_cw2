@@ -18,7 +18,6 @@ likers = db.Table('like',
 )
 
 
-
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
@@ -35,8 +34,8 @@ class User(UserMixin, db.Model):
     liked = db.relationship(
         'PostLike', foreign_keys='PostLike.user_id',
         backref='user', lazy='dynamic')
-    message_sent = db.relationship('Message', foreign_keys='Message.sender_id', backref='author', lazy='dynamic')
-    messages_received = db.relationship('Message', foreign_keys='Message.recipient_id', backref='recipent', lazy='dynamic')
+    messages_sent = db.relationship('Message', foreign_keys='Message.sender_id', backref='author', lazy='dynamic')
+    messages_received = db.relationship('Message', foreign_keys='Message.recipient_id', backref='recipient', lazy='dynamic')
     last_message_read_time = db.Column(db.DateTime)
 
     def __repr__(self):
@@ -145,7 +144,7 @@ class PostLike(db.Model):
 
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    sender_id = db.Column(db.Integer, db.ForeignKey('user_id'))
+    sender_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     recipient_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default = datetime.utcnow)
