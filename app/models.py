@@ -34,7 +34,7 @@ class User(UserMixin, db.Model):
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')
     liked = db.relationship(
         'PostLike', foreign_keys='Postlike.user_id',
-        back='user', lazy='dynamic')
+        backref='user', lazy='dynamic')
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
