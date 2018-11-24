@@ -94,6 +94,7 @@
         <h1>{{ ('Messages') }}</h1>
         {% for post in messages %}
         <p>
+          <img src="{{ post.author.avatar(36)}}">
           <a href="{{ url_for('user', username=post.author.username) }}">
           <font size="4"> {{post.author.username}}</font>
           </a>
