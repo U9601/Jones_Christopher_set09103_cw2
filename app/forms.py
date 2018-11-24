@@ -37,7 +37,7 @@ class EditProfileForm(FlaskForm):
     about_me = TextAreaField('About me', validators=[Length(min=0, max=140)])
     submit = SubmitField('Edit')
 
-    def __init__(self, orginal_user, *args, **kwargs):
+    def __init__(self, original_user, *args, **kwargs):
         super(EditProfileForm, self).__init__(*args, **kwargs)
         self.original_username = original_username
 
