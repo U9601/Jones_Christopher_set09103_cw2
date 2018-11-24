@@ -83,7 +83,7 @@ class User(UserMixin, db.Model):
 
     def like(self, post):
         if not self.is_liked(post):
-            like = PostLike(user_id=self.id, post_id=post.id):
+            like = PostLike(user_id=self.id, post_id=post.id)
             db.session.add(like)
 
     def unlike(self, post):
