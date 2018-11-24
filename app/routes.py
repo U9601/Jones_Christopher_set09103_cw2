@@ -129,6 +129,7 @@ def logout():
 @login_required
 def forum():
     name = ''
+    user = ''
     postform = PostForm()
     form = LoginForm()
     if form.validate_on_submit():
