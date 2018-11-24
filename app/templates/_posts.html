@@ -22,7 +22,7 @@
       {% else %}
       <a href="{{ url_for('like_action', post_id=post.id, action='like') }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/like.jpg")  }}" alt="Nature"></a></p>
       {% endif %}
-      <p> {{ post.likes.count() }} likes</p>
+      <p> {{ post.likes.count() }} <b>likes<b></p>
       </td>
       <td>
     </td>
