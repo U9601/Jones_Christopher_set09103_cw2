@@ -280,7 +280,7 @@ def unfollow(username):
 @login_required
 def like(post_id):
     user = User.query.get(current_user.username)
-    post = Post.objects.get(id=post_id)
+    post = Post.query.get(post_id)
     if post is None:
         flash('User {} not found'.format(post))
         return redirect(url_for('news'))
@@ -296,7 +296,7 @@ def like(post_id):
 @login_required
 def unlike(post_id):
     ser = User.query.get(current_user.username)
-    post = Post.objects.get(id=post_id)
+    post = Post.query.get(post_id)
     if post is None:
         flash('Post {} not found.'.format(post))
         return redirect(url_for('news'))
