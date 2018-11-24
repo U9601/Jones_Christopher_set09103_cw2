@@ -283,7 +283,7 @@ def like(post_id):
     if post is None:
         flash('Post {} not found'.format(post))
         return redirect(url_for('news'))
-    if user == current_user
+    if user == current_user:
         flash('You cannot like yourself!')
         return redirect(url_for('forum', username=username))
     current_user.like(user)
