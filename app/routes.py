@@ -281,10 +281,10 @@ def unfollow(username):
 def like_action(post_id, action):
     post = Post.query.filter_by(id=post_id).first_or_404()
     if action == "like":
-        current_user.like_post(post)
+        current_user.like(post)
         db.session.commit()
     if action == 'unlike':
-        current_user.unlike_post(post)
+        current_user.unlike(post)
         db.session.commit()
     return redirect(url_for('forum'))
 
