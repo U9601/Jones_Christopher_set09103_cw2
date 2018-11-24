@@ -103,11 +103,14 @@
         </p>
         <p> {{commentform.submit() }}</p>
       </form>
+
       {% for comment in post.comments %}
       <div class="rectangle5">
         <td><img src="{{ post.author.avatar(36)}}"></td>
+        <a href="{{ url_for('user', username=comment.username) }}">
         <font size="4"> {{comment.username}}</font>
-        <font size="2"> posted at: {{moment(comment.timestamp).format('LLLL')}}</font>
+        </a>
+        <font size="2"> posted at: {{(comment.timestamp)}}</font>
         <hr>
         <h4> {{comment.body}}</h4>
       </div>
