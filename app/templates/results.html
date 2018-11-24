@@ -29,6 +29,10 @@
       </form>
     </div>
   </div>
+  {% block scripts %}
+   {{ super() }}
+   {{ moment.include_moment() }}
+  {% endblock %}
 </head>
 <body>
 
