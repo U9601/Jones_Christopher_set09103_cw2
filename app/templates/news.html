@@ -53,7 +53,7 @@
      $(function() {
          var since = 0;
          setInterval(function() {
-             $.ajax('{{ url_for('main.notifications') }}?since=' + since).done(
+             $.ajax('{{ url_for('notifications') }}?since=' + since).done(
                  function(notifications) {
                      for (var i = 0; i < notifications.length; i++) {
                          if (notifications[i].name == 'unread_message_count')
@@ -65,8 +65,6 @@
          }, 10000);
      });
      {% endif %}
-
-    }
     </script>
   {% endblock %}
 </head>
