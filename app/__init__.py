@@ -21,7 +21,7 @@ login.login_view = 'login'
 mail = Mail(app)
 moment = Moment(app)
 bootstrap = Bootstrap(app)
-babe; = Babel(app)
+babel = Babel(app)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
