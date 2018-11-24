@@ -3,6 +3,8 @@ from flask_wtf.file import FileField, FileRequired, FileAllowed
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length
 from app.models import User
+from flask_bootstrap import Bootstrap
+
 
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
@@ -65,5 +67,5 @@ class CommentForm(FlaskForm):
     submit = SubmitField('Comment')
 
 class MessageForm(FlaskForm):
-    message = TextAreaField(('Message'), validators=[DataRequired(), Length(min=0, max=140)])
-    submit = SubmitField(('Submit'))
+    message = TextAreaField(_l('Message'), validators=[DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField(_l('Submit'))
