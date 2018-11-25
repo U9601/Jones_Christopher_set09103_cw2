@@ -138,12 +138,12 @@
       </div>
       <br>
       <br>
-      {% if ((current_user.username == comment.username or current_user.username == "U9601")) %}
+      {% if ((current_user.username == post.username or current_user.username == "U9601")) %}
       <p><a href="{{ url_for('edit_post', post_id=post.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/edit.png")  }}" alt="Nature"></a>
       <a href="{{ url_for('delete_post', post_id=post.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/delete.png")  }}" alt="Nature"></a></p>
       {% endif %}
       <hr>
-      
+
       <form method="post" action="{{url_for('comments', post_id=post_id)}}">
         {{ commentform.hidden_tag() }}
         <p>
