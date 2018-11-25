@@ -41,10 +41,11 @@
       </form>
     </div>
   </div>
+  {% extends 'bootstrap/base.html' %}
   {% block scripts %}
-    <script>
     {{ script() }}
     {{ moment.include_moment() }}
+    <script>
       function set_message_count(n){
         $('#message_count').text(n);
         $('#message_count').css('visibility', n ? 'visible' : 'hidden');
