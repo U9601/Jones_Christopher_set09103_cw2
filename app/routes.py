@@ -43,9 +43,11 @@ def get_parsed_page(url):
 
 def format_datetime(value, format='medium'):
     if format == 'full':
-        format=" MMMM d. y 'at' HH:mm"
+        format=" MMMM d, y 'at' HH:mm"
     elif format == 'medium':
         format="EE dd.MM.y HH:mm"
+    elif format == 'low':
+        format = "d.MM.y 'at' HH:mm"
     return babel.dates.format_datetime(value, format)
 
 app.jinja_env.filters['datetime'] = format_datetime
