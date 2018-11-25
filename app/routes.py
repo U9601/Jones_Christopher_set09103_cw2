@@ -9,6 +9,7 @@ from app import app, db
 from werkzeug.urls import url_parse
 import re
 import requests
+import babel
 from datetime import datetime
 from bs4 import BeautifulSoup
 from python_utils import converters
@@ -39,6 +40,15 @@ resultslist15th = results["15-11-2018"]
 
 def get_parsed_page(url):
     return BeautifulSoup(requests.get(url).text, "lxml")
+
+def format_datetime(value, format='medium'):
+    if format == 'full':
+        format="EEEE, d. MMMM y 'at' HH:mm"
+    elif format == 'medium':
+        format="HH:mm"
+    return babel.dates.format_datetime(value, format)
+
+app.jinja_env.filters['datetime'] = format_datetime
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/news', methods=['GET', 'POST'])
