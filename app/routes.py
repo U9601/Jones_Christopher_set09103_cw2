@@ -182,7 +182,7 @@ def newsid(news_id):
 @app.route('/comments/<post_id>' , methods=['GET', 'POST'])
 @login_required
 def comments(post_id):
-    post = Post.query.get(post_id).query.order_by(Post.timestamp.desc())
+    post = Post.query.get(post_id)
     commentform = CommentForm()
     if commentform.validate_on_submit():
         comment = Comment(body=commentform.comment.data, post_id=post.id, username=current_user.username, timestamp=datetime.utcnow())
