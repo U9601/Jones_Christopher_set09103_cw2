@@ -2,7 +2,7 @@ from __future__ import print_function
 from flask import *
 from flask_login import current_user, login_user, login_required, logout_user
 from werkzeug.utils import secure_filename
-from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm, CommentForm, MessageForm
+from app.forms import RegistrationForm, LoginForm, NewsForm, EditProfileForm, ResetPasswordRequestForm, ResetPasswordForm, PostForm, CommentForm, MessageForm, EditPostForm
 from app.models import User, Post, News, Comment, NewsBody, PostLike, Message, Notification
 from app.email import send_password_reset_email
 from app import app, db
@@ -209,7 +209,7 @@ def edit_post(post_id):
             flash('Invalid username or password')
             return redirect(url_for('news'))
     post = Post.query.get_or_404(post_id)
-    form = EditProfileForm()
+    form = EditPostForm()
     if form.validate_on_submit():
         post.body = form.post.data
         db.session.commit()
