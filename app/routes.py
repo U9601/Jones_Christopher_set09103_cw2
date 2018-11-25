@@ -217,6 +217,7 @@ def edit_post(post_id):
         return redirect(url_for('forum'))
     elif request.method == 'GET':
         form.post.data = post.body
+    return render_template('edit_post.html', form = form, loginform=loginform)
 
 
 
@@ -363,7 +364,7 @@ def edit_profile():
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
-    return render_template('edit_profile.html', title='Edit Profile', form = form, loginform=loginform)
+    return render_template('edit_profile.html', form = form, loginform=loginform)
 
 @app.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():
