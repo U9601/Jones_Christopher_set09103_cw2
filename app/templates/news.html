@@ -65,6 +65,54 @@
          }, 10000);
      });
      {% endif %}
+
+   $(function() {
+       var timer = null;
+       $('.user_popup').hover(
+           function(event) {
+               // mouse in event handler
+               var elem = $(event.currentTarget);
+               timer = setTimeout(function() {
+                   timer = null;
+                   function(data) {
+                                    xhr = null;
+                                    elem.popover({
+                                        trigger: 'manual',
+                                        html: true,
+                                        animation: false,
+                                        container: elem,
+                                        content: data
+                                    }).popover('show');
+                                    flask_moment_render_all();
+                                }
+               }, 1000);
+           },
+           function(event) {
+               // mouse out event handler
+               var elem = $(event.currentTarget);
+               if (timer) {
+                   clearTimeout(timer);
+                   timer = null;
+               }else{
+                 function(event) {
+                    // mouse out event handler
+                    var elem = $(event.currentTarget);
+                    if (timer) {
+                        clearTimeout(timer);
+                        timer = null;
+                    }
+                    else if (xhr) {
+                        xhr.abort();
+                        xhr = null;
+                    }
+                    else {
+                        elem.popover('destroy');
+                    }
+                }
+               }
+           }
+       )
+   });
     </script>
   {% endblock %}
 </head>
@@ -286,7 +334,7 @@
     <center>
       <div class="column">
         {% if current_user.username == "U9601" %}
-        <h3> Welcome Back Commander {{current_user.username}}</h3>
+        <h3> Welcome Back Commander, {{current_user.username}}</h3>
         <button onclick="document.getElementById('modal-wrapper2').style.display='block'"> add news </button>
         <h3> Look at me, Look at me, I am the Admin Now </h3>
         {% endif %}
