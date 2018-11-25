@@ -129,9 +129,9 @@
       <form method="post" action="">
         {{ form.hidden_tag() }}
         <p>
-          {{ form.post.label }}<br>
-          {{ form.post(col=32, rows=4) }}<br>
-          {% for error in form.post.errors %}
+          {{ form.comment.label }}<br>
+          {{ form.comment(col=32, rows=4) }}<br>
+          {% for error in form.comment.errors %}
           <span style="color:red;">[{{ error }}]</span>
           {% endfor %}
         </p>
