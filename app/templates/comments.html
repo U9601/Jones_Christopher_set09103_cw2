@@ -130,7 +130,7 @@
         <h3> Orginal Post </h3>
         <td><img src="{{ post.author.avatar(36)}}"></td>
         <a href="{{ url_for('user', username=post.author.username) }}">
-        <font size="4"> {{post.username}}</font>
+        <font size="4"> {{post.author.username}}</font>
         </a>
         <font size="2"> commented on the: {{post.timestamp|datetime('low')}}</font>
         <hr>
