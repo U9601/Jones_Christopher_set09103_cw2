@@ -122,6 +122,10 @@ class Post(db.Model):
     comments = db.relationship('Comment', backref='changeMe', lazy='dynamic')
     likes = db.relationship('PostLike', backref='post', lazy='dynamic')
 
+    def avatar1(self, size):
+        digest = md5(self.email.lower().encode('utf-8')).hexdigest()
+        return 'https://www.gravatar.com/avatar/{}?d=identicon&s={}'.format(digest, size)
+
     def __repr__(self):
         return '<Post {}>'.format(self.body)
 
