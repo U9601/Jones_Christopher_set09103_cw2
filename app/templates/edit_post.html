@@ -126,7 +126,7 @@
       <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
     </div>
     <div class="column">
-      <form method="post" action="{{url_for('edit_post', post_id=post.id)}}">
+      <form method="post" action="">
         {{ form.hidden_tag() }}
         <p>
           {{ form.post.label }}<br>
