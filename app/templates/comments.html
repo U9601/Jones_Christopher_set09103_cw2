@@ -149,7 +149,7 @@
         <h4> {{comment.body}}</h4>
       </div>
       {% if ((current_user.username == post.author.username or current_user.username == "U9601")) %}
-      <a href="{{ url_for('comment', comment_id=comment.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/edit.png")  }}" alt="Nature"></a>
+      <a href="{{ url_for('delete_comment', comment_id=comment.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/edit.png")  }}" alt="Nature"></a>
       {% endif %}
       <hr>
       {% endfor %}
