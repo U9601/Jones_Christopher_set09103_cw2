@@ -3,13 +3,6 @@
 </head>
 
 <body>
-  {% set user_link %}
-      <span class="user_popup">
-          <a href="{{ url_for('user', username=post.author.username) }}">
-              {{ post.author.username }}
-          </a>
-      </span>
-  {% endset %}
   <table>
     <tr valign="top">
       <td></td>
@@ -19,7 +12,7 @@
         <a href="{{ url_for('user', username=post.author.username) }}">
         <font size="4">  {{ post.author.username }}</font>
         </a>
-        <font size="2"> posted at: {{post.timestamp|datetime('low')}}</font>
+        <font size="2"> posted on the: {{post.timestamp|datetime('low')}}</font>
         <hr>
         says: <br> {{post.body }}
       </div>

@@ -130,8 +130,8 @@
             {% endif %}
             {% if user.about_me %}<p>{{ user.about_me }}
               <p>{% endif %}
-                {% if user.last_seen %}<p> Last seen on: {{(user.last_seen) }}</p>{% endif %}
-                <p> {{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+                {% if user.last_seen %}<p> Last seen on: {{user.last_seen }}</p>{% endif %}
+                <p> {{ user.followers.count() }} followers, {{ user.followed|datetime('full').count() }} following.</p>
                 {% if user == current_user %}
                 <p><a href="{{ url_for('edit_profile') }}"><img class="dImg" width="150" height="100" src={{ url_for('static', filename="pictures/editprofile.png")  }}> </a></p>
                 {% elif not current_user.is_following(user) %}

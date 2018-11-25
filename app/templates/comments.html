@@ -144,7 +144,7 @@
         <a href="{{ url_for('user', username=comment.username) }}">
         <font size="4"> {{comment.username}}</font>
         </a>
-        <font size="2"> posted at: {{(comment.timestamp)}}</font>
+        <font size="2"> commented on the: {{comment.timestamp|datetime('low')}}</font>
         <hr>
         <h4> {{comment.body}}</h4>
       </div>
