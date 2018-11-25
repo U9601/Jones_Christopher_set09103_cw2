@@ -195,7 +195,6 @@ def delete_post(post_id):
 
 
 
-
 @app.route('/results' , methods=['GET', 'POST'])
 def results():
     name = ''
@@ -398,9 +397,9 @@ def send_message(recipient):
         user = User.query.filter_by(username=loginform.username.data).first()
         if user is None or not user.check_password(loginform.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('news'))
+            return redirect(url_for('user' username=recipient))
         login_user(user, remember=loginform.remember_me.data)
-        return redirect(url_for('user', username=recipient))
+        return redirect(url_for('user', username=user.username))
     return render_template('send_message.html', form=form, recipient=recipient, loginform=loginform, posts=posts)
 
 @app.route('/messages')
