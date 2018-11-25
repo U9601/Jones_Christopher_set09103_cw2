@@ -194,7 +194,7 @@ def delete_post(post_id):
     return redirect(url_for('forum'))
 
 @app.route('/delete_comment/<comment_id>', methods=['GET','POST'])
-def delete_comment(command_id):
+def delete_comment(comment_id):
     comment = Comment.query.get_or_404(comment_id)
     db.session.delete(comment)
     db.session.commit()
