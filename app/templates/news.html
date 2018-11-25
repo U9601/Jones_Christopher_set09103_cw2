@@ -243,6 +243,9 @@
         <div class="titlefix">
         <h2> CSGO - News </h2>
       </div>
+      {% extends 'bootstrap/base.html' %}
+      {{ super() }}
+      {{ moment.include_moment() }}
         {% for new in news %}
         {% if new is defined %}
         <div class="w3-content" style="max-width:1400px">
@@ -291,9 +294,6 @@
         {% endif %}
       </div>
   </div>
-  {% extends 'bootstrap/base.html' %}
-  {{ super() }}
-  {{ moment.include_moment() }}
 </body>
 
 </html>
