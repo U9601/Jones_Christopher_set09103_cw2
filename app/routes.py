@@ -171,6 +171,7 @@ def newsid(news_id):
 @login_required
 def comments(post_id):
     post = Post.query.get(post_id)
+    user = current_user
     commentform = CommentForm()
     if commentform.validate_on_submit():
         comment = Comment(body=commentform.comment.data, post_id=post.id, username=current_user.username, timestamp=datetime.utcnow())
@@ -184,7 +185,7 @@ def comments(post_id):
             flash('Invalid username or password')
             return redirect(url_for('news'))
         login_user(user, remember=form.remember_me.data)
-    return render_template('comments.html', commentform=commentform, post_id=post_id, post=post, form=form)
+    return render_template('comments.html', commentform=commentform, post_id=post_id, post=post, form=form, user=user)
 
 
 @app.route('/results' , methods=['GET', 'POST'])
