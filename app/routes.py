@@ -392,6 +392,7 @@ def send_message(recipient):
                         body=form.message.data)
         user.add_notification('unread_mesage_count', user.new_messages())
         db.session.commit()
+        return redirect(url_for('user', username=recipient, loginform=loginform))
     loginform = LoginForm()
     if loginform.validate_on_submit():
         user = User.query.filter_by(username=loginform.username.data).first()
@@ -399,7 +400,6 @@ def send_message(recipient):
             flash('Invalid username or password')
             return redirect(url_for('user', username=recipient, loginform=loginform))
         login_user(user, remember=loginform.remember_me.data)
-        return redirect(url_for('user', username=recipient, loginform=loginform))
     return render_template('send_message.html', form=form, recipient=recipient, loginform=loginform, posts=posts)
 
 @app.route('/messages')
