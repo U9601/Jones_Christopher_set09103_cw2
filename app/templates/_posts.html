@@ -22,8 +22,9 @@
       {% if current_user.is_liked(post) %}
        <a href="{{ url_for('like_action', post_id=post.id, action='unlike') }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/like.jpg")  }}" alt="Nature"></a>
       {% else %}
-      <a href="{{ url_for('like_action', post_id=post.id, action='like') }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/like.jpg")  }}" alt="Nature"></a></p>
+      <a href="{{ url_for('like_action', post_id=post.id, action='like') }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/like.jpg")  }}" alt="Nature"></a>
       {% endif %}
+      <a href="{{ url_for('delete_post', post_id=post.id, action='like') }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/delete.png")  }}" alt="Nature"></a></p>
       <p> <b>{{ post.likes.count() }} likes</b></p>
       </td>
       <td>

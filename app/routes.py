@@ -186,6 +186,13 @@ def comments(post_id):
         login_user(user, remember=form.remember_me.data)
     return render_template('comments.html', commentform=commentform, post_id=post_id, post=post, form=form)
 
+@app.route('/delete_post/<post_id>', methods=['GET', 'POST'])
+def delete_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    db.session.delete(post)
+    db.session.commit()
+    return redirect(url_for('forum'))
+
 
 @app.route('/results' , methods=['GET', 'POST'])
 def results():
