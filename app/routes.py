@@ -666,8 +666,8 @@ def WildvsIsurus():
     return render_template('matchdetails.html', form=form, name = name, output=output)
 
 @app.route('/matchdetails/w7mvsfuria', methods=['GET', 'POST'])
-def W7MvsFuria():
-    name = 'W7MvsFuria'
+def W7MvsFURIA():
+    name = 'W7MvsFURIA'
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
