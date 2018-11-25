@@ -140,7 +140,7 @@
 
       {% for comment in post.comments %}
       <div class="rectangle5">
-        <td><img src="{{ comment.changeMe.author.avatar(36)}}"></td>
+        <td><img src="{{ comment.changeMe.username.avatar(36)}}"></td>
         <a href="{{ url_for('user', username=comment.username) }}">
         <font size="4"> {{comment.username}}</font>
         </a>
