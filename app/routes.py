@@ -74,7 +74,7 @@ def news():
         players.append(x)
     for x in eventslist:
         listofevents.append(x)
-    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output, players=players, listofevents=listofevents)
+    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output, players=players, listofevents=listofevents, user=user)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
