@@ -126,7 +126,6 @@
       <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
     </div>
     <div class="column">
-      {% for comment in post.comments %}
       <div class="rectangle5">
         <h3> Orginal Post </h3>
         <td><img src="{{ post.author.avatar(36)}}"></td>
@@ -144,7 +143,7 @@
       <a href="{{ url_for('delete_post', post_id=post.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/delete.png")  }}" alt="Nature"></a></p>
       {% endif %}
       <hr>
-      {% endfor %}
+      
       <form method="post" action="{{url_for('comments', post_id=post_id)}}">
         {{ commentform.hidden_tag() }}
         <p>
