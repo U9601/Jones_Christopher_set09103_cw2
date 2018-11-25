@@ -80,21 +80,21 @@
       <div class="button">
         <div class="container">
           <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
+            {{ loginform.username.label }}<br>
+            {{ loginform.username(size=32) }}<br>
+            {% for error in loginform.username.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
           </p>
           <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
+            {{ loginform.password.label }}<br>
+            {{ loginform.password(size=32) }}<br>
+            {% for error in loginform.password.errors %}
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
           </p>
-          <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-          <button>{{ form.submit() }}</button>
+          <p>{{ loginform.remember_me() }} {{ loginform.remember_me.label }}</p>
+          <button>{{ loginform.submit() }}</button>
           <p>
             Forgot Your Password?
             <a href="{{ url_for('reset_password_request')}}"> Click to Reset It</a>
@@ -126,36 +126,18 @@
       <img class="dImg" width="250" height="100" src={{ url_for('static', filename="pictures/Hltvlogo.png")  }}>
     </div>
     <div class="column">
-      <form method="post" action="{{url_for('comments', post_id=post_id)}}">
-        {{ commentform.hidden_tag() }}
+      <form method="post" action="{{url_for('edit_post', post_id=post_id)}}">
+        {{ form.hidden_tag() }}
         <p>
-          {{ commentform.comment.label }}<br>
-          {{ commentform.comment(col=32, rows=4) }}<br>
-          {% for error in commentform.comment.errors %}
+          {{ form.post.label }}<br>
+          {{ form.post(col=32, rows=4) }}<br>
+          {% for error in form.post.errors %}
           <span style="color:red;">[{{ error }}]</span>
           {% endfor %}
         </p>
-        <p> {{commentform.submit() }}</p>
+        <p> {{form.submit() }}</p>
       </form>
-
-      {% for comment in post.comments %}
-      <div class="rectangle5">
-        <td><img src="{{ post.author.avatar(36)}}"></td>
-        <a href="{{ url_for('user', username=comment.username) }}">
-        <font size="4"> {{comment.username}}</font>
-        </a>
-        <font size="2"> posted at: {{(comment.timestamp)}}</font>
-        <hr>
-        <h4> {{comment.body}}</h4>
-      </div>
-      {% if ((current_user.username == post.author.username or current_user.username == "U9601")) %}
-      <a href="{{ url_for('delete_comment', comment_id=comment.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/delete.png")  }}" alt="Nature"></a>  
-      {% endif %}
-      <hr>
-      {% endfor %}
     </div>
   </div>
-
 </body>
-
 </html>

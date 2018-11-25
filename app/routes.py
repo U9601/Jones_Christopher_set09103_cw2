@@ -200,6 +200,23 @@ def delete_comment(comment_id):
     db.session.commit()
     return redirect(url_for('forum'))
 
+@app.route('/edit_post/<post_id>', methods=['GET', 'POST'])
+def edit_post(post_id):
+    loginform = LoginForm()
+    if loginform.validate_on_submit():
+        user = User.query.filter_by(username=loginform.username.data).first()
+        if user is None or not user.check_password(loginform.password.data):
+            flash('Invalid username or password')
+            return redirect(url_for('news'))
+    post = Post.query.get_or_404(post_id)
+    form = EditProfileForm()
+    if form.validate_on_submit():
+        post.body = form.post.data
+        db.session.commit()
+        flash('Your changes have been saved Pog')
+        return redirect(url_for('forum'))
+    elif request.method == 'GET':
+        form.post.data = post.body
 
 
 
