@@ -140,6 +140,27 @@
 
       {% for comment in post.comments %}
       <div class="rectangle5">
+        <h3> Orginal Post </h3>
+        <td><img src="{{ post.author.avatar(36)}}"></td>
+        <a href="{{ url_for('user', username=comment.username) }}">
+        <font size="4"> {{post.username}}</font>
+        </a>
+        <font size="2"> commented on the: {{post.timestamp|datetime('low')}}</font>
+        <hr>
+        <h4> {{post.body}}</h4>
+      </div>
+      <br>
+      <br>
+      {% if ((current_user.username == comment.username or current_user.username == "U9601")) %}
+      <p><a href="{{ url_for('edit_post', post_id=post.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/edit.png")  }}" alt="Nature"></a>
+      <a href="{{ url_for('delete_post', post_id=post.id) }}"><img width="40" height="" src="{{ url_for('static', filename="pictures/delete.png")  }}" alt="Nature"></a></p>
+      {% endif %}
+      <hr>
+      {% endfor %}
+    </div>
+
+      </div>
+      <div class="rectangle5">
         <td><img src="{{ post.author.avatar(36)}}"></td>
         <a href="{{ url_for('user', username=comment.username) }}">
         <font size="4"> {{comment.username}}</font>
