@@ -139,6 +139,7 @@
       </form>
 
       {% for comment in post.comments %}
+      {{post.body}}
       <div class="rectangle5">
         <td><img src="{{ post.author.avatar(36)}}"></td>
         <a href="{{ url_for('user', username=comment.username) }}">
