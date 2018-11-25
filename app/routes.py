@@ -1263,7 +1263,7 @@ def AGOvsKinguin():
     output = []
     for x in resultslist16th:
         output.append(x)
-    return render_template('matchdetails.html', form=form, name = name, output=output)
+    return render_template('resultsdetails.html', form=form, name = name, output=output)
 
 @app.route('/resultsdetails/ordervsavant', methods=['GET', 'POST'])
 def OrdervsAvant():
