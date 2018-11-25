@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-  {% extends 'bootstrap/base.html' %}
 <html>
 
 <head>
@@ -42,9 +41,8 @@
       </form>
     </div>
   </div>
+
   {% block scripts %}
-    {{ super() }}
-    {{ moment.include_moment() }}
     <script>
       function set_message_count(n){
         $('#message_count').text(n);
@@ -293,6 +291,9 @@
         {% endif %}
       </div>
   </div>
+  {% extends 'bootstrap/base.html' %}
+  {{ super() }}
+  {{ moment.include_moment() }}
 </body>
 
 </html>
