@@ -74,3 +74,7 @@ class MessageForm(FlaskForm):
 class EditPostForm(FlaskForm):
     post = TextAreaField('Edit Post', validators=[Length(min=1, max=140)])
     submit = SubmitField('Edit')
+
+class EditCommentForm(FlaskForm):
+    comment = TextAreaField('Edit Post', validators=[Length(min=1, max=140)])
+    submit = SubmitField('Edit')
