@@ -63,7 +63,7 @@ def news():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('news'))
+            return redirect(url_for('news', user=user))
         login_user(user, remember=form.remember_me.data)
     output = []
     players = []
@@ -74,7 +74,7 @@ def news():
         players.append(x)
     for x in eventslist:
         listofevents.append(x)
-    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output, players=players, listofevents=listofevents, user=user)
+    return render_template('news.html', form = form, name = name, teams = teams, news = news, newsform = newsform, output=output, players=players, listofevents=listofevents)
 
 @app.route('/matches', methods=['GET', 'POST'])
 def matches():
