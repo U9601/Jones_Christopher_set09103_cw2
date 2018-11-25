@@ -193,8 +193,6 @@ def delete_post(post_id):
     db.session.commit()
     return redirect(url_for('forum'))
 
-@app.route('/edit_post/<post_id>', methods=['GET','POST'])
-def edit_post(post_id):
 
 
 
