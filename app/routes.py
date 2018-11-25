@@ -392,7 +392,7 @@ def send_message(recipient):
                         body=form.message.data)
         user.add_notification('unread_mesage_count', user.new_messages())
         db.session.commit()
-        return redirect(url_for('user', username=recipient, loginform=loginform))
+        return redirect(url_for('user', username=recipient))
     loginform = LoginForm()
     if loginform.validate_on_submit():
         user = User.query.filter_by(username=loginform.username.data).first()
