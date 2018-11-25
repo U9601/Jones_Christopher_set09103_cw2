@@ -246,6 +246,7 @@
       </a>
       <div class="rectangle2">
         {% elif ((o["team"] == "mousesports" and o["team2"] == "MIBR")) %}
+        <a href="/matchdetails/mouzvsmibr" style="text-decoration:none">
         <b>{{ o["time"] }}</b><img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/mouzlogo.png")  }}>{{o["team"]}} vs <img class="dImg" width="50" height="50" src={{ url_for('static', filename="pictures/MIBR.png")  }}>
         {{o["team2"]}} {{o["event"]}} {{ o["bo"] }}
         <hr>
