@@ -220,7 +220,7 @@ def edit_post(post_id):
     return render_template('edit_post.html', form = form, loginform=loginform)
 
 @app.route('/edit_comment/<comment_id>', methods=['GET', 'POST'])
-def edit_post(comment_id):
+def edit_comment(comment_id):
     loginform = LoginForm()
     if loginform.validate_on_submit():
         user = User.query.filter_by(username=loginform.username.data).first()
